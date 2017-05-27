@@ -54,8 +54,11 @@
     <Compile Include="Entity\Card.cs" />
     <Compile Include="Entity\Pack.cs" />
     <Compile Include="Event\PackOpenedEventArgs.cs" />
+    <Compile Include="History.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Storage\IStorage.cs" />
+    <Compile Include="Storage\XmlStorage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
