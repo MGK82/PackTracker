@@ -51,6 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AchievementWatcher.cs" />
+    <Compile Include="Entity\Card.cs" />
+    <Compile Include="Entity\Pack.cs" />
+    <Compile Include="Event\PackOpenedEventArgs.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

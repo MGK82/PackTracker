@@ -8,6 +8,10 @@ namespace PackHistorian {
   public class Plugin : IPlugin {
     private AchievementsWatcher _watcher;
 
+    Plugin() {
+      _watcher = new AchievementsWatcher();
+    }
+
     public string Author
     {
       get
@@ -60,7 +64,7 @@ namespace PackHistorian {
     }
 
     public void OnLoad() {
-      _watcher = new AchievementsWatcher();
+      _watcher.Start();
     }
 
     public void OnUnload() {
