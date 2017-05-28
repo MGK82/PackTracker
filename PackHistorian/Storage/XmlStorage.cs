@@ -41,9 +41,11 @@ namespace PackHistorian.Storage {
           CardId.Value = Card.HDTCard.Id;
           CardNode.Attributes.Append(CardId);
 
-          XmlAttribute Premium = Xml.CreateAttribute("Premium");
-          Premium.Value = Card.Premium.ToString();
-          CardNode.Attributes.Append(Premium);
+          if(Card.Premium) {
+            XmlAttribute Premium = Xml.CreateAttribute("Premium");
+            Premium.Value = "Premium";
+            CardNode.Attributes.Append(Premium);
+          }
         }
       }
 
