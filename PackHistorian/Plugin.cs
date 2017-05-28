@@ -3,13 +3,17 @@ using Hearthstone_Deck_Tracker.Plugins;
 using System;
 using System.Reflection;
 using System.Windows.Controls;
+using PackHistorian.Storage;
 
 namespace PackHistorian {
   public class Plugin : IPlugin {
     private AchievementsWatcher _watcher;
+    History _history;
+    IStorage _storage = new XmlStorage();
 
     public Plugin() {
       _watcher = new AchievementsWatcher();
+      _history = _storage.Fetch();
     }
 
     public string Author
@@ -65,6 +69,11 @@ namespace PackHistorian {
 
     public void OnLoad() {
       _watcher.Start();
+
+      _watcher.PackOpened += (sender, e) => {
+        _history.Add(e.Pack);
+        _storage.Store(_history.Ascending);
+      };
     }
 
     public void OnUnload() {
