@@ -18,32 +18,32 @@ namespace PackHistorian.Storage {
       XmlDocument Xml = new XmlDocument();
       Xml.AppendChild(Xml.CreateXmlDeclaration("1.0", "UTF-8", null));
 
-      XmlNode Root = Xml.CreateElement("History");
+      XmlNode Root = Xml.CreateElement("history");
       Xml.AppendChild(Root);
 
       foreach(Pack Pack in History) {
-        XmlNode PackNode = Xml.CreateElement("Pack");
+        XmlNode PackNode = Xml.CreateElement("pack");
         Root.AppendChild(PackNode);
 
-        XmlAttribute Time = Xml.CreateAttribute("Time");
+        XmlAttribute Time = Xml.CreateAttribute("time");
         Time.Value = Pack.Time.Ticks.ToString();
         PackNode.Attributes.Append(Time);
 
-        XmlAttribute PackId = Xml.CreateAttribute("Id");
+        XmlAttribute PackId = Xml.CreateAttribute("id");
         PackId.Value = Pack.Id.ToString();
         PackNode.Attributes.Append(PackId);
 
         foreach(Card Card in Pack.Cards) {
-          XmlNode CardNode = Xml.CreateElement("Card");
+          XmlNode CardNode = Xml.CreateElement("card");
           PackNode.AppendChild(CardNode);
 
-          XmlAttribute CardId = Xml.CreateAttribute("Id");
+          XmlAttribute CardId = Xml.CreateAttribute("id");
           CardId.Value = Card.HDTCard.Id;
           CardNode.Attributes.Append(CardId);
 
           if(Card.Premium) {
-            XmlAttribute Premium = Xml.CreateAttribute("Premium");
-            Premium.Value = "Premium";
+            XmlAttribute Premium = Xml.CreateAttribute("premium");
+            Premium.Value = "premium";
             CardNode.Attributes.Append(Premium);
           }
         }
