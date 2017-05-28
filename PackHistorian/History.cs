@@ -10,6 +10,8 @@ namespace PackHistorian {
   class History : IEnumerable<Pack> {
     List<Pack> _packs;
 
+    public int Count { get { return _packs.Count; } }
+
     public History() {
       _packs = new List<Pack>();
     }
