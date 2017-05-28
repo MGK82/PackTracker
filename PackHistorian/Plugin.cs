@@ -8,7 +8,7 @@ namespace PackHistorian {
   public class Plugin : IPlugin {
     private AchievementsWatcher _watcher;
 
-    Plugin() {
+    public Plugin() {
       _watcher = new AchievementsWatcher();
     }
 
