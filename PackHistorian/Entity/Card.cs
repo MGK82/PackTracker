@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HDTCard = Hearthstone_Deck_Tracker.Hearthstone.Card;
 
-namespace PackHistorian.Entity {
+namespace PackChronicler.Entity {
   class Card {
     HDTCard _card;
     bool _premium;

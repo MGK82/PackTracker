@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PackHistorian.Entity;
+using PackChronicler.Entity;
 
-namespace PackHistorian.Event {
+namespace PackChronicler.Event {
   class PackOpenedEventArgs {
     Pack _pack;
 

@@ -3,9 +3,9 @@ using Hearthstone_Deck_Tracker.Plugins;
 using System;
 using System.Reflection;
 using System.Windows.Controls;
-using PackHistorian.Storage;
+using PackChronicler.Storage;
 
-namespace PackHistorian {
+namespace PackChronicler {
   public class Plugin : IPlugin {
     private AchievementsWatcher _watcher;
     History _history;
@@ -28,7 +28,7 @@ namespace PackHistorian {
     {
       get
       {
-        return "Pack Historian";
+        return "Pack Chronicler";
       }
     }
 
@@ -52,7 +52,7 @@ namespace PackHistorian {
     {
       get
       {
-        return "Pack Historian";
+        return "Pack Chronicler";
       }
     }
 
@@ -74,6 +74,17 @@ namespace PackHistorian {
         _history.Add(e.Pack);
         _storage.Store(_history.Ascending);
       };
+
+      //List<Entity.Card> temp = new List<Entity.Card>() {
+      //  { new Entity.Card(Database.GetCardFromId("GVG_043"), false) },
+      //  { new Entity.Card(Database.GetCardFromId("GVG_043"), true) },
+      //  { new Entity.Card(Database.GetCardFromId("GVG_043"), false) },
+      //  { new Entity.Card(Database.GetCardFromId("GVG_043"), true) },
+      //  { new Entity.Card(Database.GetCardFromId("GVG_043"), false) },
+      //};
+      //_history.Add(new Entity.Pack(2, DateTime.Now, temp));
+      //MessageBox.Show("Nach mock: " + _history.Count);
+      //_storage.Store(_history);
     }
 
     public void OnUnload() {

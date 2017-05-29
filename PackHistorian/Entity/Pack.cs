@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PackHistorian.Entity {
+namespace PackChronicler.Entity {
   class Pack {
     int _id;
     DateTime _time;

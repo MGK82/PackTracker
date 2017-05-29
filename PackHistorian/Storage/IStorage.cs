@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PackHistorian.Storage {
+namespace PackChronicler.Storage {
   interface IStorage {
     History Fetch();
     void Store(History History);

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PackHistorian.Entity;
+using PackChronicler.Entity;
 
-namespace PackHistorian {
+namespace PackChronicler {
   class History : IEnumerable<Pack> {
     List<Pack> _packs;
 
