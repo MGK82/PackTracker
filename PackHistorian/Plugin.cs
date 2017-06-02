@@ -60,7 +60,7 @@ namespace PackChronicler {
     {
       get
       {
-        return Assembly.GetEntryAssembly().GetName().Version;
+        return Assembly.GetAssembly(this.GetType()).GetName().Version;
       }
     }
 
