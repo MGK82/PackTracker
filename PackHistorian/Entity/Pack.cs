@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PackChronicler.Entity {
-  class Pack {
+  public class Pack {
     int _id;
     DateTime _time;
     IEnumerable<Card> _cards;
