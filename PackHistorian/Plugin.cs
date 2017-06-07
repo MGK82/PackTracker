@@ -91,17 +91,6 @@ namespace PackChronicler {
         _history.Add(e.Pack);
         _storage.Store(_history.Ascending);
       };
-
-      //List<Entity.Card> temp = new List<Entity.Card>() {
-      //  { new Entity.Card(Database.GetCardFromId("GVG_043"), false) },
-      //  { new Entity.Card(Database.GetCardFromId("GVG_043"), true) },
-      //  { new Entity.Card(Database.GetCardFromId("GVG_043"), false) },
-      //  { new Entity.Card(Database.GetCardFromId("GVG_043"), true) },
-      //  { new Entity.Card(Database.GetCardFromId("GVG_043"), false) },
-      //};
-      //_history.Add(new Entity.Pack(2, DateTime.Now, temp));
-      //MessageBox.Show("Nach mock: " + _history.Count);
-      //_storage.Store(_history);
     }
 
     public void OnUnload() {
