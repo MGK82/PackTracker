@@ -1,0 +1,31 @@
+﻿<controls:MetroWindow x:Class="PackChronicler.Controls.History"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PackChronicler.Controls"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:DTcontrols="clr-namespace:Hearthstone_Deck_Tracker.Controls;assembly=HearthstoneDeckTracker"
+        xmlns:hearthstoneDeckTracker="clr-namespace:Hearthstone_Deck_Tracker;assembly=HearthstoneDeckTracker"
+        mc:Ignorable="d"
+        
+        Title="History" Height="300" Width="300">
+    <ListView Name="lv_Cards">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <Border>
+                    <StackPanel>
+                        <Label Content="{Binding Time}"></Label>
+                        <StackPanel>
+                            <DTcontrols:Card DataContext="{Binding Cards[0].HDTCard}"/>
+                            <DTcontrols:Card DataContext="{Binding Cards[1].HDTCard}"/>
+                            <DTcontrols:Card DataContext="{Binding Cards[2].HDTCard}"/>
+                            <DTcontrols:Card DataContext="{Binding Cards[3].HDTCard}"/>
+                            <DTcontrols:Card DataContext="{Binding Cards[4].HDTCard}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</controls:MetroWindow>
