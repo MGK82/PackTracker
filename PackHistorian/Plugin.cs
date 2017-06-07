@@ -10,6 +10,18 @@ namespace PackChronicler {
     private AchievementsWatcher _watcher;
     History _history;
     IStorage _storage = new XmlStorage();
+    Controls.History _historyWin;
+
+    Controls.History HistoryWin {
+      get {
+        if(_historyWin == null) {
+          _historyWin = new Controls.History(_history);
+          _historyWin.Closed += (sender, e) => { _historyWin = null; };
+        }
+
+        return _historyWin;
+      }
+    }
 
     public Plugin() {
       _watcher = new AchievementsWatcher();
@@ -69,6 +81,7 @@ namespace PackChronicler {
     }
 
     public void OnButtonPress() {
+      HistoryWin.Show();
     }
 
     public void OnLoad() {
