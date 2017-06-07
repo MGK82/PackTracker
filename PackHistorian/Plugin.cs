@@ -13,7 +13,11 @@ namespace PackChronicler {
 
     public Plugin() {
       _watcher = new AchievementsWatcher();
-      _history = _storage.Fetch();
+      try {
+        _history = _storage.Fetch();
+      } catch {
+        _history = new History();
+      }
     }
 
     public string Author
