@@ -16,13 +16,7 @@
                 <Border>
                     <StackPanel>
                         <Label Content="{Binding Time}"></Label>
-                        <ItemsControl ItemsSource="{Binding Cards}">
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
-                                    <DTcontrols:Card DataContext="{Binding HDTCard}"/>
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
-                        </ItemsControl>
+                        <local:Cards DataContext="{Binding Cards}" />
                     </StackPanel>
                 </Border>
             </DataTemplate>

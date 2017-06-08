@@ -85,6 +85,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AchievementWatcher.cs" />
+    <Compile Include="Controls\Cards.xaml.cs">
+      <DependentUpon>Cards.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entity\Card.cs" />
     <Compile Include="Entity\Pack.cs" />
     <Compile Include="Event\PackOpenedEventArgs.cs" />
@@ -100,6 +103,10 @@
   <ItemGroup />
   <ItemGroup>
     <Page Include="Controls\History.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Cards.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
