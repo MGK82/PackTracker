@@ -21,5 +21,10 @@ namespace PackChronicler.Controls {
     public Cards() {
       InitializeComponent();
     }
+
+    public Cards(IEnumerable<Entity.Card> Cards) {
+      InitializeComponent();
+      DataContext = Cards;
+    }
   }
 }

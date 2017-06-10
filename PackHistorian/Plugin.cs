@@ -4,6 +4,7 @@ using System;
 using System.Reflection;
 using System.Windows.Controls;
 using PackChronicler.Storage;
+using Hearthstone_Deck_Tracker.Utility.Toasts;
 
 namespace PackChronicler {
   public class Plugin : IPlugin {
@@ -90,6 +91,10 @@ namespace PackChronicler {
       _watcher.PackOpened += (sender, e) => {
         _history.Add(e.Pack);
         _storage.Store(_history.Ascending);
+      };
+
+      _watcher.PackOpened += (sender, e) => {
+        ToastManager.ShowCustomToast(new Controls.Cards(e.Pack.Cards));
       };
     }
 
