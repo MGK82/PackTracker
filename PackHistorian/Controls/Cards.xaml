@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:DTcontrols="clr-namespace:Hearthstone_Deck_Tracker.Controls;assembly=HearthstoneDeckTracker"
+             xmlns:DTRarity="clr-namespace:HearthDb.Enums;assembly=HearthDb"
              xmlns:local="clr-namespace:PackChronicler.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="300"
@@ -12,7 +13,29 @@
     <ItemsControl ItemsSource="{Binding}">
         <ItemsControl.ItemTemplate>
             <DataTemplate>
-                <DTcontrols:Card DataContext="{Binding HDTCard}"/>
+                <Border Name="brd_Border" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <Border BorderBrush="Black" BorderThickness="0, 1">
+                            <Rectangle Name="rct_Rarity" Width="10" Fill="LightGray" Stroke="Black" />
+                        </Border>
+                        <DTcontrols:Card Name="crd_Card" DataContext="{Binding HDTCard}"/>
+                    </StackPanel>
+                </Border>
+
+                <DataTemplate.Triggers>
+                    <DataTrigger  Binding="{Binding Rarity}" Value="{x:Static DTRarity:Rarity.RARE}">
+                        <Setter TargetName="rct_Rarity" Property="Fill" Value="Blue" />
+                    </DataTrigger>
+                    <DataTrigger  Binding="{Binding Rarity}" Value="{x:Static DTRarity:Rarity.EPIC}">
+                        <Setter TargetName="rct_Rarity" Property="Fill" Value="Purple" />
+                    </DataTrigger>
+                    <DataTrigger  Binding="{Binding Rarity}" Value="{x:Static DTRarity:Rarity.LEGENDARY}">
+                        <Setter TargetName="rct_Rarity" Property="Fill" Value="Orange" />
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding Premium}" Value="True">
+                        <Setter TargetName="brd_Border" Property="BorderBrush" Value="Gold" />
+                    </DataTrigger>
+                </DataTemplate.Triggers>
             </DataTemplate>
         </ItemsControl.ItemTemplate>
     </ItemsControl>
