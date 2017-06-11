@@ -14,17 +14,71 @@
     <Window.Resources>
         <view:PackNameConverter x:Key="converter" />
     </Window.Resources>
-    <ListView Name="lv_Cards">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <Border>
-                    <StackPanel>
-                        <Label Content="{Binding Id, Converter={StaticResource converter}}"></Label>
-                        <Label Content="{Binding Time}"></Label>
-                        <local:Cards DataContext="{Binding Cards}" />
-                    </StackPanel>
-                </Border>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <StackPanel>
+        <Grid Name="grd_Stats" Grid.IsSharedSizeScope="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+                <ItemsControl ItemsSource="{Binding}" Grid.Column="0">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Label Grid.Column="0" Content="{Binding Id, Converter={StaticResource converter}}" Grid.IsSharedSizeScope="True" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <ItemsControl ItemsSource="{Binding}" Grid.Column="1">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <Label Content="{Binding CurrentEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="Purple" />
+                            <Label Content="/" Foreground="Purple" />
+                            <Label Name="lvl_Average" Content="{Binding AverageEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="Purple" />
+                        </StackPanel>
+
+                        <DataTemplate.Triggers>
+                            <DataTrigger Binding="{Binding AverageEpic}" Value="{x:Null}">
+                                <Setter TargetName="lvl_Average" Property="Content" Value="-" />
+                            </DataTrigger>
+                        </DataTemplate.Triggers>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <ItemsControl ItemsSource="{Binding}" Grid.Column="2">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Grid.Column="2" Orientation="Horizontal">
+                            <Label Content="{Binding CurrentLegendary, UpdateSourceTrigger=PropertyChanged}" Foreground="Orange" />
+                            <Label Content="/" Foreground="Orange" />
+                            <Label Name="lvl_Average" Content="{Binding AverageLegendary, UpdateSourceTrigger=PropertyChanged}" Foreground="Orange" />
+                        </StackPanel>
+
+                        <DataTemplate.Triggers>
+                            <DataTrigger Binding="{Binding AverageLegendary}" Value="{x:Null}">
+                                <Setter TargetName="lvl_Average" Property="Content" Value="-" />
+                            </DataTrigger>
+                        </DataTemplate.Triggers>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+
+        <ListView Name="lv_Cards">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border>
+                        <StackPanel>
+                            <Label Content="{Binding Id, Converter={StaticResource converter}}"></Label>
+                            <Label Content="{Binding Time}"></Label>
+                            <local:Cards DataContext="{Binding Cards}" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
 </controls:MetroWindow>
