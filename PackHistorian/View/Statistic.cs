@@ -27,8 +27,8 @@ namespace PackChronicler.View {
 
     public int Id { get { return _packId; } }
 
-    public int? AverageEpic { get { return _countsEpic.Count > 0 ? (int?)Math.Round(_countsEpic.Average(), 0) : null; } }
-    public int? AberageLegendary { get { return _countsLeg.Count > 0 ? (int?)Math.Round(_countsEpic.Average(), 0) : null; } }
+    public int? AverageEpic { get { return _countsEpic.Count > 1 ? (int?)Math.Round(_countsEpic.Average(), 0) : null; } }
+    public int? AverageLegendary { get { return _countsLeg.Count > 1 ? (int?)Math.Round(_countsLeg.Average(), 0) : null; } }
 
     public int CurrentEpic { get { return _currentEpic; } }
     public int CurrentLegendary { get { return _currentLeg; } }
@@ -55,6 +55,7 @@ namespace PackChronicler.View {
         if(Pack.Id == _packId) {
           _currentEpic++;
           _currentLeg++;
+
           notifyCurrent = true;
 
           if(Pack.Cards.Any(x => x.Rarity == Rarity.EPIC)) {
@@ -62,9 +63,10 @@ namespace PackChronicler.View {
               _skippingEpic = false;
             } else {
               _countsEpic.Add(_currentEpic);
-              _currentEpic = 0;
               notifyAverageEpic = true;
             }
+
+            _currentEpic = 0;
           }
 
           if(Pack.Cards.Any(x => x.Rarity == Rarity.LEGENDARY)) {
@@ -72,9 +74,10 @@ namespace PackChronicler.View {
               _skippingLeg = false;
             } else {
               _countsLeg.Add(_currentLeg);
-              _currentLeg = 0;
               notifyAverageLegendary = true;
             }
+
+            _currentLeg = 0;
           }
         }
       }
