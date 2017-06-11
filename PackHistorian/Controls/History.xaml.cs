@@ -15,6 +15,7 @@ using PackChronicler.Entity;
 using MahApps.Metro.Controls;
 using System.Collections.ObjectModel;
 using Hearthstone_Deck_Tracker.Hearthstone;
+using PackChronicler.View;
 //using HearthDb;
 
 namespace PackChronicler.Controls {
@@ -22,8 +23,9 @@ namespace PackChronicler.Controls {
   /// Interaktionslogik für History.xaml
   /// </summary>
   public partial class History {
-    public History(PackChronicler.History History) {
+    public History(PackChronicler.History History, StatisticCollection Statistic) {
       InitializeComponent();
+      grd_Stats.DataContext = Statistic;
       lv_Cards.ItemsSource = History;
     }
   }

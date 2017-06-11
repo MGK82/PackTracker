@@ -16,7 +16,7 @@ namespace PackChronicler {
     Controls.History HistoryWin {
       get {
         if(_historyWin == null) {
-          _historyWin = new Controls.History(_history);
+          _historyWin = new Controls.History(_history, new View.StatisticCollection(_history));
           _historyWin.Closed += (sender, e) => { _historyWin = null; };
         }
 
