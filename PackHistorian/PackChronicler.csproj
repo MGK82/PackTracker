@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="View\PackNameConverter.cs" />
     <Compile Include="View\Statistic.cs" />
+    <Compile Include="View\StatisticCollection.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
