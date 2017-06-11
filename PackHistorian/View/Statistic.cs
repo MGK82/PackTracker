@@ -8,61 +8,88 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 
 namespace PackChronicler.View {
-  class Statistic : INotifyPropertyChanged {
+  public class Statistic : INotifyPropertyChanged {
     int _packId;
-    Rarity _rarity;
-    List<int> _counts = new List<int>();
-    bool _skipping = true;
-    int _current = 0;
+
+    List<int>
+      _countsEpic = new List<int>(),
+      _countsLeg = new List<int>();
+
+    bool
+      _skippingEpic = true,
+      _skippingLeg = true;
+
+    int
+      _currentEpic = 0,
+      _currentLeg = 0;
 
     public event PropertyChangedEventHandler PropertyChanged;
 
-    public int? Average { get { return _counts.Count > 0 ? (int?)Math.Round(_counts.Average(), 0) : null; } }
-    public int Current { get { return _current; } }
+    public int Id { get { return _packId; } }
 
-    public Statistic(int PackId, Rarity Rarity, History History) {
+    public int? AverageEpic { get { return _countsEpic.Count > 0 ? (int?)Math.Round(_countsEpic.Average(), 0) : null; } }
+    public int? AberageLegendary { get { return _countsLeg.Count > 0 ? (int?)Math.Round(_countsEpic.Average(), 0) : null; } }
+
+    public int CurrentEpic { get { return _currentEpic; } }
+    public int CurrentLegendary { get { return _currentLeg; } }
+
+    public Statistic(int PackId, History History) {
       _packId = PackId;
-      _rarity = Rarity;
       AddCounts(History);
 
       History.CollectionChanged += History_CollectionChanged;
     }
 
+    private void History_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e) {
+      if(e.Action == NotifyCollectionChangedAction.Add) {
+          AddCounts(e.NewItems.Cast<Entity.Pack>());
+      }
+    }
+
     private void AddCounts(IEnumerable<Entity.Pack> Packs) {
-      bool notifyAverage = false;
+      bool notifyAverageEpic = false;
+      bool notifyAverageLegendary = false;
       bool notifyCurrent = false;
 
       foreach(Entity.Pack Pack in Packs) {
         if(Pack.Id == _packId) {
-          _current++;
+          _currentEpic++;
+          _currentLeg++;
           notifyCurrent = true;
 
-          if(Pack.Cards.Any(x => x.Rarity == _rarity)) {
-            if(_skipping) {
-              _skipping = false;
+          if(Pack.Cards.Any(x => x.Rarity == Rarity.EPIC)) {
+            if(_skippingEpic) {
+              _skippingEpic = false;
             } else {
-              _counts.Add(_current);
-              _current = 0;
-              notifyAverage = true;
+              _countsEpic.Add(_currentEpic);
+              _currentEpic = 0;
+              notifyAverageEpic = true;
+            }
+          }
+
+          if(Pack.Cards.Any(x => x.Rarity == Rarity.LEGENDARY)) {
+            if(_skippingLeg) {
+              _skippingLeg = false;
+            } else {
+              _countsLeg.Add(_currentLeg);
+              _currentLeg = 0;
+              notifyAverageLegendary = true;
             }
           }
         }
       }
 
-      if(notifyAverage) {
-        OnPropertyChanged("Average");
+      if(notifyAverageEpic) {
+        OnPropertyChanged("AverageEpic");
+      }
+
+      if(notifyAverageLegendary) {
+        OnPropertyChanged("AverageLegendary");
       }
 
       if(notifyCurrent) {
-        OnPropertyChanged("Current");
-      }
-    }
-
-    private void History_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e) {
-      if(e.Action == NotifyCollectionChangedAction.Add) {
-        if(e.NewItems is IEnumerable<Entity.Pack>) {
-          AddCounts((IEnumerable<Entity.Pack>)e.NewItems);
-        }
+        OnPropertyChanged("CurrentEpic");
+        OnPropertyChanged("CurrentLegendary");
       }
     }
 
