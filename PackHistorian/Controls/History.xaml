@@ -14,8 +14,8 @@
     <Window.Resources>
         <view:PackNameConverter x:Key="converter" />
     </Window.Resources>
-    <StackPanel>
-        <Grid Name="grd_Stats" Grid.IsSharedSizeScope="True">
+    <DockPanel>
+        <Grid Name="grd_Stats" DockPanel.Dock="Top" Grid.IsSharedSizeScope="True">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
@@ -67,7 +67,7 @@
             </ItemsControl>
         </Grid>
 
-        <ListView Name="lv_Cards">
+        <ListView DockPanel.Dock="Top" Name="lv_Cards">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border>
@@ -80,5 +80,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </StackPanel>
+    </DockPanel>
 </controls:MetroWindow>
