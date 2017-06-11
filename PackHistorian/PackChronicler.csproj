@@ -99,6 +99,7 @@
     <Compile Include="Controls\History.xaml.cs">
       <DependentUpon>History.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Statistic.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
