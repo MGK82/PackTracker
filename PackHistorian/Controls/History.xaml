@@ -4,17 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PackChronicler.Controls"
+        xmlns:view="clr-namespace:PackChronicler.View"
         xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:DTcontrols="clr-namespace:Hearthstone_Deck_Tracker.Controls;assembly=HearthstoneDeckTracker"
         xmlns:hearthstoneDeckTracker="clr-namespace:Hearthstone_Deck_Tracker;assembly=HearthstoneDeckTracker"
         mc:Ignorable="d"
         
         Title="History" Height="300" Width="300">
+    <Window.Resources>
+        <view:PackNameConverter x:Key="converter" />
+    </Window.Resources>
     <ListView Name="lv_Cards">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <Border>
                     <StackPanel>
+                        <Label Content="{Binding Id, Converter={StaticResource converter}}"></Label>
                         <Label Content="{Binding Time}"></Label>
                         <local:Cards DataContext="{Binding Cards}" />
                     </StackPanel>
