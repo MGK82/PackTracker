@@ -8,7 +8,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 
 namespace PackChronicler.View {
-  public class Statistic : INotifyPropertyChanged {
+  public class Average : INotifyPropertyChanged {
     int _packId;
 
     List<int>
@@ -33,7 +33,7 @@ namespace PackChronicler.View {
     public int CurrentEpic { get { return _currentEpic; } }
     public int CurrentLegendary { get { return _currentLeg; } }
 
-    public Statistic(int PackId, History History) {
+    public Average(int PackId, History History) {
       _packId = PackId;
       AddCounts(History);
 

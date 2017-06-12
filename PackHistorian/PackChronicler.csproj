@@ -100,8 +100,8 @@
       <DependentUpon>History.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PackNameConverter.cs" />
-    <Compile Include="View\Statistic.cs" />
-    <Compile Include="View\StatisticCollection.cs" />
+    <Compile Include="View\Average.cs" />
+    <Compile Include="View\AverageCollection.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -23,7 +23,7 @@ namespace PackChronicler.Controls {
   /// Interaktionslogik für History.xaml
   /// </summary>
   public partial class History {
-    public History(PackChronicler.History History, StatisticCollection Statistic) {
+    public History(PackChronicler.History History, AverageCollection Statistic) {
       InitializeComponent();
       grd_Stats.DataContext = Statistic;
       lv_Cards.ItemsSource = History;

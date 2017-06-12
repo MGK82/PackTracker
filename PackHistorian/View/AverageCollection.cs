@@ -8,14 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PackChronicler.View {
-  public class StatisticCollection : INotifyCollectionChanged, IEnumerable<Statistic> {
-    ObservableCollection<Statistic> _statistics = new ObservableCollection<Statistic>();
+  public class AverageCollection : INotifyCollectionChanged, IEnumerable<Average> {
+    ObservableCollection<Average> _statistics = new ObservableCollection<Average>();
     public event NotifyCollectionChangedEventHandler CollectionChanged;
 
-    public StatisticCollection(History History) {
+    public AverageCollection(History History) {
       IEnumerable<int> PackIds = History.Select(x => x.Id).Distinct().OrderBy(x => x);
       foreach(int Id in PackIds) {
-        _statistics.Add(new Statistic(Id, History));
+        _statistics.Add(new Average(Id, History));
       }
 
       History.CollectionChanged += (sender, e) => {
@@ -23,7 +23,7 @@ namespace PackChronicler.View {
           if(e.Action == NotifyCollectionChangedAction.Add) {
             foreach(Entity.Pack Pack in e.NewItems) {
               if(!_statistics.Any(x => x.Id == Pack.Id)) {
-                Add(new Statistic(Pack.Id, (History)sender));
+                Add(new Average(Pack.Id, (History)sender));
               }
             }
           }
@@ -33,8 +33,8 @@ namespace PackChronicler.View {
       _statistics.CollectionChanged += (sender, e) => { CollectionChanged?.Invoke(this, e); };
     }
 
-    void Add(Statistic Statistic) {
-      foreach(Statistic Stat in _statistics) {
+    void Add(Average Statistic) {
+      foreach(Average Stat in _statistics) {
         if(Stat.Id < Statistic.Id) {
           _statistics.Insert(_statistics.IndexOf(Stat), Statistic);
           return;
@@ -44,7 +44,7 @@ namespace PackChronicler.View {
       _statistics.Add(Statistic);
     }
 
-    public IEnumerator<Statistic> GetEnumerator() {
+    public IEnumerator<Average> GetEnumerator() {
       return _statistics.GetEnumerator();
 
     }
