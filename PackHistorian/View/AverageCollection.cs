@@ -52,5 +52,9 @@ namespace PackChronicler.View {
     IEnumerator IEnumerable.GetEnumerator() {
       return _statistics.GetEnumerator();
     }
+
+    public Average FindForPackId(int id) {
+      return _statistics.SingleOrDefault(x => x.Id == id);
+    }
   }
 }

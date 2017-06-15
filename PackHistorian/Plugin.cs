@@ -12,11 +12,12 @@ namespace PackChronicler {
     History _history;
     IStorage _storage = new XmlStorage();
     Controls.History _historyWin;
+    View.AverageCollection _averageCollection;
 
     Controls.History HistoryWin {
       get {
         if(_historyWin == null) {
-          _historyWin = new Controls.History(_history, new View.AverageCollection(_history));
+          _historyWin = new Controls.History(_history, _averageCollection);
           _historyWin.Closed += (sender, e) => { _historyWin = null; };
         }
 
@@ -28,6 +29,7 @@ namespace PackChronicler {
       _watcher = new AchievementsWatcher();
       try {
         _history = _storage.Fetch();
+        _averageCollection = new View.AverageCollection(_history);
       } catch {
         _history = new History();
       }
@@ -91,10 +93,9 @@ namespace PackChronicler {
       _watcher.PackOpened += (sender, e) => {
         _history.Add(e.Pack);
         _storage.Store(_history.Ascending);
-      };
 
-      _watcher.PackOpened += (sender, e) => {
-        ToastManager.ShowCustomToast(new Controls.Cards(e.Pack.Cards));
+        View.Average Average = _averageCollection.FindForPackId(e.Pack.Id);
+        ToastManager.ShowCustomToast(new Controls.Toast(e.Pack, Average));
       };
     }
 
