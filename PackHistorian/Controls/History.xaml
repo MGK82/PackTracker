@@ -12,7 +12,8 @@
         
         Title="History" Height="300" Width="300">
     <Window.Resources>
-        <view:PackNameConverter x:Key="converter" />
+        <view:PackNameConverter x:Key="PackNameConverter" />
+        <view:DateTimeConverter x:Key="DateTimeConverter" />
     </Window.Resources>
     <DockPanel>
         <Grid Name="grd_Stats" DockPanel.Dock="Top" Grid.IsSharedSizeScope="True">
@@ -25,7 +26,7 @@
                 <ItemsControl ItemsSource="{Binding}" Grid.Column="0">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Label Grid.Column="0" Content="{Binding Id, Converter={StaticResource converter}}" Grid.IsSharedSizeScope="True" />
+                        <Label Grid.Column="0" Content="{Binding Id, Converter={StaticResource PackNameConverter}}" Grid.IsSharedSizeScope="True" />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
@@ -72,8 +73,8 @@
                 <DataTemplate>
                     <Border>
                         <StackPanel>
-                            <Label Content="{Binding Id, Converter={StaticResource converter}}"></Label>
-                            <Label Content="{Binding Time}"></Label>
+                            <Label Content="{Binding Id, Converter={StaticResource PackNameConverter}}"></Label>
+                            <Label Content="{Binding Time, Converter={StaticResource DateTimeConverter}}"></Label>
                             <local:Cards DataContext="{Binding Cards}" />
                         </StackPanel>
                     </Border>
