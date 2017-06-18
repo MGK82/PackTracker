@@ -10,7 +10,7 @@
         xmlns:hearthstoneDeckTracker="clr-namespace:Hearthstone_Deck_Tracker;assembly=HearthstoneDeckTracker"
         mc:Ignorable="d"
         
-        Title="History" Height="300" Width="300">
+        Title="History" Height="400" Width="500">
     <Window.Resources>
         <view:PackNameConverter x:Key="PackNameConverter" />
         <view:DateTimeConverter x:Key="DateTimeConverter" />
@@ -71,8 +71,8 @@
         <DockPanel DockPanel.Dock="Top">
             <UserControl Name="uc_Date" DockPanel.Dock="Top" />
 
-            <ListView DockPanel.Dock="Top" Name="lv_Cards" ItemsSource="{Binding AssociatedPack, UpdateSourceTrigger=PropertyChanged}">
-                <ListView.ItemTemplate>
+            <ItemsControl DockPanel.Dock="Top" Name="ic_Cards" ItemsSource="{Binding AssociatedPack, UpdateSourceTrigger=PropertyChanged}">
+                <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Border>
                             <StackPanel>
@@ -82,8 +82,14 @@
                             </StackPanel>
                         </Border>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </ItemsControl.ItemTemplate>
+
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
         </DockPanel>
     </DockPanel>
 </controls:MetroWindow>

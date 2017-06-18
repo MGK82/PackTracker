@@ -26,7 +26,7 @@ namespace PackChronicler.Controls {
     public History(PackChronicler.History History, AverageCollection Statistic, HistoryDatePicker DatePicker) {
       InitializeComponent();
       grd_Stats.DataContext = Statistic;
-      lv_Cards.DataContext = DatePicker;
+      ic_Cards.DataContext = DatePicker;
       uc_Date.Content = DatePicker;
     }
   }
