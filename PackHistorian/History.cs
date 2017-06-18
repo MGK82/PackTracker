@@ -36,6 +36,17 @@ namespace PackChronicler {
       _packs.Add(Pack);
     }
 
+    public Pack First() {
+      Pack First = null as Pack;
+      foreach(Pack Pack in _packs) {
+        if(First == null || Pack.Time.Ticks < First.Time.Ticks) {
+          First = Pack;
+        }
+      }
+
+      return First;
+    }
+
     public IEnumerator<Pack> GetEnumerator() {
       return _packs.GetEnumerator();
     }

@@ -11,13 +11,14 @@ namespace PackChronicler {
     private AchievementsWatcher _watcher;
     History _history;
     IStorage _storage = new XmlStorage();
+    MenuItem _menu;
     Controls.History _historyWin;
     View.AverageCollection _averageCollection;
 
     Controls.History HistoryWin {
       get {
         if(_historyWin == null) {
-          _historyWin = new Controls.History(_history, _averageCollection);
+          _historyWin = new Controls.History(_history, _averageCollection, new Controls.HistoryDatePicker(_history));
           _historyWin.Closed += (sender, e) => { _historyWin = null; };
         }
 
@@ -59,11 +60,12 @@ namespace PackChronicler {
       }
     }
 
-    public MenuItem MenuItem
-    {
-      get
-      {
-        return null;
+    public MenuItem MenuItem {
+      get {
+        MenuItem Menu = new Controls.Menu();
+        Menu.Click += (sender, e) => HistoryWin.Show();
+
+        return Menu;
       }
     }
 
@@ -84,7 +86,6 @@ namespace PackChronicler {
     }
 
     public void OnButtonPress() {
-      HistoryWin.Show();
     }
 
     public void OnLoad() {

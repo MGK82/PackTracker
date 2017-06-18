@@ -68,18 +68,22 @@
             </ItemsControl>
         </Grid>
 
-        <ListView DockPanel.Dock="Top" Name="lv_Cards">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Border>
-                        <StackPanel>
-                            <Label Content="{Binding Id, Converter={StaticResource PackNameConverter}}"></Label>
-                            <Label Content="{Binding Time, Converter={StaticResource DateTimeConverter}}"></Label>
-                            <local:Cards DataContext="{Binding Cards}" />
-                        </StackPanel>
-                    </Border>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <DockPanel DockPanel.Dock="Top">
+            <UserControl Name="uc_Date" DockPanel.Dock="Top" />
+
+            <ListView DockPanel.Dock="Top" Name="lv_Cards" ItemsSource="{Binding AssociatedPack, UpdateSourceTrigger=PropertyChanged}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border>
+                            <StackPanel>
+                                <Label Content="{Binding Id, Converter={StaticResource PackNameConverter}}"></Label>
+                                <Label Content="{Binding Time, Converter={StaticResource DateTimeConverter}}"></Label>
+                                <local:Cards DataContext="{Binding Cards}" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </DockPanel>
     </DockPanel>
 </controls:MetroWindow>

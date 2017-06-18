@@ -88,6 +88,12 @@
     <Compile Include="Controls\Cards.xaml.cs">
       <DependentUpon>Cards.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HistoryDatePicker.xaml.cs">
+      <DependentUpon>HistoryDatePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Toast.xaml.cs">
       <DependentUpon>Toast.xaml</DependentUpon>
     </Compile>
@@ -107,7 +113,6 @@
     <Compile Include="View\Average.cs" />
     <Compile Include="View\AverageCollection.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Page Include="Controls\History.xaml">
       <SubType>Designer</SubType>
@@ -117,10 +122,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\HistoryDatePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Toast.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\1497613802_feather.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
