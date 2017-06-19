@@ -47,6 +47,17 @@ namespace PackChronicler {
       return First;
     }
 
+    public Pack Last() {
+      Pack Last = null as Pack;
+      foreach(Pack Pack in _packs) {
+        if(Last == null || Pack.Time.Ticks > Last.Time.Ticks) {
+          Last = Pack;
+        }
+      }
+
+      return Last;
+    }
+
     public IEnumerator<Pack> GetEnumerator() {
       return _packs.GetEnumerator();
     }

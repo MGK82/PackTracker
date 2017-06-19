@@ -46,6 +46,7 @@ namespace PackChronicler.Controls {
       if(History.Count > 0) {
         InitializeCalender(History);
       } else {
+        dp_DatePicker.DisplayDateStart = DateTime.Today;
         History.CollectionChanged += InitializeCalender;
       }
 
@@ -70,6 +71,7 @@ namespace PackChronicler.Controls {
     private void InitializeCalender(PackChronicler.History History) {
       Entity.Pack FirstPack = History.First();
       dp_DatePicker.DisplayDateStart = FirstPack.Time;
+      dp_DatePicker.SelectedDate = History.Last().Time.Date;
 
       IEnumerable<DateTime> HistoryDates = History.Select(x => x.Time.Date).Distinct();
       for(DateTime i = FirstPack.Time.Date; i.Date < DateTime.Today; i = i.AddDays(1)) {
