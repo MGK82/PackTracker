@@ -25,7 +25,14 @@ namespace PackChronicler.View {
           { Locale.enGB, "Mean Streets of Gadgetzan" },
           { Locale.deDE, "Die Straßen von Gadgetzan" },
         }
-      }
+      },
+      {
+        20, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Journey to Un'Goro" },
+          { Locale.enGB, "Journey to Un'Goro" },
+          { Locale.deDE, "Reise nach Un'Goro" },
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
