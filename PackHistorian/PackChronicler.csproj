@@ -114,6 +114,10 @@
     <Compile Include="View\AverageCollection.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Controls\Brushes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\History.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

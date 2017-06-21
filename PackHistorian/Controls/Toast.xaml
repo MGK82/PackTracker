@@ -8,16 +8,21 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
-        <view:PackNameConverter x:Key="converter" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Brushes.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <view:PackNameConverter x:Key="converter" />
+        </ResourceDictionary>
     </UserControl.Resources>
     <StackPanel>
         <UserControl Name="ctr_Average">
             <StackPanel>
                 <Label Content="{Binding Id, Converter={StaticResource converter}}" />
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="{Binding CurrentEpic, Mode=OneTime}" Foreground="Purple" />
-                    <Label Content="/" Foreground="Purple" />
-                    <Label Name="lbl_AverageEpic" Foreground="Purple">
+                    <Label Content="{Binding CurrentEpic, Mode=OneTime}" Foreground="{StaticResource Epic}" />
+                    <Label Content="/" Foreground="{StaticResource Epic}" />
+                    <Label Name="lbl_AverageEpic" Foreground="{StaticResource Epic}">
                         <Label.Resources>
                             <Style TargetType="Label">
                                 <Setter Property="Content" Value="{Binding AverageEpic, Mode=OneTime}" />
@@ -29,9 +34,9 @@
                             </Style>
                         </Label.Resources>
                     </Label>
-                    <Label Content="{Binding CurrentLegendary, Mode=OneTime}" Foreground="Orange" />
-                    <Label Content="/" Foreground="Orange" />
-                    <Label Name="lbl_AverageLeg" Foreground="Orange">
+                    <Label Content="{Binding CurrentLegendary, Mode=OneTime}" Foreground="{StaticResource Legendary}" />
+                    <Label Content="/" Foreground="{StaticResource Legendary}" />
+                    <Label Name="lbl_AverageLeg" Foreground="{StaticResource Legendary}">
                         <Label.Resources>
                             <Style TargetType="Label">
                                 <Setter Property="Content" Value="{Binding AverageLegendary}" />

@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:PackChronicler.Controls">
+    <SolidColorBrush x:Key="Common" Color="#FFC1C1C1" />
+    <SolidColorBrush x:Key="Rare" Color="#FF2748CF" />
+    <SolidColorBrush x:Key="Epic" Color="#FFC01FE4" />
+    <SolidColorBrush x:Key="Legendary" Color="#FFFF7B0D" />
+</ResourceDictionary>

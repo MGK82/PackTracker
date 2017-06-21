@@ -9,12 +9,17 @@
         xmlns:DTcontrols="clr-namespace:Hearthstone_Deck_Tracker.Controls;assembly=HearthstoneDeckTracker"
         xmlns:hearthstoneDeckTracker="clr-namespace:Hearthstone_Deck_Tracker;assembly=HearthstoneDeckTracker"
         mc:Ignorable="d"
-        
         Title="History" Height="400" Width="500">
     <Window.Resources>
-        <view:PackNameConverter x:Key="PackNameConverter" />
-        <view:DateTimeConverter x:Key="DateTimeConverter" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Brushes.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <view:PackNameConverter x:Key="PackNameConverter" />
+            <view:DateTimeConverter x:Key="DateTimeConverter" />
+        </ResourceDictionary>
     </Window.Resources>
+
     <DockPanel>
         <Grid Name="grd_Stats" DockPanel.Dock="Top" Grid.IsSharedSizeScope="True">
             <Grid.ColumnDefinitions>
@@ -35,9 +40,9 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
-                            <Label Content="{Binding CurrentEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="Purple" />
-                            <Label Content="/" Foreground="Purple" />
-                            <Label Name="lvl_Average" Content="{Binding AverageEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="Purple" />
+                            <Label Content="{Binding CurrentEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Epic}" />
+                            <Label Content="/" Foreground="{StaticResource Epic}" />
+                            <Label Name="lvl_Average" Content="{Binding AverageEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Epic}" />
                         </StackPanel>
 
                         <DataTemplate.Triggers>
@@ -53,9 +58,9 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Grid.Column="2" Orientation="Horizontal">
-                            <Label Content="{Binding CurrentLegendary, UpdateSourceTrigger=PropertyChanged}" Foreground="Orange" />
-                            <Label Content="/" Foreground="Orange" />
-                            <Label Name="lvl_Average" Content="{Binding AverageLegendary, UpdateSourceTrigger=PropertyChanged}" Foreground="Orange" />
+                            <Label Content="{Binding CurrentLegendary, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Legendary}" />
+                            <Label Content="/" Foreground="{StaticResource Legendary}" />
+                            <Label Name="lvl_Average" Content="{Binding AverageLegendary, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Legendary}" />
                         </StackPanel>
 
                         <DataTemplate.Triggers>
