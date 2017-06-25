@@ -69,7 +69,7 @@ namespace PackChronicler {
     {
       get
       {
-        return "";
+        return "Description goes here";
       }
     }
 
