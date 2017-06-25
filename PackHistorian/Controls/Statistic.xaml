@@ -1,0 +1,83 @@
+﻿<controls:MetroWindow x:Class="PackChronicler.Controls.Statistic"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PackChronicler.Controls"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:view="clr-namespace:PackChronicler.View"
+        mc:Ignorable="d"
+        Title="STATISTIC"
+        BorderBrush="Black" BorderThickness="1"
+        Height="220" Width="290"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="CanMinimize"
+>
+    <Window.Resources>
+        <view:PackNameConverter x:Key="PackNameConverter" />
+    </Window.Resources>
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Margin="4" Padding="1" BorderBrush="Black" BorderThickness="1">
+            <DockPanel>
+                <ComboBox DockPanel.Dock="Right" Name="dd_Packs" IsEnabled="{Binding Items.Count, Mode=OneWay, RelativeSource={RelativeSource Self}}" VerticalAlignment="Center">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Converter={StaticResource PackNameConverter}}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <Label>Booster Pack</Label>
+            </DockPanel>
+        </Border>
+        <Grid Name="grd_Statistic" Margin="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="CornflowerBlue" BorderThickness="0,1" />
+            <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="CornflowerBlue" BorderThickness="0,1" />
+            <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="CornflowerBlue" BorderThickness="0,1,0,0" />
+
+            <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="6" BorderBrush="CornflowerBlue" BorderThickness="0,0,1,0" />
+            <Border Grid.Row="0" Grid.Column="2" Grid.RowSpan="5" BorderBrush="CornflowerBlue" BorderThickness="1,0" />
+
+            <Label Grid.Row="0" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Amount</Label>
+            <Label Grid.Row="0" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Cards</Label>
+            <Label Grid.Row="0" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Packs</Label>
+
+            <Label Grid.Row="1" Grid.Column="0" VerticalContentAlignment="Center">Common</Label>
+            <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding CommonAmount, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Grid.Row="1" Grid.Column="2"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding CommonCards, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:0.0}%}" />
+            <TextBlock Grid.Row="1" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding CommonPacks, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:0.0}%}" />
+
+            <Label Grid.Row="2" Grid.Column="0" VerticalContentAlignment="Center">Rare</Label>
+            <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding RareAmount, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding RareCards, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:0.0}%}" />
+            <TextBlock Grid.Row="2" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding RarePacks, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:0.0}%}" />
+
+            <Label Grid.Row="3" Grid.Column="0" VerticalContentAlignment="Center">Epic</Label>
+            <TextBlock Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding EpicAmount, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding EpicCards, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:0.0}%}" />
+            <TextBlock Grid.Row="3" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding EpicPacks, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:0.0}%}" />
+
+            <Label Grid.Row="4" Grid.Column="0" VerticalContentAlignment="Center">Legendary</Label>
+            <TextBlock Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding LegendaryAmount, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding LegendaryCards, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:0.0}%}" />
+            <TextBlock Grid.Row="4" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding LegendaryPacks, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0:0.0}%}" />
+
+            <Label Grid.Row="5" Grid.Column="0" VerticalContentAlignment="Center">Total</Label>
+            <TextBlock Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding TotalPacks, UpdateSourceTrigger=PropertyChanged, StringFormat={}{0} Packs}" />
+        </Grid>
+    </DockPanel>
+</controls:MetroWindow>

@@ -13,6 +13,7 @@ namespace PackChronicler {
     IStorage _storage = new XmlStorage();
     MenuItem _menu;
     Controls.History _historyWin;
+    Controls.Statistic _statisticWin;
     View.AverageCollection _averageCollection;
 
     Controls.History HistoryWin {
@@ -23,6 +24,18 @@ namespace PackChronicler {
         }
 
         return _historyWin;
+      }
+    }
+
+    Controls.Statistic StatisticWin {
+      get {
+        if(_statisticWin == null) {
+          _statisticWin = new Controls.Statistic(_history) {
+            Owner = Hearthstone_Deck_Tracker.Core.MainWindow,
+          };
+        }
+
+        return _statisticWin;
       }
     }
 
@@ -62,8 +75,9 @@ namespace PackChronicler {
 
     public MenuItem MenuItem {
       get {
-        MenuItem Menu = new Controls.Menu();
-        Menu.Click += (sender, e) => HistoryWin.Show();
+        Controls.Menu Menu = new Controls.Menu();
+        Menu.mnu_History.Click += (sender, e) => HistoryWin.Show();
+        Menu.mnu_Statistic.Click += (sender, e) => StatisticWin.Show();
 
         return Menu;
       }

@@ -6,8 +6,22 @@
              xmlns:local="clr-namespace:PackChronicler.Controls"
              mc:Ignorable="d" 
              >
+    <MenuItem.Header>Pack Chronicler</MenuItem.Header>
     <MenuItem.Icon>
         <Image Source="pack://application:,,,/PackChronicler;component/Resources/Icons/1497613802_feather.ico" />
     </MenuItem.Icon>
-    <MenuItem.Header>Pack Chronicler: History</MenuItem.Header>
+
+    <MenuItem Name="mnu_History">
+        <MenuItem.Icon>
+            <Image Source="pack://application:,,,/PackChronicler;component/Resources/Icons/1498438250_calendar-3.ico" />
+        </MenuItem.Icon>
+        <MenuItem.Header>History</MenuItem.Header>
+    </MenuItem>
+
+    <MenuItem Name="mnu_Statistic">
+        <MenuItem.Icon>
+            <Image Source="pack://application:,,,/PackChronicler;component/Resources/Icons/1498438378_line-chart_4.ico" />
+        </MenuItem.Icon>
+        <MenuItem.Header>Statistic</MenuItem.Header>
+    </MenuItem>
 </MenuItem>

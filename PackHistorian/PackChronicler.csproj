@@ -94,6 +94,9 @@
     <Compile Include="Controls\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Statistic.xaml.cs">
+      <DependentUpon>Statistic.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Toast.xaml.cs">
       <DependentUpon>Toast.xaml</DependentUpon>
     </Compile>
@@ -112,6 +115,7 @@
     <Compile Include="View\PackNameConverter.cs" />
     <Compile Include="View\Average.cs" />
     <Compile Include="View\AverageCollection.cs" />
+    <Compile Include="View\Statistic.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\Brushes.xaml">
@@ -134,6 +138,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\Statistic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Toast.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -141,6 +149,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Icons\1497613802_feather.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\1498438250_calendar-3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\1498438378_line-chart_4.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
