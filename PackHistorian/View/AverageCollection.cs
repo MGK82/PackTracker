@@ -35,7 +35,7 @@ namespace PackChronicler.View {
 
     void Add(Average Statistic) {
       foreach(Average Stat in _statistics) {
-        if(Stat.Id < Statistic.Id) {
+        if(Statistic.Id < Stat.Id) {
           _statistics.Insert(_statistics.IndexOf(Stat), Statistic);
           return;
         }
