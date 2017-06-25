@@ -33,6 +33,7 @@ namespace PackChronicler {
           _statisticWin = new Controls.Statistic(_history) {
             Owner = Hearthstone_Deck_Tracker.Core.MainWindow,
           };
+          _statisticWin.Closed += (sender, e) => _statisticWin = null;
         }
 
         return _statisticWin;
