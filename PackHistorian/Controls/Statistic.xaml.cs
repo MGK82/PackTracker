@@ -37,7 +37,7 @@ namespace PackChronicler.Controls {
 
           grd_Statistic.DataContext = _statistics[selection];
         } else {
-          dd_Packs.DataContext = null;
+          grd_Statistic.DataContext = null;
         }
       };
 
