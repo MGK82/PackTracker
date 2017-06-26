@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Collections.Specialized;
+using PackChronicler.Entity;
 
 namespace PackChronicler.Controls {
   /// <summary>
@@ -62,20 +63,20 @@ namespace PackChronicler.Controls {
 
     private void DropDown_NewEntry(object sender, NotifyCollectionChangedEventArgs e) {
       if(e.Action == NotifyCollectionChangedAction.Add) {
-        foreach(int newId in e.NewItems) {
-          if(!_dropDown.Contains(newId)) {
+        foreach(Pack newPack in e.NewItems) {
+          if(!_dropDown.Contains(newPack.Id)) {
             bool isInserted = false;
 
             foreach(int id in _dropDown) {
-              if(newId < id) {
-                _dropDown.Insert(_dropDown.IndexOf(id), newId);
+              if(newPack.Id < id) {
+                _dropDown.Insert(_dropDown.IndexOf(id), newPack.Id);
                 isInserted = true;
                 break;
               }
             }
 
             if(!isInserted) {
-              _dropDown.Add(newId);
+              _dropDown.Add(newPack.Id);
             }
           }
         }
