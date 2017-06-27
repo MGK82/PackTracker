@@ -33,6 +33,8 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
+                <Border Grid.Column="1" BorderThickness="0,0,1,0" BorderBrush="CornflowerBlue" Margin="0,6" />
+
                     <ItemsControl ItemsSource="{Binding}" Grid.Column="0">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
