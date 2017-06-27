@@ -35,7 +35,7 @@
 
                 <Border Grid.Column="1" BorderThickness="0,0,1,0" BorderBrush="CornflowerBlue" Margin="0,6" />
 
-                    <ItemsControl ItemsSource="{Binding}" Grid.Column="0">
+                <ItemsControl ItemsSource="{Binding}" Grid.Column="0">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Label Grid.Column="0" Content="{Binding Id, Converter={StaticResource PackNameConverter}}" Grid.IsSharedSizeScope="True" />
@@ -54,7 +54,7 @@
                                 </Grid.ColumnDefinitions>
                                 <Label Grid.Column="0" Content="{Binding CurrentEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Epic}" HorizontalContentAlignment="Right" />
                                 <Label Grid.Column="1" Content="/" Foreground="{StaticResource Epic}" />
-                                <Label Grid.Column="3" Name="lvl_Average" Content="{Binding AverageEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Epic}" HorizontalContentAlignment="Right" />
+                                <Label Grid.Column="2" Name="lvl_Average" Content="{Binding AverageEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Epic}" HorizontalContentAlignment="Right" />
                             </Grid>
 
                             <DataTemplate.Triggers>
