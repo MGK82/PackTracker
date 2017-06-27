@@ -20,6 +20,7 @@
             </ResourceDictionary.MergedDictionaries>
             <view:PackNameConverter x:Key="PackNameConverter" />
             <view:DateTimeConverter x:Key="DateTimeConverter" />
+            <view:TimeConverter x:Key="TimeConverter" />
         </ResourceDictionary>
     </Window.Resources>
 
@@ -98,7 +99,7 @@
                             <Border>
                                 <StackPanel>
                                     <Label Content="{Binding Id, Converter={StaticResource PackNameConverter}}"></Label>
-                                    <Label Content="{Binding Time, Converter={StaticResource DateTimeConverter}}"></Label>
+                                    <Label Content="{Binding Time, Converter={StaticResource TimeConverter}}"></Label>
                                     <local:Cards DataContext="{Binding Cards}" />
                                 </StackPanel>
                             </Border>

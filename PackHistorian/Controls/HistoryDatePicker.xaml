@@ -4,7 +4,23 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PackChronicler.Controls"
+             xmlns:view="clr-namespace:PackChronicler.View"
              mc:Ignorable="d" 
              >
-    <DatePicker Name="dp_DatePicker" IsEnabled="{Binding DisplayDateStart.HasValue, Mode=OneWay, RelativeSource={RelativeSource Self}}" />
+    <UserControl.Resources>
+        <view:DateConverter x:Key="DateConverter" />
+    </UserControl.Resources>
+    <DatePicker Name="dp_DatePicker" IsEnabled="{Binding DisplayDateStart.HasValue, Mode=OneWay, RelativeSource={RelativeSource Self}}">
+        <DatePicker.Resources>
+            <Style TargetType="{x:Type DatePickerTextBox}">
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <TextBox x:Name="PART_TextBox" Text="{Binding Path=SelectedDate, Converter={StaticResource DateConverter}, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </DatePicker.Resources>
+    </DatePicker>
 </UserControl>

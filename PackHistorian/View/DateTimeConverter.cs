@@ -10,6 +10,7 @@ using Hearthstone_Deck_Tracker;
 namespace PackChronicler.View {
   class DateTimeConverter : IValueConverter {
     static Config _config = Config.Instance;
+    protected virtual string _format { get => "G"; }
 
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
       if(value is DateTime) {
@@ -21,7 +22,7 @@ namespace PackChronicler.View {
           cult = CultureInfo.InstalledUICulture;
         }
 
-        return ((DateTime)value).ToString(cult);
+        return ((DateTime)value).ToString(_format, cult);
       }
 
       return value;

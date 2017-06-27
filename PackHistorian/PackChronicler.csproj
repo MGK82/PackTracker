@@ -111,11 +111,13 @@
     <Compile Include="Controls\History.xaml.cs">
       <DependentUpon>History.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\DateConverter.cs" />
     <Compile Include="View\DateTimeConverter.cs" />
     <Compile Include="View\PackNameConverter.cs" />
     <Compile Include="View\Average.cs" />
     <Compile Include="View\AverageCollection.cs" />
     <Compile Include="View\Statistic.cs" />
+    <Compile Include="View\TimeConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\Brushes.xaml">
