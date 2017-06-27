@@ -21,7 +21,7 @@
     </Window.Resources>
 
     <DockPanel>
-        <Grid Name="grd_Stats" DockPanel.Dock="Top" Grid.IsSharedSizeScope="True">
+        <Grid Name="grd_Stats" DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
@@ -36,14 +36,19 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
 
-            <ItemsControl ItemsSource="{Binding}" Grid.Column="1">
+            <ItemsControl ItemsSource="{Binding}" Grid.Column="1" Grid.IsSharedSizeScope="True">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Grid.Column="1" Orientation="Horizontal">
-                            <Label Content="{Binding CurrentEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Epic}" />
-                            <Label Content="/" Foreground="{StaticResource Epic}" />
-                            <Label Name="lvl_Average" Content="{Binding AverageEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Epic}" />
-                        </StackPanel>
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition SharedSizeGroup="First" />
+                                <ColumnDefinition SharedSizeGroup="Second" />
+                                <ColumnDefinition SharedSizeGroup="Third" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Content="{Binding CurrentEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Epic}" HorizontalContentAlignment="Right" />
+                            <Label Grid.Column="1" Content="/" Foreground="{StaticResource Epic}" />
+                            <Label Grid.Column="3" Name="lvl_Average" Content="{Binding AverageEpic, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Epic}" HorizontalContentAlignment="Right" />
+                        </Grid>
 
                         <DataTemplate.Triggers>
                             <DataTrigger Binding="{Binding AverageEpic}" Value="{x:Null}">
@@ -54,14 +59,19 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
 
-            <ItemsControl ItemsSource="{Binding}" Grid.Column="2">
+            <ItemsControl ItemsSource="{Binding}" Grid.Column="2" Grid.IsSharedSizeScope="True">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Grid.Column="2" Orientation="Horizontal">
-                            <Label Content="{Binding CurrentLegendary, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Legendary}" />
-                            <Label Content="/" Foreground="{StaticResource Legendary}" />
-                            <Label Name="lvl_Average" Content="{Binding AverageLegendary, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Legendary}" />
-                        </StackPanel>
+                        <Grid Grid.Column="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition SharedSizeGroup="Fourth" />
+                                <ColumnDefinition SharedSizeGroup="Fifth" />
+                                <ColumnDefinition SharedSizeGroup="Sixth" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Content="{Binding CurrentLegendary, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Legendary}" HorizontalContentAlignment="Right" />
+                            <Label Grid.Column="1" Content="/" Foreground="{StaticResource Legendary}" />
+                            <Label Grid.Column="2" Name="lvl_Average" Content="{Binding AverageLegendary, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource Legendary}" HorizontalContentAlignment="Right" />
+                        </Grid>
 
                         <DataTemplate.Triggers>
                             <DataTrigger Binding="{Binding AverageLegendary}" Value="{x:Null}">
