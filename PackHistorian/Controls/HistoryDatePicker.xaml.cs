@@ -59,6 +59,10 @@ namespace PackChronicler.Controls {
               if(_associatedPacks.ContainsKey(NewPack.Time.Date)) {
                 _associatedPacks[NewPack.Time.Date].Add(NewPack);
               }
+
+              if(dp_DatePicker.SelectedDate != NewPack.Time.Date) {
+                dp_DatePicker.SelectedDate = NewPack.Time.Date;
+              }
             }
           }
         }
