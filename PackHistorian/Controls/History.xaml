@@ -98,7 +98,7 @@
                 <ItemsControl DockPanel.Dock="Top" Name="ic_Cards" ItemsSource="{Binding AssociatedPack, UpdateSourceTrigger=PropertyChanged}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Border>
+                            <Border BorderThickness="1" BorderBrush="Black" Padding="2,0,2,2" Margin="0,0,2,0" >
                                 <StackPanel>
                                     <Label Content="{Binding Id, Converter={StaticResource PackNameConverter}}"></Label>
                                     <Label Content="{Binding Time, Converter={StaticResource TimeConverter}}"></Label>
