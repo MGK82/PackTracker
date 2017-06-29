@@ -12,6 +12,7 @@
         Title="History"
         Height="400" Width="500"
         BorderBrush="Black" BorderThickness="1"
+        WindowStartupLocation="CenterOwner"
 >
     <Window.Resources>
         <ResourceDictionary>
