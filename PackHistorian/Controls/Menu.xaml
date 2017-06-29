@@ -24,4 +24,11 @@
         </MenuItem.Icon>
         <MenuItem.Header>Statistic</MenuItem.Header>
     </MenuItem>
+
+    <MenuItem Name="mnu_Log">
+        <MenuItem.Icon>
+            <Image Source="pack://application:,,,/PackChronicler;component/Resources/Icons/1498791216_calendar-2.ico" />
+        </MenuItem.Icon>
+        <MenuItem.Header>Log</MenuItem.Header>
+    </MenuItem>
 </MenuItem>
