@@ -5,11 +5,11 @@ using HearthWatcher;
 using HearthWatcher.EventArgs;
 using System.Collections.Generic;
 using System.Windows;
-using PackChronicler.Event;
-using PackChronicler.Entity;
+using PackTracker.Event;
+using PackTracker.Entity;
 using System;
 
-namespace PackChronicler {
+namespace PackTracker {
   delegate void PackOpenedEventHandler(object sender, PackOpenedEventArgs e);
 
   class AchievementsWatcher {

@@ -13,15 +13,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Collections.Specialized;
-using PackChronicler.Entity;
+using PackTracker.Entity;
 
-namespace PackChronicler.Controls {
+namespace PackTracker.Controls {
   /// <summary>
   /// Interaktionslogik für Statistic.xaml
   /// </summary>
   public partial class Statistic {
     ObservableCollection<int> _dropDown;
-    public Statistic(PackChronicler.History History) {
+    public Statistic(PackTracker.History History) {
       InitializeComponent();
 
       Dictionary<int, View.Statistic> _statistics = new Dictionary<int, View.Statistic>();

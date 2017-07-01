@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PackChronicler.View {
+namespace PackTracker.View {
   class DateConverter : DateTimeConverter {
     protected override string _format { get => "D"; }
   }

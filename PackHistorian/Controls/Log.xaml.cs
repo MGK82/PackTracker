@@ -13,17 +13,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using HearthDb.Enums;
-using PackChronicler.Entity;
-using PackChronicler.View;
+using PackTracker.Entity;
+using PackTracker.View;
 
-namespace PackChronicler.Controls {
+namespace PackTracker.Controls {
   /// <summary>
   /// Interaktionslogik für Log.xaml
   /// </summary>
   public partial class Log {
     SolidColorBrush Legendary, Epic, Rare;
 
-    public Log(PackChronicler.History History) {
+    public Log(PackTracker.History History) {
       InitializeComponent();
       Legendary = (SolidColorBrush)FindResource("Legendary");
       Epic = (SolidColorBrush)FindResource("Epic");

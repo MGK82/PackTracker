@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
-using PackChronicler.Entity;
+using PackTracker.Entity;
 using Hearthstone_Deck_Tracker;
 using System.IO;
 using Hearthstone_Deck_Tracker.Hearthstone;
 using HDTCard = Hearthstone_Deck_Tracker.Hearthstone.Card;
 
-namespace PackChronicler.Storage {
+namespace PackTracker.Storage {
   class XmlStorage : IStorage {
     public History Fetch() {
       History History = new History();
 
-      string path = Path.Combine(Config.AppDataPath, "PackChronicler", "History.xml");
+      string path = Path.Combine(Config.AppDataPath, "PackTracker", "History.xml");
       if(File.Exists(path)) {
         XmlDocument Xml = new XmlDocument();
         Xml.Load(path);
@@ -96,7 +96,7 @@ namespace PackChronicler.Storage {
         }
       }
 
-      string path = Path.Combine(Config.AppDataPath, "PackChronicler");
+      string path = Path.Combine(Config.AppDataPath, "PackTracker");
       if(!Directory.Exists(path)) {
         Directory.CreateDirectory(path);
       }

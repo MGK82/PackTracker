@@ -11,19 +11,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using PackChronicler.Entity;
+using PackTracker.Entity;
 using MahApps.Metro.Controls;
 using System.Collections.ObjectModel;
 using Hearthstone_Deck_Tracker.Hearthstone;
-using PackChronicler.View;
+using PackTracker.View;
 //using HearthDb;
 
-namespace PackChronicler.Controls {
+namespace PackTracker.Controls {
   /// <summary>
   /// Interaktionslogik für History.xaml
   /// </summary>
   public partial class History {
-    public History(PackChronicler.History History, AverageCollection Statistic, HistoryDatePicker DatePicker) {
+    public History(PackTracker.History History, AverageCollection Statistic, HistoryDatePicker DatePicker) {
       InitializeComponent();
       grd_Stats.DataContext = Statistic;
       ic_Cards.DataContext = DatePicker;

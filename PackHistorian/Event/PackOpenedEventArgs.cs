@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PackChronicler.Entity;
+using PackTracker.Entity;
 
-namespace PackChronicler.Event {
+namespace PackTracker.Event {
   class PackOpenedEventArgs {
     Pack _pack;
 

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PackChronicler.Entity;
+using PackTracker.Entity;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using HearthDb.Enums;
 
-namespace PackChronicler.View {
+namespace PackTracker.View {
   class Statistic : INotifyPropertyChanged{
     int _packId;
     List<Pack> _packs;

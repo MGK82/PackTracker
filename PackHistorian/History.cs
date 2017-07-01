@@ -6,9 +6,9 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PackChronicler.Entity;
+using PackTracker.Entity;
 
-namespace PackChronicler {
+namespace PackTracker {
   public class History : IEnumerable<Pack>,  INotifyCollectionChanged {
     ObservableCollection<Pack> _packs;
 

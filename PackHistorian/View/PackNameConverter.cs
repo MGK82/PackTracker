@@ -8,7 +8,7 @@ using System.Windows.Data;
 using HearthDb.Enums;
 using Hearthstone_Deck_Tracker;
 
-namespace PackChronicler.View {
+namespace PackTracker.View {
   class PackNameConverter : IValueConverter {
     static Config _config = Config.Instance;
     static Dictionary<int, Dictionary<Locale, string>> PackNames = new Dictionary<int, Dictionary<Locale, string>>() {

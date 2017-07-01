@@ -16,12 +16,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PackChronicler.Controls {
+namespace PackTracker.Controls {
   /// <summary>
   /// Interaktionslogik für HistoryDatePicker.xaml
   /// </summary>
   public partial class HistoryDatePicker : UserControl, INotifyPropertyChanged {
-    PackChronicler.History _history;
+    PackTracker.History _history;
     Dictionary<DateTime?, ObservableCollection<Entity.Pack>> _associatedPacks = new Dictionary<DateTime?, ObservableCollection<Entity.Pack>>();
 
     public ObservableCollection<Entity.Pack> AssociatedPack { get
@@ -39,7 +39,7 @@ namespace PackChronicler.Controls {
       }
     }
 
-    public HistoryDatePicker(PackChronicler.History History) {
+    public HistoryDatePicker(PackTracker.History History) {
       InitializeComponent();
       _history = History;
 
@@ -72,7 +72,7 @@ namespace PackChronicler.Controls {
     public event PropertyChangedEventHandler PropertyChanged;
     private void OnPropertyChanged(string prop) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
 
-    private void InitializeCalender(PackChronicler.History History) {
+    private void InitializeCalender(PackTracker.History History) {
       Entity.Pack FirstPack = History.First();
       dp_DatePicker.DisplayDateStart = FirstPack.Time;
       dp_DatePicker.SelectedDate = History.Last().Time.Date;
@@ -86,8 +86,8 @@ namespace PackChronicler.Controls {
     }
 
     private void InitializeCalender(object sender, NotifyCollectionChangedEventArgs e) {
-      if(e.Action == NotifyCollectionChangedAction.Add && e.NewItems.Count > 0 && sender is PackChronicler.History) {
-        PackChronicler.History History = (PackChronicler.History)sender;
+      if(e.Action == NotifyCollectionChangedAction.Add && e.NewItems.Count > 0 && sender is PackTracker.History) {
+        PackTracker.History History = (PackTracker.History)sender;
         InitializeCalender(History);
         History.CollectionChanged -= InitializeCalender;
       }

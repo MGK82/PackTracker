@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PackChronicler.View {
+namespace PackTracker.View {
   public class AverageCollection : INotifyCollectionChanged, IEnumerable<Average> {
     ObservableCollection<Average> _statistics = new ObservableCollection<Average>();
     public event NotifyCollectionChangedEventHandler CollectionChanged;

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PackChronicler.Controls {
+namespace PackTracker.Controls {
   /// <summary>
   /// Interaktionslogik für PackToast.xaml
   /// </summary>

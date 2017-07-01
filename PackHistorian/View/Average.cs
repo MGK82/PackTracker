@@ -7,7 +7,7 @@ using HearthDb.Enums;
 using System.Collections.Specialized;
 using System.ComponentModel;
 
-namespace PackChronicler.View {
+namespace PackTracker.View {
   public class Average : INotifyPropertyChanged {
     int _packId;
 

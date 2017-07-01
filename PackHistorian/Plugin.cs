@@ -3,10 +3,10 @@ using Hearthstone_Deck_Tracker.Plugins;
 using System;
 using System.Reflection;
 using System.Windows.Controls;
-using PackChronicler.Storage;
+using PackTracker.Storage;
 using Hearthstone_Deck_Tracker.Utility.Toasts;
 
-namespace PackChronicler {
+namespace PackTracker {
   public class Plugin : IPlugin {
     private AchievementsWatcher _watcher;
     History _history;
@@ -78,7 +78,7 @@ namespace PackChronicler {
     {
       get
       {
-        return "Pack Chronicler";
+        return "Pack Tracker";
       }
     }
 
@@ -105,7 +105,7 @@ namespace PackChronicler {
     {
       get
       {
-        return "Pack Chronicler";
+        return "Pack Tracker";
       }
     }
 

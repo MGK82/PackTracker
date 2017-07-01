@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using Hearthstone_Deck_Tracker;
 
-namespace PackChronicler.View {
+namespace PackTracker.View {
   class DateTimeConverter : IValueConverter {
     static Config _config = Config.Instance;
     protected virtual string _format { get => "G"; }

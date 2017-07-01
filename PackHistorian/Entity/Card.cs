@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using HearthDb.Enums;
 using HDTCard = Hearthstone_Deck_Tracker.Hearthstone.Card;
 
-namespace PackChronicler.Entity {
+namespace PackTracker.Entity {
   public class Card {
     HDTCard _card;
     bool _premium;

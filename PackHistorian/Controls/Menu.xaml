@@ -1,33 +1,33 @@
-﻿<MenuItem x:Class="PackChronicler.Controls.Menu"
+﻿<MenuItem x:Class="PackTracker.Controls.Menu"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:PackChronicler.Controls"
+             xmlns:local="clr-namespace:PackTracker.Controls"
              mc:Ignorable="d" 
              >
-    <MenuItem.Header>Pack Chronicler</MenuItem.Header>
+    <MenuItem.Header>Pack Tracker</MenuItem.Header>
     <MenuItem.Icon>
-        <Image Source="pack://application:,,,/PackChronicler;component/Resources/Icons/1497613802_feather.ico" />
+        <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/1497613802_feather.ico" />
     </MenuItem.Icon>
 
     <MenuItem Name="mnu_History">
         <MenuItem.Icon>
-            <Image Source="pack://application:,,,/PackChronicler;component/Resources/Icons/1498438250_calendar-3.ico" />
+            <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/1498438250_calendar-3.ico" />
         </MenuItem.Icon>
         <MenuItem.Header>History</MenuItem.Header>
     </MenuItem>
 
     <MenuItem Name="mnu_Statistic">
         <MenuItem.Icon>
-            <Image Source="pack://application:,,,/PackChronicler;component/Resources/Icons/1498438378_line-chart_4.ico" />
+            <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/1498438378_line-chart_4.ico" />
         </MenuItem.Icon>
         <MenuItem.Header>Statistic</MenuItem.Header>
     </MenuItem>
 
     <MenuItem Name="mnu_Log">
         <MenuItem.Icon>
-            <Image Source="pack://application:,,,/PackChronicler;component/Resources/Icons/1498791216_calendar-2.ico" />
+            <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/1498791216_calendar-2.ico" />
         </MenuItem.Icon>
         <MenuItem.Header>Log</MenuItem.Header>
     </MenuItem>
