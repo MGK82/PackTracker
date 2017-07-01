@@ -37,9 +37,20 @@ namespace PackTracker.Update {
         using(WebClient client = new WebClient()) {
           using(Stream download = client.OpenRead(Asset.browser_download_url)) {
             string path = Path.Combine(Config.AppDataPath, "Plugins");
+            string tempPath = Path.Combine(Path.GetTempPath(), "PackTracker");
+
+            if(Directory.Exists(tempPath)) {
+              Directory.Delete(tempPath, true);
+            }
 
             ZipArchive Zipper = new ZipArchive(download);
-            Zipper.ExtractToDirectory(path);
+            Zipper.ExtractToDirectory(tempPath);
+
+            foreach(string file in Directory.GetFiles(tempPath)) {
+              File.Copy(file, Path.Combine(path, Path.GetFileName(file)), true);
+            }
+
+            Directory.Delete(tempPath, true);
 
             return true;
           }

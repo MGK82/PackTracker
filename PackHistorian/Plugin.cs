@@ -62,6 +62,8 @@ namespace PackTracker {
 
     public Plugin() {
       _watcher = new AchievementsWatcher();
+      _updater = new Updater();
+
       try {
         _history = _storage.Fetch();
         _averageCollection = new View.AverageCollection(_history);
