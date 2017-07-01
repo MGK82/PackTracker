@@ -5,10 +5,14 @@ using System.Reflection;
 using System.Windows.Controls;
 using PackTracker.Storage;
 using Hearthstone_Deck_Tracker.Utility.Toasts;
+using System.ComponentModel;
+using PackTracker.Update;
+using System.Windows;
 
 namespace PackTracker {
   public class Plugin : IPlugin {
     private AchievementsWatcher _watcher;
+    Update.Updater _updater;
     History _history;
     IStorage _storage = new XmlStorage();
     MenuItem _menu;
@@ -113,7 +117,7 @@ namespace PackTracker {
     {
       get
       {
-        return Assembly.GetAssembly(this.GetType()).GetName().Version;
+        return _updater.CurrentVersion;
       }
     }
 
@@ -130,6 +134,33 @@ namespace PackTracker {
         View.Average Average = _averageCollection.FindForPackId(e.Pack.Id);
         ToastManager.ShowCustomToast(new Controls.Toast(e.Pack, Average));
       };
+
+      BackgroundWorker bwCheck = new BackgroundWorker();
+      Release LatestRelease = null as Release;
+      bwCheck.DoWork += (sender, e) => {
+        e.Result = _updater.NewVersionAvailable(out LatestRelease);
+      };
+      bwCheck.RunWorkerCompleted += (sender, e) => {
+        if((bool?)e.Result == true) {
+          MessageBoxResult Result = MessageBox.Show("New version available.\n\n" + LatestRelease.tag_name + "\n" + LatestRelease.body + "\n\nUpdate now?", "Pack Tracker", MessageBoxButton.YesNo);
+          if(Result == MessageBoxResult.Yes) {
+            BackgroundWorker bwUpdate = new BackgroundWorker();
+            bwUpdate.DoWork += (sender2, e2) => {
+              e2.Result = _updater.Update();
+            };
+            bwUpdate.RunWorkerCompleted += (sender2, e2) => {
+              if((bool)e2.Result) {
+                MessageBox.Show("Update complete. Please restart Deck Tracker", "Pack Tracker");
+              }
+              else {
+                MessageBox.Show("Something went wrong. Update failed.", "Pack Tracker");
+              }
+            };
+            bwUpdate.RunWorkerAsync();
+          }
+        }
+      };
+      bwCheck.RunWorkerAsync(LatestRelease);
     }
 
     public void OnUnload() {
