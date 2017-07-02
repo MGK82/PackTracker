@@ -1,0 +1,50 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PackTracker.Controls.Settings"
+             xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="PackTracker.Controls.Settings.Credits"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             Background="Black"
+>
+    <UserControl.Resources>
+        <FontFamily x:Key="FontFamily">Kozuka Gothic Pro R</FontFamily>
+        <SolidColorBrush x:Key="Foreground" Color="White"/>
+        <SolidColorBrush x:Key="HeadlineForeground" Color="White"/>
+        <SolidColorBrush x:Key="HeadlineBackground" Color="CornflowerBlue"/>
+        <System:Double x:Key="HeadlineFontSize">18</System:Double>
+    </UserControl.Resources>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+            <Border Margin="4,2,4,4">
+                <StackPanel>
+                    <TextBlock FontFamily="{StaticResource FontFamily}" Background="{StaticResource HeadlineBackground}" Foreground="{StaticResource HeadlineForeground}" FontSize="{DynamicResource HeadlineFontSize}" Padding="2,0">Creator:</TextBlock>
+                    <TextBlock FontFamily="{StaticResource FontFamily}" Foreground="{StaticResource Foreground}" Padding="2,0">DBqFetti &lt;dbqfetti@gmail.com&gt;</TextBlock>
+                </StackPanel>
+            </Border>
+
+            <Border Margin="4">
+                <StackPanel>
+                    <TextBlock FontFamily="{StaticResource FontFamily}" Background="{StaticResource HeadlineBackground}" Foreground="{StaticResource Foreground}" FontSize="{StaticResource HeadlineFontSize}" Padding="2,0">Beta Testers:</TextBlock>
+                    <TextBlock FontFamily="{StaticResource FontFamily}" Foreground="{StaticResource Foreground}" Padding="2,0">Antony Alvarado</TextBlock>
+                </StackPanel>
+            </Border>
+
+            <Border Margin="4">
+                <StackPanel>
+                    <TextBlock FontFamily="{StaticResource FontFamily}" Background="{StaticResource HeadlineBackground}" Foreground="{StaticResource Foreground}" FontSize="{StaticResource HeadlineFontSize}" Padding="2,0">Translations:</TextBlock>
+                    <TextBlock FontFamily="{StaticResource FontFamily}" Foreground="{StaticResource Foreground}" Padding="2,0">(english) Antony Alvarado</TextBlock>
+                </StackPanel>
+            </Border>
+
+            <Border Margin="4">
+                <StackPanel>
+                    <TextBlock FontFamily="{StaticResource FontFamily}" Background="{StaticResource HeadlineBackground}" Foreground="{StaticResource Foreground}" FontSize="{StaticResource HeadlineFontSize}" Padding="2,0">Icons:</TextBlock>
+                    <TextBlock FontFamily="{StaticResource FontFamily}" Foreground="{StaticResource Foreground}" Padding="2,0">Icons&#160;Solid &lt;<Hyperlink NavigateUri="http://www.iconsolid.com/" RequestNavigate="Hyperlink_RequestNavigate">www.iconsolid.com</Hyperlink>&gt;</TextBlock>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

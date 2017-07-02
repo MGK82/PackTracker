@@ -83,7 +83,7 @@ namespace PackTracker {
     {
       get
       {
-        return "Pack Tracker";
+        return "Settings";
       }
     }
 
@@ -123,6 +123,7 @@ namespace PackTracker {
     }
 
     public void OnButtonPress() {
+      (new Controls.Settings.Settings() { Owner = Hearthstone_Deck_Tracker.Core.MainWindow }).ShowDialog();
     }
 
     public void OnLoad() {
