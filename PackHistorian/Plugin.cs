@@ -12,10 +12,9 @@ using System.Windows;
 namespace PackTracker {
   public class Plugin : IPlugin {
     private AchievementsWatcher _watcher;
-    Update.Updater _updater;
+    Updater _updater;
     History _history;
     IStorage _storage = new XmlStorage();
-    MenuItem _menu;
     Controls.History _historyWin;
     Controls.Statistic _statisticWin;
     Controls.Log _logWin;
