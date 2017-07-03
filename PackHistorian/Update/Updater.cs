@@ -13,7 +13,6 @@ using Hearthstone_Deck_Tracker;
 
 namespace PackTracker.Update {
   class Updater {
-    public Version CurrentVersion { get => Assembly.GetAssembly(typeof(Plugin)).GetName().Version; }
 
     public bool? NewVersionAvailable(out Release LatestRelease) {
       LatestRelease = null as Release;
@@ -26,7 +25,8 @@ namespace PackTracker.Update {
 
       Version LatestVersion = new Version(Regex.Match(LatestRelease.tag_name, @"\d+(\.\d+)*").ToString());
 
-      return CurrentVersion.CompareTo(LatestVersion) < 0;
+      return Plugin.CurrentVersion.CompareTo(LatestVersion) < 0;
+
     }
 
     public bool Update() {
