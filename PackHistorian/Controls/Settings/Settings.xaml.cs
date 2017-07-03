@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PackTracker.Update;
 
 namespace PackTracker.Controls.Settings {
   /// <summary>
@@ -21,6 +22,7 @@ namespace PackTracker.Controls.Settings {
       InitializeComponent();
       lb_tabs.ItemsSource = new List<ITitledElement>() {
         new Credits(),
+        new Update(new Updater()),
       };
       lb_tabs.SelectedIndex = 0;
     }

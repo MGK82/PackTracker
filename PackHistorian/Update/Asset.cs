@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PackTracker.Update {
   [DataContract]
-  class Asset {
+  public class Asset {
     [DataMember]
     public string name;
 

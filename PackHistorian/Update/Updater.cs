@@ -12,7 +12,8 @@ using System.Threading.Tasks;
 using Hearthstone_Deck_Tracker;
 
 namespace PackTracker.Update {
-  class Updater {
+  public class Updater {
+    static string _userAgend = "PackTracker";
 
     public bool? NewVersionAvailable(out Release LatestRelease) {
       LatestRelease = null as Release;
@@ -23,10 +24,13 @@ namespace PackTracker.Update {
         return null;
       }
 
-      Version LatestVersion = new Version(Regex.Match(LatestRelease.tag_name, @"\d+(\.\d+)*").ToString());
+      Version LatestVersion = ParseVersion(LatestRelease.tag_name);
 
       return Plugin.CurrentVersion.CompareTo(LatestVersion) < 0;
+    }
 
+    public static Version ParseVersion(string version) {
+      return new Version(Regex.Match(version, @"\d+(\.\d+)*").ToString());
     }
 
     public bool Update() {
@@ -66,7 +70,7 @@ namespace PackTracker.Update {
     public Release GetLatestRelease() {
       HttpWebRequest request = WebRequest.CreateHttp(@"https://api.github.com/repos/mgk82/PackTracker/releases/latest");
       request.Proxy = null;
-      request.UserAgent = "PackTracker";
+      request.UserAgent = _userAgend;
 
       Release Release = new Release();
       using(Stream response = request.GetResponse().GetResponseStream()) {
@@ -75,6 +79,25 @@ namespace PackTracker.Update {
       }
 
       return Release;
+    }
+
+    public IEnumerable<Release> GetAllReleases() {
+      List<Release> Releases = new List<Release>();
+
+      HttpWebRequest request = WebRequest.CreateHttp(@"https://api.github.com/repos/mgk82/PackTracker/releases");
+      request.Proxy = null;
+      request.UserAgent = _userAgend;
+
+      try {
+        using(Stream response = request.GetResponse().GetResponseStream()) {
+          DataContractJsonSerializer ser = new DataContractJsonSerializer(Releases.GetType());
+          Releases = (List<Release>)ser.ReadObject(response);
+        }
+      } catch (WebException) {
+        return null;
+      }
+
+      return Releases.AsEnumerable();
     }
   }
 }

@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="PackTracker.Controls.Settings.Update"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:local="clr-namespace:PackTracker.Controls.Settings"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             Background="Black"
+>
+    <DockPanel ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        <Border DockPanel.Dock="Bottom" Padding="15" Margin="1">
+            <DockPanel>
+                <Button DockPanel.Dock="Right" Name="btn_Refresh" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="15,0,0,0" Click="btn_Refresh_Click">Refresh</Button>
+                <metro:MetroProgressBar Name="pb_Bar" IsIndeterminate="True" Visibility="Hidden" />
+            </DockPanel>
+        </Border>
+
+        <Border DockPanel.Dock="Top">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <TextBlock Name="txt_ChangeLog" Margin="4,0" />
+            </ScrollViewer>
+        </Border>
+    </DockPanel>
+</UserControl>

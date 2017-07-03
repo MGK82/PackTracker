@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PackTracker.Update {
   [DataContract]
-  class Release {
+  public class Release {
     [DataMember]
     public string tag_name;
 
