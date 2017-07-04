@@ -12,6 +12,9 @@ namespace PackTracker.Update {
     public string tag_name;
 
     [DataMember]
+    public string name;
+
+    [DataMember]
     public List<Asset> assets;
 
     [DataMember]
