@@ -15,8 +15,8 @@ namespace PackTracker.Update {
   public class Updater {
     static string _userAgend = "PackTracker";
 
-    public bool? NewVersionAvailable(out Release LatestRelease) {
-      LatestRelease = null as Release;
+    public bool? NewVersionAvailable() {
+      Release LatestRelease = null as Release;
       try {
         LatestRelease = GetLatestRelease();
       }

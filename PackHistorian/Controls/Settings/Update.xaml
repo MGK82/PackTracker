@@ -13,6 +13,7 @@
         <Border DockPanel.Dock="Bottom" Padding="15" Margin="1">
             <DockPanel>
                 <Button DockPanel.Dock="Right" Name="btn_Refresh" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="15,0,0,0" Click="btn_Refresh_Click">Refresh</Button>
+                <Button DockPanel.Dock="Right" Name="btn_Update" IsEnabled="False" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="15,0,0,0" Click="btn_Update_Click">Update Now</Button>
                 <metro:MetroProgressBar Name="pb_Bar" IsIndeterminate="True" Visibility="Hidden" />
             </DockPanel>
         </Border>

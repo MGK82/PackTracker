@@ -22,6 +22,7 @@ namespace PackTracker.Controls.Settings {
   /// </summary>
   public partial class Update : UserControl, ITitledElement {
     Updater _updater;
+    Timer _timer;
 
     public string Title => "Update";
 
@@ -29,6 +30,8 @@ namespace PackTracker.Controls.Settings {
       InitializeComponent();
 
       _updater = Updater;
+      _timer = new Timer((new TimeSpan(0, 0, 10)).TotalMilliseconds) { AutoReset = false };
+      _timer.Elapsed += (sender, e) => { Dispatcher.Invoke(() => btn_Refresh.IsEnabled = true); };
 
       Loaded += Update_Loaded;
     }
@@ -40,6 +43,7 @@ namespace PackTracker.Controls.Settings {
 
     void Refresh() {
       btn_Refresh.IsEnabled = false;
+      btn_Update.IsEnabled = false;
       pb_Bar.Visibility = Visibility.Visible;
 
       txt_ChangeLog.Inlines.Clear();
@@ -51,14 +55,15 @@ namespace PackTracker.Controls.Settings {
 
       bw.RunWorkerCompleted += (sender, e) => {
         if(e.Result is IEnumerable<Release>) {
-          InsertInlines((IEnumerable<Release>)e.Result, txt_ChangeLog.Inlines);
+          IEnumerable<Release> Result = (IEnumerable<Release>)e.Result;
+          InsertInlines(Result, txt_ChangeLog.Inlines);
+          btn_Update.IsEnabled = Result.Any(x => Updater.ParseVersion(x.tag_name) > Plugin.CurrentVersion);
         } else {
           MessageBox.Show("Request failed", "Update", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         pb_Bar.Visibility = Visibility.Hidden;
-        (new Timer((new TimeSpan(0, 0, 10)).TotalMilliseconds) { AutoReset = false, Enabled = true,})
-          .Elapsed += (timer, e2) => { Dispatcher.Invoke(() => btn_Refresh.IsEnabled = true); ((Timer)timer).Dispose(); };
+        _timer.Start();
       };
 
       bw.RunWorkerAsync();
@@ -95,6 +100,30 @@ namespace PackTracker.Controls.Settings {
 
     private void btn_Refresh_Click(object sender, RoutedEventArgs e) {
       Refresh();
+    }
+
+    private void btn_Update_Click(object sender, RoutedEventArgs e) {
+      BackgroundWorker bw = new BackgroundWorker();
+      bw.DoWork += (bwsender, bwe) => {
+        bwe.Result = _updater.Update();
+      };
+      bw.RunWorkerCompleted += (bwsender, bwe) => {
+        pb_Bar.Visibility = Visibility.Hidden;
+
+        if((bool)bwe.Result) {
+          MessageBox.Show("Update completed\nPlease restart Hearthstone Deck Tracker", "Pack Tracker: Update");
+        } else {
+          btn_Refresh.IsEnabled = true;
+          btn_Refresh.IsEnabled = true;
+          MessageBox.Show("Update failed\nPlease try again later or download on Github", "Pack Tracker: Update");
+        }
+      };
+
+      btn_Refresh.IsEnabled = false;
+      btn_Update.IsEnabled = false;
+      pb_Bar.Visibility = Visibility.Visible;
+      _timer.Stop();
+      bw.RunWorkerAsync();
     }
   }
 }

@@ -141,31 +141,22 @@ namespace PackTracker {
       };
 
       BackgroundWorker bwCheck = new BackgroundWorker();
-      Release LatestRelease = null as Release;
       bwCheck.DoWork += (sender, e) => {
-        e.Result = _updater.NewVersionAvailable(out LatestRelease);
+        e.Result = _updater.NewVersionAvailable();
       };
       bwCheck.RunWorkerCompleted += (sender, e) => {
         if((bool?)e.Result == true) {
-          MessageBoxResult Result = MessageBox.Show("New version available.\n\n" + LatestRelease.tag_name + "\n" + LatestRelease.body + "\n\nUpdate now?", "Pack Tracker", MessageBoxButton.YesNo);
-          if(Result == MessageBoxResult.Yes) {
-            BackgroundWorker bwUpdate = new BackgroundWorker();
-            bwUpdate.DoWork += (sender2, e2) => {
-              e2.Result = _updater.Update();
-            };
-            bwUpdate.RunWorkerCompleted += (sender2, e2) => {
-              if((bool)e2.Result) {
-                MessageBox.Show("Update complete. Please restart Deck Tracker", "Pack Tracker");
-              }
-              else {
-                MessageBox.Show("Something went wrong. Update failed.", "Pack Tracker");
-              }
-            };
-            bwUpdate.RunWorkerAsync();
+          Controls.Settings.Settings Settings = new Controls.Settings.Settings() { Owner = Hearthstone_Deck_Tracker.Core.MainWindow };
+          foreach(var Item in Settings.lb_tabs.Items) {
+            if(Item is Controls.Settings.Update) {
+              Settings.lb_tabs.SelectedItem = Item;
+              Settings.ShowDialog();
+              break;
+            }
           }
         }
       };
-      bwCheck.RunWorkerAsync(LatestRelease);
+      bwCheck.RunWorkerAsync();
     }
 
     public void OnUnload() {
