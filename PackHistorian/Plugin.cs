@@ -30,6 +30,7 @@ namespace PackTracker {
             Owner = Hearthstone_Deck_Tracker.Core.MainWindow,
           };
           _historyWin.Closed += (sender, e) => { _historyWin = null; };
+          _historyWin.Loaded += (sender, e) => _historyWin.Title = Name + ": " + _historyWin.Title;
         }
 
         return _historyWin;
@@ -43,6 +44,7 @@ namespace PackTracker {
             Owner = Hearthstone_Deck_Tracker.Core.MainWindow,
           };
           _statisticWin.Closed += (sender, e) => _statisticWin = null;
+          _statisticWin.Loaded += (sender, e) => _statisticWin.Title = Name + ": " + _statisticWin.Title;
         }
 
         return _statisticWin;
@@ -56,6 +58,7 @@ namespace PackTracker {
             Owner = Hearthstone_Deck_Tracker.Core.MainWindow,
           };
           _logWin.Closed += (sender, e) => _logWin = null;
+          _logWin.Loaded += (sender, e) => _logWin.Title = Name + ": " + _logWin.Title;
         }
 
         return _logWin;
@@ -101,9 +104,9 @@ namespace PackTracker {
     public MenuItem MenuItem {
       get {
         Controls.Menu Menu = new Controls.Menu();
-        Menu.mnu_History.Click += (sender, e) => HistoryWin.Show();
-        Menu.mnu_Statistic.Click += (sender, e) => StatisticWin.Show();
-        Menu.mnu_Log.Click += (sender, e) => LogWin.Show();
+        Menu.mnu_History.Click += (sender, e) => { HistoryWin.Show(); HistoryWin.Focus(); };
+        Menu.mnu_Statistic.Click += (sender, e) => { StatisticWin.Show(); StatisticWin.Focus(); };
+        Menu.mnu_Log.Click += (sender, e) => { LogWin.Show(); LogWin.Focus(); };
 
         return Menu;
       }

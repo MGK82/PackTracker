@@ -12,6 +12,7 @@
         Height="220" Width="290"
         WindowStartupLocation="CenterOwner"
         ResizeMode="CanMinimize"
+        ShowInTaskbar="False"
 >
     <Window.Resources>
         <view:PackNameConverter x:Key="PackNameConverter" />

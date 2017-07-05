@@ -9,6 +9,7 @@
         Title="Log" Height="350"
         SizeToContent="Width"
         WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False"
 >
     <Window.Resources>
         <ResourceDictionary Source="Brushes.xaml" />
