@@ -122,8 +122,8 @@
     <Compile Include="ITitledElement.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Storage\IStorage.cs" />
-    <Compile Include="Storage\XmlStorage.cs" />
+    <Compile Include="Storage\IHistoryStorage.cs" />
+    <Compile Include="Storage\XmlHistory.cs" />
     <Compile Include="Controls\History.xaml.cs">
       <DependentUpon>History.xaml</DependentUpon>
     </Compile>

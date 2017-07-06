@@ -15,7 +15,7 @@ namespace PackTracker {
     private AchievementsWatcher _watcher;
     Updater _updater;
     History _history;
-    IStorage _storage = new XmlStorage();
+    IHistoryStorage _historyStorage = new XmlHistory();
     Controls.History _historyWin;
     Controls.Statistic _statisticWin;
     Controls.Log _logWin;
@@ -70,7 +70,7 @@ namespace PackTracker {
       _updater = new Updater();
 
       try {
-        _history = _storage.Fetch();
+        _history = _historyStorage.Fetch();
         _averageCollection = new View.AverageCollection(_history);
       } catch {
         _history = new History();
@@ -137,7 +137,7 @@ namespace PackTracker {
 
       _watcher.PackOpened += (sender, e) => {
         _history.Add(e.Pack);
-        _storage.Store(_history.Ascending);
+        _historyStorage.Store(_history.Ascending);
 
         View.Average Average = _averageCollection.FindForPackId(e.Pack.Id);
         ToastManager.ShowCustomToast(new Controls.Toast(e.Pack, Average));

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PackTracker.Storage {
-  interface IStorage {
+  interface IHistoryStorage {
     History Fetch();
     void Store(History History);
   }

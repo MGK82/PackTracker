@@ -11,7 +11,7 @@ using Hearthstone_Deck_Tracker.Hearthstone;
 using HDTCard = Hearthstone_Deck_Tracker.Hearthstone.Card;
 
 namespace PackTracker.Storage {
-  class XmlStorage : IStorage {
+  class XmlHistory : IHistoryStorage {
     public History Fetch() {
       History History = new History();
 
