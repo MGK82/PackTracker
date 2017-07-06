@@ -30,7 +30,18 @@ namespace PackTracker.View {
         20, new Dictionary<Locale, string>() {
           { Locale.enUS, "Journey to Un'Goro" },
           { Locale.enGB, "Journey to Un'Goro" },
+          { Locale.frFR, "Voyage au centre d’Un’Goro" },
           { Locale.deDE, "Reise nach Un'Goro" },
+          { Locale.koKR, "운고로를 향한 여정" },
+          { Locale.esES, "Viaje a Un'Goro" },
+          { Locale.esMX, "Viaje a Un'Goro" },
+          { Locale.ruRU, "Экспедиция в Ун'Горо" },
+          { Locale.itIT, "Viaggio a Un'Goro" },
+          { Locale.ptBR, "Jornada a Un'Goro" },
+          { Locale.plPL, "Podróż do wnętrza Un'Goro" },
+          { Locale.ptPT, "Jornada a Un'Goro" },
+          { Locale.jaJP, "大魔境ウンゴロ" },
+          { Locale.thTH, "Journey to Un'Goro" },
         }
       },
     };
