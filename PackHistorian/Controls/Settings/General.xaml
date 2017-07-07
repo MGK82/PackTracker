@@ -1,0 +1,24 @@
+﻿<metro:MetroContentControl x:Class="PackTracker.Controls.Settings.General"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PackTracker.Controls.Settings"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+>
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Content="Spoil" Target="{Binding ElementName=sw_Spoil}" ToolTip="Shows a pack's content when it's opened" />
+        <metro:ToggleSwitchButton Grid.Column="1" Grid.Row="0" Name="sw_Spoil" IsChecked="{Binding Spoil, Mode=TwoWay}" HorizontalAlignment="Right" />
+    </Grid>
+</metro:MetroContentControl>

@@ -10,26 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using PackTracker.Update;
+using MahApps.Metro.Controls;
 
 namespace PackTracker.Controls.Settings {
   /// <summary>
-  /// Interaktionslogik für Settings.xaml
+  /// Interaktionslogik für General.xaml
   /// </summary>
-  public partial class Settings {
-    PackTracker.Settings _settings;
+  public partial class General : MetroContentControl, ITitledElement {
+    public string Title => "General";
 
-    public Settings(PackTracker.Settings Settings) {
+    public General(PackTracker.Settings Settings) {
       InitializeComponent();
-      lb_tabs.ItemsSource = new List<ITitledElement>() {
-        new General(Settings),
-        new Update(Settings, new Updater()),
-        new Credits(),
-      };
-      lb_tabs.SelectedIndex = 0;
-
-      _settings = Settings;
+      DataContext = Settings;
     }
   }
 }

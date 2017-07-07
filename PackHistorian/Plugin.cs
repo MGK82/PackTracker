@@ -16,6 +16,8 @@ namespace PackTracker {
     Updater _updater;
     History _history;
     IHistoryStorage _historyStorage = new XmlHistory();
+    Settings _settings;
+    ISettingsStorage _settingsStorage = new XmlSettings();
     Controls.History _historyWin;
     Controls.Statistic _statisticWin;
     Controls.Log _logWin;
@@ -65,15 +67,31 @@ namespace PackTracker {
       }
     }
 
+    Controls.Settings.Settings CreateSettingsWin() {
+      Controls.Settings.Settings Win = new Controls.Settings.Settings(_settings) {
+        Owner = Hearthstone_Deck_Tracker.Core.MainWindow
+      };
+      Win.Closed += (sender, e) => _settingsStorage.Store(_settings);
+
+      return Win;
+    }
+
     public Plugin() {
       _watcher = new AchievementsWatcher();
       _updater = new Updater();
+      _settings = new Settings();
 
       try {
         _history = _historyStorage.Fetch();
         _averageCollection = new View.AverageCollection(_history);
       } catch {
         _history = new History();
+      }
+
+      try {
+        _settings = _settingsStorage.Fetch();
+      } catch {
+        _settings = new Settings();
       }
     }
 
@@ -129,7 +147,7 @@ namespace PackTracker {
     }
 
     public void OnButtonPress() {
-      (new Controls.Settings.Settings() { Owner = Hearthstone_Deck_Tracker.Core.MainWindow }).ShowDialog();
+      CreateSettingsWin().ShowDialog();
     }
 
     public void OnLoad() {
@@ -140,26 +158,30 @@ namespace PackTracker {
         _historyStorage.Store(_history.Ascending);
 
         View.Average Average = _averageCollection.FindForPackId(e.Pack.Id);
-        ToastManager.ShowCustomToast(new Controls.Toast(e.Pack, Average));
-      };
-
-      BackgroundWorker bwCheck = new BackgroundWorker();
-      bwCheck.DoWork += (sender, e) => {
-        e.Result = _updater.NewVersionAvailable();
-      };
-      bwCheck.RunWorkerCompleted += (sender, e) => {
-        if((bool?)e.Result == true) {
-          Controls.Settings.Settings Settings = new Controls.Settings.Settings() { Owner = Hearthstone_Deck_Tracker.Core.MainWindow };
-          foreach(var Item in Settings.lb_tabs.Items) {
-            if(Item is Controls.Settings.Update) {
-              Settings.lb_tabs.SelectedItem = Item;
-              Settings.ShowDialog();
-              break;
-            }
-          }
+        if(_settings.Spoil) {
+          ToastManager.ShowCustomToast(new Controls.Toast(e.Pack, Average));
         }
       };
-      bwCheck.RunWorkerAsync();
+
+      if(_settings.Update) {
+        BackgroundWorker bwCheck = new BackgroundWorker();
+        bwCheck.DoWork += (sender, e) => {
+          e.Result = _updater.NewVersionAvailable();
+        };
+        bwCheck.RunWorkerCompleted += (sender, e) => {
+          if((bool?)e.Result == true) {
+            Controls.Settings.Settings Settings = CreateSettingsWin();
+            foreach(var Item in Settings.lb_tabs.Items) {
+              if(Item is Controls.Settings.Update) {
+                Settings.lb_tabs.SelectedItem = Item;
+                Settings.ShowDialog();
+                break;
+              }
+            }
+          }
+        };
+        bwCheck.RunWorkerAsync();
+      }
     }
 
     public void OnUnload() {

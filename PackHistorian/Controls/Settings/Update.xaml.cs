@@ -15,19 +15,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using PackTracker.Update;
+using MahApps.Metro.Controls;
 
 namespace PackTracker.Controls.Settings {
   /// <summary>
   /// Interaktionslogik für Update.xaml
   /// </summary>
-  public partial class Update : UserControl, ITitledElement {
+  public partial class Update : MetroContentControl, ITitledElement {
     Updater _updater;
     Timer _timer;
 
     public string Title => "Update";
 
-    public Update(Updater Updater) {
+    public Update(PackTracker.Settings Settings, Updater Updater) {
       InitializeComponent();
+      DataContext = Settings;
 
       _updater = Updater;
       _timer = new Timer((new TimeSpan(0, 0, 10)).TotalMilliseconds) { AutoReset = false };

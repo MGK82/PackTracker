@@ -12,12 +12,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
 namespace PackTracker.Controls.Settings {
   /// <summary>
   /// Interaktionslogik für Credits.xaml
   /// </summary>
-  public partial class Credits : UserControl, ITitledElement {
+  public partial class Credits : MetroContentControl, ITitledElement {
     public string Title => "Credits";
 
     public Credits() {
