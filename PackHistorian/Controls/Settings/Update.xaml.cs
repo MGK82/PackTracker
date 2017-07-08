@@ -73,7 +73,7 @@ namespace PackTracker.Controls.Settings {
 
     void InsertInlines(IEnumerable<Release> Releases, InlineCollection Target) {
       foreach(Release Release in Releases) {
-        Run Headline = new Run(Release.name + Release.name != Release.tag_name ? (" " + Release.tag_name) : "") {
+        Run Headline = new Run(Release.tag_name + (Release.name != Release.tag_name ? (" \"" + Release.name + "\"") : "")) {
           FontStyle = FontStyles.Oblique,
           FontWeight = FontWeights.Bold,
           Foreground = Brushes.CornflowerBlue,
