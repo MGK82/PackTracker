@@ -20,10 +20,41 @@ namespace PackTracker.View {
         }
       },
       {
+        11, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Whispers of the Old Gods" },
+          { Locale.enGB, "Whispers of the Old Gods" },
+          { Locale.frFR, "Les murmures des Dieux très anciens" },
+          { Locale.deDE, "Das Flüstern der Alten Götter" },
+          { Locale.koKR, "고대 신의 속삭임" },
+          { Locale.esES, "Susurros de los Dioses Antiguos" },
+          { Locale.esMX, "Susurros de los Dioses Antiguos" },
+          { Locale.ruRU, "Пробуждение древних богов" },
+          { Locale.zhTW, "古神碎碎念" },
+          { Locale.itIT, "Sussurri degli Dei Antichi" },
+          { Locale.ptBR, "Sussurros dos Deuses Antigos" },
+          { Locale.plPL, "Przedwieczni Bogowie" },
+          { Locale.ptPT, "Sussurros dos Deuses Antigos" },
+          { Locale.jaJP, "旧神のささやき" },
+          { Locale.thTH, "Whispers of the Old Gods" },
+        }
+      },
+      {
         19, new Dictionary<Locale, string>() {
           { Locale.enUS, "Mean Streets of Gadgetzan" },
           { Locale.enGB, "Mean Streets of Gadgetzan" },
+          { Locale.frFR, "Main basse sur Gadgetzan" },
           { Locale.deDE, "Die Straßen von Gadgetzan" },
+          { Locale.koKR, "비열한 거리의 가젯잔" },
+          { Locale.esES, "Mafias de Gadgetzan" },
+          { Locale.esMX, "Mafias de Gadgetzan" },
+          { Locale.ruRU, "Злачный город Прибамбасск" },
+          { Locale.zhTW, "黑街英雄之加基森風雲" },
+          { Locale.itIT, "I bassifondi di Meccania" },
+          { Locale.ptBR, "As Gangues de Geringontzan" },
+          { Locale.plPL, "Ciemne zaułki Gadżetonu" },
+          { Locale.ptPT, "As Gangues de Geringontzan" },
+          { Locale.jaJP, "仁義なきガジェッツァン" },
+          { Locale.thTH, "Mean Streets of Gadgetzan" },
         }
       },
       {
@@ -36,6 +67,7 @@ namespace PackTracker.View {
           { Locale.esES, "Viaje a Un'Goro" },
           { Locale.esMX, "Viaje a Un'Goro" },
           { Locale.ruRU, "Экспедиция в Ун'Горо" },
+          { Locale.zhTW, "安戈洛歷險記" },
           { Locale.itIT, "Viaggio a Un'Goro" },
           { Locale.ptBR, "Jornada a Un'Goro" },
           { Locale.plPL, "Podróż do wnętrza Un'Goro" },
