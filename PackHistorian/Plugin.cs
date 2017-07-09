@@ -115,7 +115,7 @@ namespace PackTracker {
     {
       get
       {
-        return "Description goes here";
+        return Name + " is a plugin that allows you to keep an eye on every pack you open. This allows you to see how many cards of different rarities have dropped over time and also enables you to estimate when your next Epic or Legendary is coming!";
       }
     }
 
