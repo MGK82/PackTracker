@@ -12,3 +12,6 @@ This allows you to see how many cards of different rarities have dropped over ti
   - a plain chronological text-log
 - Supports auto-update
 - Counts boosterpack-series-bases "pitty-counters" for epic and legendary cards
+
+[Download](https://github.com/MGK82/PackTracker/releases/tag/v0.4) and unzip  
+[How to add plugins to HDT](https://github.com/HearthSim/Hearthstone-Deck-Tracker/wiki/Available-Plugins)
