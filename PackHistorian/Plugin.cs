@@ -11,7 +11,7 @@ using System.Windows;
 
 namespace PackTracker {
   public class Plugin : IPlugin {
-    readonly static Version _version = new Version("0.4");
+    readonly static Version _version = new Version("1.0");
     private AchievementsWatcher _watcher;
     Updater _updater;
     History _history;
