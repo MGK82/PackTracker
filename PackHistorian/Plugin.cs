@@ -72,6 +72,7 @@ namespace PackTracker {
         Owner = Hearthstone_Deck_Tracker.Core.MainWindow
       };
       Win.Closed += (sender, e) => _settingsStorage.Store(_settings);
+      Win.Title = Name + ": " + Win.Title;
 
       return Win;
     }
