@@ -117,6 +117,26 @@ namespace PackTracker.View {
           { Locale.thTH, "Journey to Un'Goro" },
         }
       },
+      {
+        21, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Knights of the Frozen Throne" },
+          { Locale.enGB, "Knights of the Frozen Throne" },
+          { Locale.frFR, "Chevaliers du Trône de glace" },
+          { Locale.deDE, "Ritter des Frostthrons" },
+          { Locale.koKR, "얼어붙은 왕좌의 기사들" },
+          { Locale.esES, "Caballeros del Trono Helado" },
+          { Locale.esMX, "Caballeros del Trono Helado" },
+          { Locale.ruRU, "Рыцари Ледяного Трона" },
+          { Locale.zhTW, "《冰封王座》" },
+          { Locale.zhCN, "冰封王座的骑士" },
+          { Locale.itIT, "Cavalieri del Trono di Ghiaccio" },
+          { Locale.ptBR, "Cavaleiros do Trono Gélido" },
+          { Locale.plPL, "Rycerze Mroźnego Tronu" },
+          { Locale.ptPT, "Cavaleiros do Trono Gélido" },
+          { Locale.jaJP, "凍てつく玉座の騎士団" },
+          { Locale.thTH, "Knights of the Frozen Throne" },
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
