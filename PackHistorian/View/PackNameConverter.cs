@@ -20,6 +20,25 @@ namespace PackTracker.View {
         }
       },
       {
+        10, new Dictionary<Locale, string>() {
+          { Locale.enUS, "The Grand Tournament" },
+          { Locale.enGB, "The Grand Tournament" },
+          { Locale.frFR, "Le Grand Tournoi" },
+          { Locale.deDE, "Das Große Turnier" },
+          { Locale.koKR, "대 마상시합" },
+          { Locale.esES, "El Gran Torneo" },
+          { Locale.esMX, "El Gran Torneo" },
+          { Locale.ruRU, "Большой турнир" },
+          { Locale.zhTW, "銀白聯賽" },
+          { Locale.itIT, "Gran Torneo" },
+          { Locale.ptBR, "O Grande Torneio" },
+          { Locale.plPL, "Wielki Turniej" },
+          { Locale.ptPT, "O Grande Torneio" },
+          { Locale.jaJP, "グランド・トーナメント" },
+          { Locale.thTH, "The Grand Tournament" },
+        }
+      },
+      {
         11, new Dictionary<Locale, string>() {
           { Locale.enUS, "Whispers of the Old Gods" },
           { Locale.enGB, "Whispers of the Old Gods" },
