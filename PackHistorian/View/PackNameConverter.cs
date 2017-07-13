@@ -20,6 +20,25 @@ namespace PackTracker.View {
         }
       },
       {
+        9, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Goblins vs Gnomes" },
+          { Locale.enGB, "Goblins vs Gnomes" },
+          { Locale.frFR, "Gobelins et Gnomes" },
+          { Locale.deDE, "Goblins gegen Gnome" },
+          { Locale.koKR, "고블린 대 노움" },
+          { Locale.esES, "Goblins vs Gnomos" },
+          { Locale.esMX, "Goblins vs Gnomos" },
+          { Locale.ruRU, "Гоблины и гномы" },
+          { Locale.zhTW, "哥哥打地地" },
+          { Locale.itIT, "Goblin vs Gnomi" },
+          { Locale.ptBR, "Goblins vs Gnomos" },
+          { Locale.plPL, "Gobliny vs Gnomy" },
+          { Locale.ptPT, "Goblins vs Gnomos" },
+          { Locale.jaJP, "ゴブリンvsノーム" },
+          { Locale.thTH, "Goblins vs Gnomes" },
+        }
+      },
+      {
         10, new Dictionary<Locale, string>() {
           { Locale.enUS, "The Grand Tournament" },
           { Locale.enGB, "The Grand Tournament" },
