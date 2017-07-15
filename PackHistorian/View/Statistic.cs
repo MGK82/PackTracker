@@ -13,35 +13,36 @@ namespace PackTracker.View {
     int _packId;
     List<Pack> _packs;
 
-    int _commonAmount = 0;
-    double _commonPacks = 0;
+    int
+      _commonAmount = 0,
+      _commonPacks = 0,
 
-    int _rareAmount = 0;
-    double _rarePacks = 0;
+      _rareAmount = 0,
+      _rarePacks = 0,
 
-    int _epicAmount = 0;
-    double _epicPacks = 0;
+      _epicAmount = 0,
+      _epicPacks = 0,
 
-    int _legendaryAmount = 0;
-    double _legendaryPacks = 0;
+      _legendaryAmount = 0,
+      _legendaryPacks = 0,
 
-    int _totalAmount = 0;
+      _totalAmount = 0;
 
     public int CommonAmount { get => _commonAmount; }
-    public double CommonCards { get => 100d / _totalAmount * _commonAmount; }
-    public double CommonPacks { get => 100d / _packs.Count * _commonPacks; }
+    public double CommonCards { get => _totalAmount == 0 ? 0 : (double)_commonAmount / _totalAmount; }
+    public double CommonPacks { get => _packs.Count == 0 ? 0 : (double)_commonPacks / _packs.Count; }
 
     public int RareAmount { get => _rareAmount; }
-    public double RareCards { get => 100d / _totalAmount * _rareAmount; }
-    public double RarePacks { get => 100d / _packs.Count * _rarePacks; }
+    public double RareCards { get => _totalAmount == 0 ? 0 : (double)_rareAmount / _totalAmount; }
+    public double RarePacks { get => _packs.Count == 0 ? 0 : (double)_rarePacks / _packs.Count; }
 
     public int EpicAmount { get => _epicAmount; }
-    public double EpicCards { get => 100d / _totalAmount * _epicAmount; }
-    public double EpicPacks { get => 100d / _packs.Count * _epicPacks; }
+    public double EpicCards { get => _totalAmount == 0 ? 0 : (double)_epicAmount / _totalAmount; }
+    public double EpicPacks { get => _packs.Count == 0 ? 0 : (double)_epicPacks / _packs.Count; }
 
     public int LegendaryAmount { get => _legendaryAmount; }
-    public double LegendaryCards { get => 100d / _totalAmount * _legendaryAmount; }
-    public double LegendaryPacks { get => 100d / _packs.Count * _legendaryPacks; }
+    public double LegendaryCards { get => _totalAmount == 0 ? 0 : (double)_legendaryAmount / _totalAmount; }
+    public double LegendaryPacks { get => _packs.Count == 0 ? 0 : (double)_legendaryPacks / _packs.Count; }
 
     public int TotalPacks { get => _packs.Count; }
 

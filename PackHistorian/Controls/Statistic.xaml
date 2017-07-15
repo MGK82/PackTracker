@@ -18,6 +18,7 @@
     <controls:MetroWindow.Resources>
         <ResourceDictionary>
             <view:PackNameConverter x:Key="PackNameConverter" />
+            <view:PercentConverter x:Key="PercentConverter" />
             <System:Double x:Key="FontSize">16</System:Double>
         </ResourceDictionary>
     </controls:MetroWindow.Resources>
@@ -63,23 +64,23 @@
 
             <Label Grid.Row="1" Grid.Column="0" VerticalContentAlignment="Center" Content="Common" FontSize="{DynamicResource FontSize}"/>
             <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding CommonAmount, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
-            <TextBlock Grid.Row="1" Grid.Column="2"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding CommonCards, StringFormat=\{0:0.0\}%, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
-            <TextBlock Grid.Row="1" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding CommonPacks, StringFormat=\{0:0.0\}%, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
+            <TextBlock Grid.Row="1" Grid.Column="2"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding CommonCards, Converter={StaticResource PercentConverter}, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
+            <TextBlock Grid.Row="1" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding CommonPacks, Converter={StaticResource PercentConverter}, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
 
             <Label Grid.Row="2" Grid.Column="0" VerticalContentAlignment="Center" Content="Rare" FontSize="{DynamicResource FontSize}"/>
             <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding RareAmount, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
-            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding RareCards, StringFormat=\{0:0.0\}%, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
-            <TextBlock Grid.Row="2" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding RarePacks, StringFormat=\{0:0.0\}%, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
+            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding RareCards, Converter={StaticResource PercentConverter}, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
+            <TextBlock Grid.Row="2" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding RarePacks, Converter={StaticResource PercentConverter}, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
 
             <Label Grid.Row="3" Grid.Column="0" VerticalContentAlignment="Center" Content="Epic" FontSize="{DynamicResource FontSize}"/>
             <TextBlock Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding EpicAmount, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
-            <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding EpicCards, StringFormat=\{0:0.0\}%, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
-            <TextBlock Grid.Row="3" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding EpicPacks, StringFormat=\{0:0.0\}%, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
+            <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding EpicCards, Converter={StaticResource PercentConverter}, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
+            <TextBlock Grid.Row="3" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding EpicPacks, Converter={StaticResource PercentConverter}, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
 
             <Label Grid.Row="4" Grid.Column="0" VerticalContentAlignment="Center" Content="Legendary" FontSize="{DynamicResource FontSize}"/>
             <TextBlock Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding LegendaryAmount, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
-            <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding LegendaryCards, StringFormat=\{0:0.0\}%, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
-            <TextBlock Grid.Row="4" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding LegendaryPacks, StringFormat=\{0:0.0\}%, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
+            <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding LegendaryCards, Converter={StaticResource PercentConverter}, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
+            <TextBlock Grid.Row="4" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding LegendaryPacks, Converter={StaticResource PercentConverter}, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
 
             <Label Grid.Row="5" Grid.Column="0" VerticalContentAlignment="Center" Content="Total" FontSize="{DynamicResource FontSize}"/>
             <TextBlock Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="3" Text="{Binding TotalPacks, StringFormat=\{0\} Packs, UpdateSourceTrigger=PropertyChanged}" FontSize="{DynamicResource FontSize}" />
