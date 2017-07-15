@@ -67,6 +67,44 @@ namespace PackTracker.Controls {
           }
         }
       };
+
+      dp_DatePicker.MouseWheel += (sender, e) => {
+        if(dp_DatePicker.SelectedDate == null) {
+          return;
+        }
+
+        int day = e.Delta < 0 ? -1 : 1;
+        DateTime Date = (DateTime)dp_DatePicker.SelectedDate;
+        DateTime First = History.First().Time.Date;
+        DateTime Last = History.Last().Time.Date;
+
+        do {
+          Date = Date.AddDays(day);
+
+          if(day == 1) {
+            if(Date > Last) {
+              return;
+            }
+
+            if(Date < First) {
+              dp_DatePicker.SelectedDate = First;
+              return;
+            }
+          } else {
+            if(Date < First) {
+              return;
+            }
+
+            if(Date > Last) {
+              dp_DatePicker.SelectedDate = Last;
+              return;
+            }
+          }
+
+        } while(dp_DatePicker.BlackoutDates.Contains(Date));
+
+        dp_DatePicker.SelectedDate = Date;
+      };
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
