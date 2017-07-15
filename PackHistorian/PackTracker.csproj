@@ -138,6 +138,7 @@
     <Compile Include="Update\Updater.cs" />
     <Compile Include="View\DateConverter.cs" />
     <Compile Include="View\DateTimeConverter.cs" />
+    <Compile Include="View\DecimalConverter.cs" />
     <Compile Include="View\PackNameConverter.cs" />
     <Compile Include="View\Average.cs" />
     <Compile Include="View\AverageCollection.cs" />
