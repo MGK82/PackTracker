@@ -49,6 +49,7 @@ namespace PackTracker.Controls {
       }
 
       History.CollectionChanged += DropDown_NewEntry;
+      dd_Packs.Focus();
     }
 
     //TODO: Testen
