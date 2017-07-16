@@ -1,0 +1,48 @@
+﻿<metro:MetroWindow x:Class="PackTracker.Controls.Search"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:PackTracker.Controls"
+        xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:view="clr-namespace:PackTracker.View"
+        xmlns:DTcontrols="clr-namespace:Hearthstone_Deck_Tracker.Controls;assembly=HearthstoneDeckTracker"
+        xmlns:local="clr-namespace:PackTracker.Controls"
+        mc:Ignorable="d"
+        Title="Search" Height="300" Width="400"
+        KeyDown="MetroWindow_KeyDown"
+        WindowStartupLocation="CenterOwner"
+>
+    <metro:MetroWindow.Resources>
+        <ResourceDictionary>
+            <view:DateTimeConverter x:Key="DateTimeConverter" />
+        </ResourceDictionary>
+    </metro:MetroWindow.Resources>
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Bottom">
+            <Button DockPanel.Dock="Right" Name="btn_Search" IsDefault="True" Height="22" Click="btn_Search_Click">
+                <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/if_search_322497.ico" />
+            </Button>
+            <TextBox DockPanel.Dock="Left" Name="txt_Search" KeyDown="txt_Search_KeyDown" />
+        </DockPanel>
+        
+        <DataGrid Name="dg_Result" DockPanel.Dock="Top" AutoGenerateColumns="False" SelectionMode="Single" CanUserSortColumns="True">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Time" SortMemberPath="DateTime" Width="SizeToCells" IsReadOnly="True" MinWidth="150" SortDirection="Ascending">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding DateTime, Converter={StaticResource DateTimeConverter}}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Card" SortMemberPath="Card.HDTCard.LocalizedName" Width="SizeToCells" IsReadOnly="True" MinWidth="200">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DTcontrols:Card Name="crd_Card" DataContext="{Binding Card.HDTCard}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</metro:MetroWindow>

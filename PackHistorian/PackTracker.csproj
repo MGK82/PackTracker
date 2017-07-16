@@ -101,6 +101,9 @@
     <Compile Include="Controls\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Settings\Credits.xaml.cs">
       <DependentUpon>Credits.xaml</DependentUpon>
     </Compile>
@@ -120,6 +123,8 @@
       <DependentUpon>Toast.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entity\Card.cs" />
+    <Compile Include="Entity\Index.cs" />
+    <Compile Include="IndexRepository.cs" />
     <Compile Include="Entity\Pack.cs" />
     <Compile Include="Event\PackOpenedEventArgs.cs" />
     <Compile Include="History.cs" />
@@ -172,6 +177,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\Search.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Settings\Credits.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -208,6 +217,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Icons\1498791216_calendar-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\if_search_322497.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

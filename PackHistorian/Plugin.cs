@@ -21,6 +21,7 @@ namespace PackTracker {
     Controls.History _historyWin;
     Controls.Statistic _statisticWin;
     Controls.Log _logWin;
+    Controls.Search _searchWin;
     View.AverageCollection _averageCollection;
 
     public static Version CurrentVersion { get => _version; }
@@ -77,6 +78,20 @@ namespace PackTracker {
       return Win;
     }
 
+    Controls.Search SearchWin {
+      get {
+        if(_searchWin == null) {
+          _searchWin = new Controls.Search(_history) {
+            Owner = Hearthstone_Deck_Tracker.Core.MainWindow,
+          };
+          _searchWin.Closed += (sender, e) => _searchWin = null;
+          _searchWin.Loaded += (sender, e) => _searchWin.Title = Name + ": " + _searchWin.Title;
+        }
+
+        return _searchWin;
+      }
+    }
+
     public Plugin() {
       _watcher = new AchievementsWatcher();
       _updater = new Updater();
@@ -126,6 +141,7 @@ namespace PackTracker {
         Menu.mnu_History.Click += (sender, e) => { HistoryWin.Show(); HistoryWin.Focus(); };
         Menu.mnu_Statistic.Click += (sender, e) => { StatisticWin.Show(); StatisticWin.Focus(); };
         Menu.mnu_Log.Click += (sender, e) => { LogWin.Show(); LogWin.Focus(); };
+        Menu.mnu_Search.Click += (sender, e) => { SearchWin.Show(); SearchWin.Focus(); };
 
         return Menu;
       }

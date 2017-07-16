@@ -31,4 +31,11 @@
         </MenuItem.Icon>
         <MenuItem.Header>Log</MenuItem.Header>
     </MenuItem>
+
+    <MenuItem Name="mnu_Search">
+        <MenuItem.Icon>
+            <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/if_search_322497.ico" />
+        </MenuItem.Icon>
+        <MenuItem.Header>Search</MenuItem.Header>
+    </MenuItem>
 </MenuItem>
