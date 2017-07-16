@@ -12,6 +12,8 @@
         Title="Search" Height="300" Width="400"
         KeyDown="MetroWindow_KeyDown"
         WindowStartupLocation="CenterOwner"
+        BorderBrush="Black"
+        BorderThickness="1"
 >
     <metro:MetroWindow.Resources>
         <ResourceDictionary>
@@ -19,7 +21,7 @@
         </ResourceDictionary>
     </metro:MetroWindow.Resources>
     <DockPanel>
-        <DockPanel DockPanel.Dock="Bottom">
+        <DockPanel DockPanel.Dock="Bottom" Margin="4">
             <Button DockPanel.Dock="Right" Name="btn_Search" IsDefault="True" Height="22" Click="btn_Search_Click">
                 <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/if_search_322497.ico" />
             </Button>
