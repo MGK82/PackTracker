@@ -36,9 +36,9 @@ namespace PackTracker.Controls {
             _statistics.Add(selection, new View.Statistic(selection, History));
           }
 
-          grd_Statistic.DataContext = _statistics[selection];
+          dp_Statistic.DataContext = _statistics[selection];
         } else {
-          grd_Statistic.DataContext = null;
+          dp_Statistic.DataContext = null;
         }
       };
 

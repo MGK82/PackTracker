@@ -26,7 +26,13 @@ namespace PackTracker.View {
       _legendaryAmount = 0,
       _legendaryPacks = 0,
 
-      _totalAmount = 0;
+      _totalAmount = 0,
+
+      _epicCurrStreak = 0,
+      _epicLongStreak = 0,
+
+      _legendaryCurrStreak = 0,
+      _legendaryLongStreak = 0;
 
     public int CommonAmount { get => _commonAmount; }
     public double CommonCards { get => _totalAmount == 0 ? 0 : (double)_commonAmount / _totalAmount; }
@@ -46,12 +52,16 @@ namespace PackTracker.View {
 
     public int TotalPacks { get => _packs.Count; }
 
+    public int EpicStreak { get => _epicLongStreak; }
+    public int LegendaryStreak { get => _legendaryLongStreak; }
+
     public Statistic(int packId, History History) {
       _packId = packId;
       _packs = new List<Pack>(History.Where(x => x.Id == packId));
 
       foreach(Pack Pack in _packs) {
         CountRarity(Pack);
+        CountStreak(Pack);
       }
 
       History.CollectionChanged += (sender, e) => {
@@ -60,6 +70,7 @@ namespace PackTracker.View {
             if(Pack.Id == _packId) {
               _packs.Add(Pack);
               CountRarity(Pack);
+              CountStreak(Pack);
 
               if(Pack.Cards.Any(x => x.Rarity == Rarity.COMMON)) {
                 OnPropertyChanged("CommonAmount");
@@ -136,6 +147,30 @@ namespace PackTracker.View {
 
       if(hasLegendary) {
         _legendaryPacks++;
+      }
+    }
+
+    void CountStreak(Pack Pack) {
+      if(Pack.Cards.Any(x => x.Rarity == Rarity.EPIC)) {
+        _epicCurrStreak = 0;
+      } else {
+        _epicCurrStreak++;
+
+        if(_epicCurrStreak > _epicLongStreak) {
+          _epicLongStreak = _epicCurrStreak;
+          OnPropertyChanged("EpicStreak");
+        }
+      }
+
+      if(Pack.Cards.Any(x => x.Rarity == Rarity.LEGENDARY)) {
+        _legendaryCurrStreak = 0;
+      } else {
+        _legendaryCurrStreak++;
+
+        if(_legendaryCurrStreak > _legendaryLongStreak) {
+          _legendaryLongStreak = _legendaryCurrStreak;
+          OnPropertyChanged("LegendaryStreak");
+        }
       }
     }
 
