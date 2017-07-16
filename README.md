@@ -26,3 +26,6 @@ Statistic
 
 Log  
 ![](https://github.com/MGK82/PackTracker/blob/master/doc/Screenshots/Log.png?raw=true)
+
+Search  
+![](https://github.com/MGK82/PackTracker/blob/master/doc/Screenshots/Search.png?raw=true)
