@@ -96,26 +96,27 @@
         <Border DockPanel.Dock="Top" Margin="4" Padding="1" BorderBrush="Black" BorderThickness="1">
             <DockPanel>
                 <UserControl Name="uc_Date" DockPanel.Dock="Top" />
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ItemsControl DockPanel.Dock="Top" Name="ic_Cards" ItemsSource="{Binding AssociatedPack, UpdateSourceTrigger=PropertyChanged}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderThickness="1" BorderBrush="Black" Padding="2,0,2,2" Margin="0,0,2,0" >
+                                    <StackPanel>
+                                        <Label Content="{Binding Id, Converter={StaticResource PackNameConverter}}"></Label>
+                                        <Label Content="{Binding Time, Converter={StaticResource TimeConverter}}"></Label>
+                                        <local:Cards DataContext="{Binding Cards}" />
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
 
-                <ItemsControl DockPanel.Dock="Top" Name="ic_Cards" ItemsSource="{Binding AssociatedPack, UpdateSourceTrigger=PropertyChanged}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Border BorderThickness="1" BorderBrush="Black" Padding="2,0,2,2" Margin="0,0,2,0" >
-                                <StackPanel>
-                                    <Label Content="{Binding Id, Converter={StaticResource PackNameConverter}}"></Label>
-                                    <Label Content="{Binding Time, Converter={StaticResource TimeConverter}}"></Label>
-                                    <local:Cards DataContext="{Binding Cards}" />
-                                </StackPanel>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel />
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                </ItemsControl>
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </ScrollViewer>
             </DockPanel>
         </Border>
     </DockPanel>
