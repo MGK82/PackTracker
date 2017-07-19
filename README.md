@@ -11,7 +11,7 @@ This allows you to see how many cards of different rarities have dropped over ti
   - a boosterpack-series-based statistic
   - a plain chronological text-log
 - Supports auto-update
-- Counts boosterpack-series-based "pitty-counters" for Epic and Legendary cards
+- Counts boosterpack-series-based "pity timer" for Epic and Legendary cards
 - Can search through card names and texts in both, english and the chosen language of your HDT at once
   - *HDT must support the translation*
 
