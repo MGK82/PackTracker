@@ -95,7 +95,6 @@ namespace PackTracker {
     public Plugin() {
       _watcher = new AchievementsWatcher();
       _updater = new Updater();
-      _settings = new Settings();
 
       try {
         _history = _historyStorage.Fetch();
@@ -174,8 +173,8 @@ namespace PackTracker {
         _history.Add(e.Pack);
         _historyStorage.Store(_history.Ascending);
 
-        View.Average Average = _averageCollection.FindForPackId(e.Pack.Id);
         if(_settings.Spoil) {
+          View.Average Average = _averageCollection.FindForPackId(e.Pack.Id);
           ToastManager.ShowCustomToast(new Controls.Toast(e.Pack, Average));
         }
       };
