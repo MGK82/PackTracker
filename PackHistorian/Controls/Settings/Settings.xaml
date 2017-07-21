@@ -21,7 +21,7 @@
                 </ListBox.ItemTemplate>
             </ListBox>
 
-            <ContentControl Name="cc_Content" DockPanel.Dock="Right" Content="{Binding ElementName=lb_tabs, Path=SelectedItem}" MinWidth="300" Margin="1,0,0,0" />
+            <ContentControl DockPanel.Dock="Right" Content="{Binding ElementName=lb_tabs, Path=SelectedItem}" MinWidth="300" Margin="1,0,0,0" />
         </DockPanel>
     </Border>
 </metro:MetroWindow>

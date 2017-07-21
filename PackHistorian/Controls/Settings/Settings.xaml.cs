@@ -34,8 +34,6 @@ namespace PackTracker.Controls.Settings {
       AnimateSizeToContentStart();
     }
 
-
-
     void AnimateSizeToContentStart() {
       SizeChanged += ChangeSize;
       SizeToContent = SizeToContent.Width;
