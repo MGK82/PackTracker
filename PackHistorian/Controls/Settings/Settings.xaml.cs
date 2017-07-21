@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using PackTracker.Update;
@@ -30,6 +31,30 @@ namespace PackTracker.Controls.Settings {
       lb_tabs.SelectedIndex = 0;
 
       _settings = Settings;
+      AnimateSizeToContentStart();
+    }
+
+
+
+    void AnimateSizeToContentStart() {
+      SizeChanged += ChangeSize;
+      SizeToContent = SizeToContent.Width;
+    }
+
+    void AnimateSizeToContentStop() {
+      SizeChanged -= ChangeSize;
+      SizeToContent = SizeToContent.Manual;
+    }
+
+    void ChangeSize(object sender, SizeChangedEventArgs e) {
+      DoubleAnimation at = new DoubleAnimation(e.PreviousSize.Width, e.NewSize.Width, new Duration(new TimeSpan(6000000)));
+      AnimateSizeToContentStop();
+      at.EasingFunction = new ExponentialEase() { EasingMode = EasingMode.EaseInOut };
+      at.Completed += (sender2, e2) => {
+        AnimateSizeToContentStart();
+      };
+
+      BeginAnimation(WidthProperty, at);
     }
   }
 }

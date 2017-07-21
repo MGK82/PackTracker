@@ -9,6 +9,7 @@
         Title="Settings" Height="350" Width="500"
         BorderBrush="Black" BorderThickness="1"
         WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
 >
     <Border Margin="4" Padding="1" BorderBrush="Black" BorderThickness="1">
         <DockPanel>
@@ -20,7 +21,7 @@
                 </ListBox.ItemTemplate>
             </ListBox>
 
-            <ContentControl DockPanel.Dock="Right" Content="{Binding ElementName=lb_tabs, Path=SelectedItem}" Margin="1,0,0,0" />
+            <ContentControl Name="cc_Content" DockPanel.Dock="Right" Content="{Binding ElementName=lb_tabs, Path=SelectedItem}" MinWidth="300" Margin="1,0,0,0" />
         </DockPanel>
     </Border>
 </metro:MetroWindow>

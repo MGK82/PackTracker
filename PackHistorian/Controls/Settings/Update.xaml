@@ -6,7 +6,7 @@
              xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              xmlns:local="clr-namespace:PackTracker.Controls.Settings"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300"
+             d:DesignHeight="300"
 >
     <metro:MetroContentControl.Resources>
         <ResourceDictionary>
@@ -35,7 +35,7 @@
 
         <Border DockPanel.Dock="Top">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <TextBlock Name="txt_ChangeLog" Margin="4,0" />
+                <TextBlock Name="txt_ChangeLog" MinWidth="300" Margin="4,0" />
             </ScrollViewer>
         </Border>
     </DockPanel>
