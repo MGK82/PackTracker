@@ -10,6 +10,7 @@
         BorderBrush="Black" BorderThickness="1"
         WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize"
+        Closing="MetroWindow_Closing"
 >
     <Border Margin="4" Padding="1" BorderBrush="Black" BorderThickness="1">
         <DockPanel>

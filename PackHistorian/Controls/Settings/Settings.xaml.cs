@@ -20,6 +20,7 @@ namespace PackTracker.Controls.Settings {
   /// </summary>
   public partial class Settings {
     PackTracker.Settings _settings;
+    bool allowClosing = false;
 
     public Settings(PackTracker.Settings Settings) {
       InitializeComponent();
@@ -53,6 +54,31 @@ namespace PackTracker.Controls.Settings {
       };
 
       BeginAnimation(WidthProperty, at);
+    }
+
+    private void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e) {
+      if(allowClosing) {
+        return;
+      } else {
+        e.Cancel = true;
+      }
+
+      AnimateSizeToContentStop();
+      Duration Duration = new Duration(TimeSpan.FromSeconds(.4));
+      IEasingFunction Easing = new ExponentialEase() { EasingMode = EasingMode.EaseInOut };
+
+      DoubleAnimation Width = new DoubleAnimation(ActualWidth, 2, Duration) { EasingFunction = Easing };
+      Width.Completed += (sender2, e2) => {
+        DoubleAnimation Height = new DoubleAnimation(ActualHeight, 0, Duration) { EasingFunction = Easing };
+        Height.Completed += (sender3, e3) => {
+          allowClosing = true;
+          Close();
+        };
+
+        BeginAnimation(HeightProperty, Height);
+      };
+
+      BeginAnimation(WidthProperty, Width);
     }
   }
 }
