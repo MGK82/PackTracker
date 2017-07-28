@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="PackTracker.Controls.PityTimer.BarChartPrev"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PackTracker.Controls.PityTimer"
+             mc:Ignorable="d" 
+             xmlns:chart="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+>
+    <Grid>
+        <chart:CartesianChart Name="Chart" Series="{Binding SystemCollection, UpdateSourceTrigger=PropertyChanged}">
+            <chart:CartesianChart.AxisX>
+                <chart:Axis Title="Packs" Labels="{Binding Labels}"></chart:Axis>
+            </chart:CartesianChart.AxisX>
+            <chart:CartesianChart.AxisY>
+                <chart:Axis IsMerged="False" ShowLabels="True">
+                    <chart:Axis.Sections>
+                        <chart:AxisSection Value="20" Stroke="YellowGreen" StrokeThickness="3" StrokeDashArray="10" />
+                    </chart:Axis.Sections>
+                    <chart:Axis.Separator>
+                        <chart:Separator IsEnabled="True" Step="1"></chart:Separator>
+                    </chart:Axis.Separator>
+                </chart:Axis>
+            </chart:CartesianChart.AxisY>
+        </chart:CartesianChart>
+    </Grid>
+</UserControl>
