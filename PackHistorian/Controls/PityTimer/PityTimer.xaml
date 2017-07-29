@@ -12,7 +12,8 @@
     <Window.Resources>
         <ResourceDictionary Source="..\Brushes.xaml" />
     </Window.Resources>
-    <Grid>
-        <local:BarChartPrev x:Name="Ep_Prev" Fill="{StaticResource Epic}" Threshold="9" />
-    </Grid>
+    <DockPanel>
+        <local:BarChartCurr DockPanel.Dock="Right" x:Name="Ep_Curr" Fill="{StaticResource Epic}" Threshold="9" YTitle="Current Without Epic" />
+        <local:BarChartPrev DockPanel.Dock="Left" x:Name="Ep_Prev" Fill="{StaticResource Epic}" Threshold="9" XTitle="Epic Packs" YTitle="Non Epic Packs" />
+    </DockPanel>
 </Window>

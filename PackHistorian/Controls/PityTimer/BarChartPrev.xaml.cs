@@ -22,7 +22,7 @@ namespace PackTracker.Controls.PityTimer {
   /// <summary>
   /// Interaktionslogik für BarChart.xaml
   /// </summary>
-  public partial class BarChartPrev : UserControl, INotifyPropertyChanged {
+  public partial class BarChartPrev : UserControl, IBarChart {
     SeriesCollection _sc;
     ColumnSeries _cs;
     ChartValues<int> _prevTimer = new ChartValues<int>();
@@ -31,6 +31,8 @@ namespace PackTracker.Controls.PityTimer {
     public Brush Fill { set => _cs.Fill = value; }
     public int Threshold { get; set; }
     public int? Average { get => DataContext is View.PityTimer ? ((View.PityTimer)DataContext).Average : null; }
+    public string XTitle { get; set; }
+    public string YTitle { get; set; }
 
     public BarChartPrev() {
       InitializeComponent();

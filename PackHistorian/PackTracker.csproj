@@ -112,6 +112,7 @@
     <Compile Include="Controls\PityTimer\BarChartPrev.xaml.cs">
       <DependentUpon>BarChartPrev.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PityTimer\IBarChart.cs" />
     <Compile Include="Controls\PityTimer\PityTimer.xaml.cs">
       <DependentUpon>PityTimer.xaml</DependentUpon>
     </Compile>
