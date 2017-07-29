@@ -27,7 +27,7 @@ namespace PackTracker.Controls.PityTimer {
     ColumnSeries _cs;
     ChartValues<int> _prevTimer = new ChartValues<int>();
 
-    public SeriesCollection SystemCollection { get => _sc; }
+    public SeriesCollection Prev { get => _sc; }
     public Brush Fill { set => _cs.Fill = value; }
     public int Threshold { get; set; }
     public int? Average { get => DataContext is View.PityTimer ? ((View.PityTimer)DataContext).Average : null; }
@@ -61,7 +61,7 @@ namespace PackTracker.Controls.PityTimer {
           _sc = new SeriesCollection();
         }
 
-        OnPropertyChanged("SystemCollection");
+        OnPropertyChanged("Prev");
       };
     }
 

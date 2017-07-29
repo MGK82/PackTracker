@@ -10,7 +10,7 @@
              d:DesignWidth="300"
 >
     <Grid>
-        <chart:CartesianChart Name="Chart" Series="{Binding SystemCollection, UpdateSourceTrigger=PropertyChanged}">
+        <chart:CartesianChart Name="Chart" Series="{Binding Prev, UpdateSourceTrigger=PropertyChanged}">
             <chart:CartesianChart.AxisX>
                 <chart:Axis Title="Epic Packs"></chart:Axis>
             </chart:CartesianChart.AxisX>
