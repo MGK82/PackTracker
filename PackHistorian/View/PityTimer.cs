@@ -44,21 +44,19 @@ namespace PackTracker.View {
         return;
       }
 
+      _current++;
+
       if(_condition(Pack)) {
         if(_waitForFirst) {
           _waitForFirst = false;
         } else {
           _prev.Add(_current);
-          _current = 0;
-          OnPropertyChanged("Current");
           OnPropertyChanged("Average");
         }
-      } else {
-        if(!_waitForFirst) {
-          _current++;
-          OnPropertyChanged("Current");
-        }
+        _current = 0;
       }
+
+      OnPropertyChanged("Current");
     }
 
     public event PropertyChangedEventHandler PropertyChanged;
