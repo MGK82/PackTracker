@@ -9,7 +9,10 @@
         Height="300"
         Width="300"
 >
+    <Window.Resources>
+        <ResourceDictionary Source="..\Brushes.xaml" />
+    </Window.Resources>
     <Grid>
-        
+        <local:BarChartPrev x:Name="Ep_Prev" Fill="{StaticResource Epic}" Threshold="9" />
     </Grid>
 </Window>

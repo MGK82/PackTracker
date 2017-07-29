@@ -24,19 +24,25 @@ namespace PackTracker.Controls.PityTimer {
   /// </summary>
   public partial class BarChartPrev : UserControl, INotifyPropertyChanged {
     SeriesCollection _sc;
+    ColumnSeries _cs;
     ChartValues<int> _prevTimer = new ChartValues<int>();
 
     public SeriesCollection SystemCollection { get => _sc; }
+    public Brush Fill { set => _cs.Fill = value; }
+    public int Threshold { get; set; }
+    public int? Average { get => DataContext is View.PityTimer ? ((View.PityTimer)DataContext).Average : null; }
 
     public BarChartPrev() {
       InitializeComponent();
       Chart.DataContext = this;
 
+      _cs = new ColumnSeries() {
+        Values = _prevTimer,
+        Fill = Brushes.Red,
+      };
+
       _sc = new SeriesCollection() {
-        new ColumnSeries() {
-          Values = _prevTimer,
-          Fill = Brushes.Red,
-        }
+        _cs,
       };
 
       DataContextChanged += (sender, e) => {
@@ -46,15 +52,23 @@ namespace PackTracker.Controls.PityTimer {
           _prevTimer.AddRange(pt.Prev);
 
           pt.Prev.CollectionChanged += PrevChanged;
+          pt.PropertyChanged += AverageChanged;
         } else {
           if(e.OldValue is View.PityTimer) {
             ((View.PityTimer)e.OldValue).Prev.CollectionChanged -= PrevChanged;
+            ((View.PityTimer)e.OldValue).PropertyChanged -= AverageChanged;
           }
           _sc = new SeriesCollection();
         }
 
         OnPropertyChanged("SystemCollection");
       };
+    }
+
+    private void AverageChanged(object sender, PropertyChangedEventArgs e) {
+      if(e.PropertyName == "Average") {
+        OnPropertyChanged(e.PropertyName);
+      }
     }
 
     private void PrevChanged(object sender, NotifyCollectionChangedEventArgs e) {

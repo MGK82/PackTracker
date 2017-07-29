@@ -10,6 +10,7 @@ using PackTracker.Entity;
 
 namespace PackTracker.View {
   public class PityTimer : INotifyPropertyChanged {
+    int _packId;
     bool _waitForFirst;
     Func<Pack, bool> _condition;
 
@@ -20,7 +21,8 @@ namespace PackTracker.View {
     public ObservableCollection<int> Prev { get => _prev; }
     public int? Average { get => _prev.Count > 0 ? (int?)Math.Round(_prev.Average(), 0) : null; }
 
-    public PityTimer(History History, Func<Pack, bool> Condition, bool skipFirst) {
+    public PityTimer(History History, int packId, Func<Pack, bool> Condition, bool skipFirst) {
+      _packId = packId;
       _waitForFirst = skipFirst;
       _condition = Condition;
 
@@ -38,6 +40,10 @@ namespace PackTracker.View {
     }
 
     void AddPack(Pack Pack) {
+      if(Pack.Id != _packId) {
+        return;
+      }
+
       if(_condition(Pack)) {
         if(_waitForFirst) {
           _waitForFirst = false;
@@ -45,6 +51,7 @@ namespace PackTracker.View {
           _prev.Add(_current);
           _current = 0;
           OnPropertyChanged("Current");
+          OnPropertyChanged("Average");
         }
       } else {
         if(!_waitForFirst) {

@@ -17,7 +17,7 @@ namespace PackTracker.Controls.PityTimer {
   /// Interaktionslogik für PityTimer.xaml
   /// </summary>
   public partial class PityTimer : Window {
-    public PityTimer() {
+    public PityTimer(PackTracker.History History) {
       InitializeComponent();
     }
   }

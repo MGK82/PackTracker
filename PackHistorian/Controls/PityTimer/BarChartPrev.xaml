@@ -12,12 +12,13 @@
     <Grid>
         <chart:CartesianChart Name="Chart" Series="{Binding SystemCollection, UpdateSourceTrigger=PropertyChanged}">
             <chart:CartesianChart.AxisX>
-                <chart:Axis Title="Packs" Labels="{Binding Labels}"></chart:Axis>
+                <chart:Axis Title="Epic Packs"></chart:Axis>
             </chart:CartesianChart.AxisX>
             <chart:CartesianChart.AxisY>
-                <chart:Axis IsMerged="False" ShowLabels="True">
+                <chart:Axis Title="Non Epic Packs" IsMerged="False" ShowLabels="True">
                     <chart:Axis.Sections>
-                        <chart:AxisSection Value="20" Stroke="YellowGreen" StrokeThickness="3" StrokeDashArray="10" />
+                        <chart:AxisSection Value="{Binding Threshold}" Stroke="YellowGreen" StrokeThickness="3" />
+                        <chart:AxisSection Value="{Binding Average, UpdateSourceTrigger=PropertyChanged}" Stroke="MediumSeaGreen" StrokeThickness="2" StrokeDashArray="4,5" />
                     </chart:Axis.Sections>
                     <chart:Axis.Separator>
                         <chart:Separator IsEnabled="True" Step="1"></chart:Separator>
