@@ -159,6 +159,7 @@
     <Compile Include="Update\Release.cs" />
     <Compile Include="Update\Updater.cs" />
     <Compile Include="View\AbstractValueConverter.cs" />
+    <Compile Include="View\Cache\PityTimerRepository.cs" />
     <Compile Include="View\DateConverter.cs" />
     <Compile Include="View\DateTimeConverter.cs" />
     <Compile Include="View\DecimalConverter.cs" />
