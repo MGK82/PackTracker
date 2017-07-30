@@ -64,9 +64,10 @@ namespace PackTracker.Controls.PityTimer {
       };
 
       DataContextChanged += (sender, e) => {
+        _prevTimer.Clear();
+
         if(e.NewValue is View.PityTimer) {
           View.PityTimer pt = (View.PityTimer)e.NewValue;
-          _prevTimer.Clear();
           _prevTimer.AddRange(pt.Prev.Select(x => new ObservableValue(x)));
           _currTimer = new ObservableValue(pt.Current);
           _prevTimer.Add(_currTimer);
@@ -74,16 +75,15 @@ namespace PackTracker.Controls.PityTimer {
           pt.Prev.CollectionChanged += PrevChanged;
           pt.PropertyChanged += AverageChanged;
           pt.PropertyChanged += CurrentChanged;
-        } else {
-          if(e.OldValue is View.PityTimer) {
-            ((View.PityTimer)e.OldValue).Prev.CollectionChanged -= PrevChanged;
-            ((View.PityTimer)e.OldValue).PropertyChanged -= AverageChanged;
-            ((View.PityTimer)e.OldValue).PropertyChanged += CurrentChanged;
-          }
-          _sc = new SeriesCollection();
         }
 
-        OnPropertyChanged("Prev");
+        if(e.OldValue is View.PityTimer) {
+          ((View.PityTimer)e.OldValue).Prev.CollectionChanged -= PrevChanged;
+          ((View.PityTimer)e.OldValue).PropertyChanged -= AverageChanged;
+          ((View.PityTimer)e.OldValue).PropertyChanged -= CurrentChanged;
+        }
+
+        OnPropertyChanged("Average");
       };
     }
 
