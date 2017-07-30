@@ -20,14 +20,10 @@ namespace PackTracker.Controls {
   /// Interaktionslogik für Statistic.xaml
   /// </summary>
   public partial class Statistic {
-    ObservableCollection<int> _dropDown;
     public Statistic(PackTracker.History History) {
       InitializeComponent();
 
       Dictionary<int, View.Statistic> _statistics = new Dictionary<int, View.Statistic>();
-
-      _dropDown = new ObservableCollection<int>(History.Select(x => x.Id).Distinct().OrderBy(x => x));
-      dd_Packs.ItemsSource = _dropDown;
 
       dd_Packs.SelectionChanged += (sender, e) => {
         if(e.AddedItems.Count == 1) {
@@ -42,46 +38,8 @@ namespace PackTracker.Controls {
         }
       };
 
-      if(_dropDown.Count > 0) {
-        dd_Packs.SelectedIndex = 0;
-      } else {
-        _dropDown.CollectionChanged += DropDown_Initialize;
-      }
-
-      History.CollectionChanged += DropDown_NewEntry;
+      Loaded += (sender, e) => dd_Packs.DataContext = History;
       dd_Packs.Focus();
-    }
-
-    //TODO: Testen
-    private void DropDown_Initialize(object sender, NotifyCollectionChangedEventArgs e) {
-      if(e.Action == NotifyCollectionChangedAction.Add) {
-        dd_Packs.SelectedItem = e.NewItems[0];
-        if(sender is INotifyCollectionChanged) {
-          ((INotifyCollectionChanged)sender).CollectionChanged -= DropDown_Initialize;
-        }
-      }
-    }
-
-    private void DropDown_NewEntry(object sender, NotifyCollectionChangedEventArgs e) {
-      if(e.Action == NotifyCollectionChangedAction.Add) {
-        foreach(Pack newPack in e.NewItems) {
-          if(!_dropDown.Contains(newPack.Id)) {
-            bool isInserted = false;
-
-            foreach(int id in _dropDown) {
-              if(newPack.Id < id) {
-                _dropDown.Insert(_dropDown.IndexOf(id), newPack.Id);
-                isInserted = true;
-                break;
-              }
-            }
-
-            if(!isInserted) {
-              _dropDown.Add(newPack.Id);
-            }
-          }
-        }
-      }
     }
   }
 }

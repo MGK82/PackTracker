@@ -27,13 +27,7 @@
         <Border DockPanel.Dock="Top" Margin="4" Padding="1" BorderBrush="Black" BorderThickness="1">
             <StackPanel>
                 <DockPanel>
-                    <ComboBox DockPanel.Dock="Right" x:Name="dd_Packs" IsEnabled="{Binding Items.Count, Mode=OneWay, RelativeSource={RelativeSource Self}}" VerticalAlignment="Center">
-                        <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Converter={StaticResource PackNameConverter}}"/>
-                            </DataTemplate>
-                        </ComboBox.ItemTemplate>
-                    </ComboBox>
+                    <local:PackDropDown DockPanel.Dock="Right" x:Name="dd_Packs" />
                     <Label Content="Booster Pack"/>
                 </DockPanel>
                 <Border BorderThickness="0,1,0,0" BorderBrush="CornflowerBlue" Margin="6,6,6,0" />
