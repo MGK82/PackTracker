@@ -109,6 +109,9 @@
     <Compile Include="Controls\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PackDropDown.xaml.cs">
+      <DependentUpon>PackDropDown.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PityTimer\BarChartPrev.xaml.cs">
       <DependentUpon>BarChartPrev.xaml</DependentUpon>
     </Compile>
@@ -193,6 +196,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PackDropDown.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
