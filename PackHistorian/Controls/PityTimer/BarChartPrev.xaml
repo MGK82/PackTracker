@@ -11,7 +11,7 @@
 >
     <chart:CartesianChart Name="Chart" Series="{Binding Prev, UpdateSourceTrigger=PropertyChanged}">
         <chart:CartesianChart.AxisX>
-            <chart:Axis Title="{Binding XTitle}">
+            <chart:Axis Title="{Binding XTitle}" LabelFormatter="{x:Static local:LabelFormatter.PlusOne}">
                 <chart:Axis.Separator>
                     <chart:Separator Visibility="Hidden" Step="1" Stroke="{x:Null}"></chart:Separator>
                 </chart:Axis.Separator>
@@ -21,6 +21,7 @@
             <chart:Axis Title="{Binding YTitle}" IsMerged="False" ShowLabels="True">
                 <chart:Axis.Sections>
                     <chart:AxisSection Value="{Binding Threshold}" Stroke="OrangeRed" StrokeThickness="3" />
+                    <chart:AxisSection Value="{Binding SoftThreshold}" Stroke="Orange" StrokeThickness="3" />
                     <chart:AxisSection Value="{Binding Average, UpdateSourceTrigger=PropertyChanged}" Stroke="MediumSeaGreen" StrokeThickness="2" StrokeDashArray="4,5" />
                 </chart:Axis.Sections>
                 <chart:Axis.Separator>
