@@ -12,12 +12,18 @@ using PackTracker.Entity;
 namespace PackTracker.View {
   public class PityTimer : INotifyPropertyChanged {
     int _packId;
-    bool _waitForFirst;
     Rarity _rarity;
     bool _premium;
+    bool _skipFirst;
+    bool _waitForFirst;
 
     int _current = 0;
     ObservableCollection<int> _prev = new ObservableCollection<int>();
+
+    public int PackId { get => _packId; }
+    public Rarity Rarity { get => _rarity; }
+    public bool Premium { get => _premium; }
+    public bool SkipFirst { get => _skipFirst; }
 
     public int Current { get => _current; }
     public ObservableCollection<int> Prev { get => _prev; }
@@ -27,7 +33,7 @@ namespace PackTracker.View {
       _packId = packId;
       _rarity = rarity;
       _premium = premium;
-      _waitForFirst = skipFirst;
+      _skipFirst = _waitForFirst = skipFirst;
 
       foreach(Pack Pack in History) {
         AddPack(Pack);
