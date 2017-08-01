@@ -261,5 +261,8 @@
   <ItemGroup>
     <Resource Include="Resources\Icons\if_search_322497.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\if__chart_2006795.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
