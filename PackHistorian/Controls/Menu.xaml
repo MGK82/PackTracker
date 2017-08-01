@@ -38,4 +38,11 @@
         </MenuItem.Icon>
         <MenuItem.Header>Search</MenuItem.Header>
     </MenuItem>
+
+    <MenuItem Name="mnu_PityTimers">
+        <MenuItem.Icon>
+            <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/if__chart_2006795.ico" />
+        </MenuItem.Icon>
+        <MenuItem.Header>PityTimers</MenuItem.Header>
+    </MenuItem>
 </MenuItem>

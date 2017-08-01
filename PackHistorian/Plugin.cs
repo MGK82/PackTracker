@@ -22,7 +22,9 @@ namespace PackTracker {
     Controls.Statistic _statisticWin;
     Controls.Log _logWin;
     Controls.Search _searchWin;
+    Controls.PityTimer.PityTimer _pityWin;
     View.AverageCollection _averageCollection;
+    View.Cache.PityTimerRepository _pityTimers;
 
     public static Version CurrentVersion { get => _version; }
 
@@ -92,6 +94,20 @@ namespace PackTracker {
       }
     }
 
+    Controls.PityTimer.PityTimer PityWin {
+      get {
+        if(_pityWin == null) {
+          _pityWin = new Controls.PityTimer.PityTimer(_history, _pityTimers) {
+            Owner = Hearthstone_Deck_Tracker.Core.MainWindow,
+          };
+          _pityWin.Closed += (sender, e) => _pityWin = null;
+          _pityWin.Loaded += (sender, e) => _pityWin.Title = Name + ": " + _pityWin.Title;
+        }
+
+        return _pityWin;
+      }
+    }
+
     public Plugin() {
       _watcher = new AchievementsWatcher();
       _updater = new Updater();
@@ -108,6 +124,8 @@ namespace PackTracker {
       } catch {
         _settings = new Settings();
       }
+
+      _pityTimers = new View.Cache.PityTimerRepository(_history);
     }
 
     public string Author
@@ -141,6 +159,7 @@ namespace PackTracker {
         Menu.mnu_Statistic.Click += (sender, e) => { StatisticWin.Show(); StatisticWin.Focus(); };
         Menu.mnu_Log.Click += (sender, e) => { LogWin.Show(); LogWin.Focus(); };
         Menu.mnu_Search.Click += (sender, e) => { SearchWin.Show(); SearchWin.Focus(); };
+        Menu.mnu_PityTimers.Click += (sender, e) => { PityWin.Show(); PityWin.Focus(); };
 
         return Menu;
       }
