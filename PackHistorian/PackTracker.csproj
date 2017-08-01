@@ -115,6 +115,9 @@
     <Compile Include="Controls\PityTimer\BarChartPrev.xaml.cs">
       <DependentUpon>BarChartPrev.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PityTimer\Label.xaml.cs">
+      <DependentUpon>Label.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PityTimer\LabelFormatter.cs" />
     <Compile Include="Controls\PityTimer\PityTimer.xaml.cs">
       <DependentUpon>PityTimer.xaml</DependentUpon>
@@ -203,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\PityTimer\BarChartPrev.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PityTimer\Label.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
