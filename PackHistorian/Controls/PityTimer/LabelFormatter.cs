@@ -7,5 +7,6 @@ using System.Threading.Tasks;
 namespace PackTracker.Controls.PityTimer {
   static class LabelFormatter {
     public static Func<double, string> PlusOne => val => (val + 1).ToString();
+    public static Func<double, string> PlusTwo => val => (val + 2).ToString();
   }
 }
