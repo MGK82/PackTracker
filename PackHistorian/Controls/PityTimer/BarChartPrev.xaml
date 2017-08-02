@@ -9,7 +9,7 @@
              d:DesignHeight="300"
              d:DesignWidth="300"
 >
-    <chart:CartesianChart Name="Chart" Series="{Binding Prev, UpdateSourceTrigger=PropertyChanged}">
+    <chart:CartesianChart Name="Chart" Series="{Binding Prev, UpdateSourceTrigger=PropertyChanged}" DataTooltip="{x:Null}">
         <chart:CartesianChart.AxisX>
             <chart:Axis Title="{Binding XTitle}" LabelFormatter="{x:Static local:LabelFormatter.PlusTwo}" FontSize="20">
                 <chart:Axis.Separator>
