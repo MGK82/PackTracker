@@ -22,7 +22,7 @@
                 <chart:Axis.Sections>
                     <chart:AxisSection Value="{Binding Threshold}" Stroke="OrangeRed" StrokeThickness="3" />
                     <chart:AxisSection Value="{Binding SoftThreshold}" Stroke="Orange" StrokeThickness="3" />
-                    <chart:AxisSection Value="{Binding Average, UpdateSourceTrigger=PropertyChanged}" Stroke="MediumSeaGreen" StrokeThickness="2" StrokeDashArray="4,5" />
+                    <chart:AxisSection Value="{Binding Average, UpdateSourceTrigger=PropertyChanged}" Stroke="CornflowerBlue" StrokeThickness="2" StrokeDashArray="4,5" />
                 </chart:Axis.Sections>
                 <chart:Axis.Separator>
                     <chart:Separator IsEnabled="True" Step="5"></chart:Separator>
