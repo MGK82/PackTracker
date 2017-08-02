@@ -23,9 +23,8 @@ namespace PackTracker.Controls {
   /// Interaktionslogik für History.xaml
   /// </summary>
   public partial class History {
-    public History(PackTracker.History History, AverageCollection Statistic, HistoryDatePicker DatePicker) {
+    public History(PackTracker.History History, HistoryDatePicker DatePicker) {
       InitializeComponent();
-      grd_Stats.DataContext = Statistic;
       ic_Cards.DataContext = DatePicker;
       uc_Date.Content = DatePicker;
     }

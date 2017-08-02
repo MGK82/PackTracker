@@ -31,7 +31,7 @@ namespace PackTracker {
     Controls.History HistoryWin {
       get {
         if(_historyWin == null) {
-          _historyWin = new Controls.History(_history, _averageCollection, new Controls.HistoryDatePicker(_history)) {
+          _historyWin = new Controls.History(_history, new Controls.HistoryDatePicker(_history)) {
             Owner = Hearthstone_Deck_Tracker.Core.MainWindow,
           };
           _historyWin.Closed += (sender, e) => { _historyWin = null; };
