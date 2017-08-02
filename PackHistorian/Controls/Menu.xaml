@@ -11,11 +11,11 @@
         <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/1497613802_feather.ico" />
     </MenuItem.Icon>
 
-    <MenuItem Name="mnu_History">
+    <MenuItem Name="mnu_PityTimers">
         <MenuItem.Icon>
-            <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/1498438250_calendar-3.ico" />
+            <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/if__chart_2006795.ico" />
         </MenuItem.Icon>
-        <MenuItem.Header>History</MenuItem.Header>
+        <MenuItem.Header>PityTimers</MenuItem.Header>
     </MenuItem>
 
     <MenuItem Name="mnu_Statistic">
@@ -23,6 +23,13 @@
             <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/1498438378_line-chart_4.ico" />
         </MenuItem.Icon>
         <MenuItem.Header>Statistic</MenuItem.Header>
+    </MenuItem>
+
+    <MenuItem Name="mnu_History">
+        <MenuItem.Icon>
+            <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/1498438250_calendar-3.ico" />
+        </MenuItem.Icon>
+        <MenuItem.Header>History</MenuItem.Header>
     </MenuItem>
 
     <MenuItem Name="mnu_Log">
@@ -37,12 +44,5 @@
             <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/if_search_322497.ico" />
         </MenuItem.Icon>
         <MenuItem.Header>Search</MenuItem.Header>
-    </MenuItem>
-
-    <MenuItem Name="mnu_PityTimers">
-        <MenuItem.Icon>
-            <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/if__chart_2006795.ico" />
-        </MenuItem.Icon>
-        <MenuItem.Header>PityTimers</MenuItem.Header>
     </MenuItem>
 </MenuItem>
