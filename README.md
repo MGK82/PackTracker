@@ -12,6 +12,7 @@ This allows you to see how many cards of different rarities have dropped over ti
   - a plain chronological text-log
 - Supports auto-update
 - Counts boosterpack-series-based "pity timer" for Epic and Legendary cards
+  - Represented as bar charts
 - Can search through card names and texts in both, english and the chosen language of your HDT at once
   - *HDT must support the translation*
 
@@ -20,11 +21,14 @@ This allows you to see how many cards of different rarities have dropped over ti
 
 ## Screenshots
 
-History  
-![](https://github.com/MGK82/PackTracker/blob/master/doc/Screenshots/History.png?raw=true)  
+Pity Timers  
+![](https://github.com/MGK82/PackTracker/blob/master/doc/Screenshots/PityTimer.png?raw=true)
 
 Statistic  
 ![](https://github.com/MGK82/PackTracker/blob/master/doc/Screenshots/Statistic.png?raw=true)
+
+History  
+![](https://github.com/MGK82/PackTracker/blob/master/doc/Screenshots/History.png?raw=true)  
 
 Log  
 ![](https://github.com/MGK82/PackTracker/blob/master/doc/Screenshots/Log.png?raw=true)
