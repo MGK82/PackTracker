@@ -11,7 +11,9 @@ using System.Windows;
 
 namespace PackTracker {
   public class Plugin : IPlugin {
+    const string _name = "Pack Tracker";
     readonly static Version _version = new Version("1.2");
+
     private PackWatcher _watcher;
     Updater _updater;
     History _history;
@@ -165,13 +167,7 @@ namespace PackTracker {
       }
     }
 
-    public string Name
-    {
-      get
-      {
-        return "Pack Tracker";
-      }
-    }
+    public string Name => _name;
 
     public Version Version
     {
