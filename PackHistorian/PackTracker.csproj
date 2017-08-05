@@ -175,6 +175,7 @@
     <Compile Include="View\PityTimer.cs" />
     <Compile Include="View\Statistic.cs" />
     <Compile Include="View\TimeConverter.cs" />
+    <Compile Include="WindowManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\Brushes.xaml">
