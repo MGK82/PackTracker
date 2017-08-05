@@ -96,7 +96,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AchievementWatcher.cs" />
+    <Compile Include="PackWatcher.cs" />
     <Compile Include="Controls\Cards.xaml.cs">
       <DependentUpon>Cards.xaml</DependentUpon>
     </Compile>

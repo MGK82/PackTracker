@@ -12,7 +12,7 @@ using System.Windows;
 namespace PackTracker {
   public class Plugin : IPlugin {
     readonly static Version _version = new Version("1.2");
-    private AchievementsWatcher _watcher;
+    private PackWatcher _watcher;
     Updater _updater;
     History _history;
     IHistoryStorage _historyStorage = new XmlHistory();
@@ -109,7 +109,7 @@ namespace PackTracker {
     }
 
     public Plugin() {
-      _watcher = new AchievementsWatcher();
+      _watcher = new PackWatcher();
       _updater = new Updater();
 
       try {

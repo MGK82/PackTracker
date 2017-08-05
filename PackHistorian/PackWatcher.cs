@@ -12,7 +12,7 @@ using System;
 namespace PackTracker {
   delegate void PackOpenedEventHandler(object sender, PackOpenedEventArgs e);
 
-  class AchievementsWatcher {
+  class PackWatcher {
     bool _running = false;
 
     public bool Running { get { return _running; } }
