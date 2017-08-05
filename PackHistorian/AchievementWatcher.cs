@@ -17,10 +17,6 @@ namespace PackTracker {
 
     public bool Running { get { return _running; } }
 
-    public AchievementsWatcher() {
-      Watchers.PackWatcher.Run();
-    }
-
     public event PackOpenedEventHandler PackOpened;
 
     private void NewPack(object sender, PackEventArgs e) {
