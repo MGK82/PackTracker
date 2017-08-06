@@ -96,6 +96,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\PityTimer\BarChartSingle.xaml.cs">
+      <DependentUpon>BarChartSingle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PackWatcher.cs" />
     <Compile Include="Controls\Cards.xaml.cs">
       <DependentUpon>Cards.xaml</DependentUpon>
@@ -207,6 +210,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\PityTimer\BarChartPrev.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PityTimer\BarChartSingle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="PackTracker.Controls.PityTimer.BarChartSingle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PackTracker.Controls.PityTimer"
+             xmlns:chart="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+>
+    <chart:CartesianChart Name="Chart" Series="{Binding Single, UpdateSourceTrigger=PropertyChanged}" DataTooltip="{x:Null}">
+        <chart:CartesianChart.AxisX>
+            <chart:Axis Title="{Binding Title}" FontSize="20" ShowLabels="False">
+                <chart:Axis.Separator>
+                    <chart:Separator Visibility="Hidden" Step="1" Stroke="{x:Null}"></chart:Separator>
+                </chart:Axis.Separator>
+            </chart:Axis>
+        </chart:CartesianChart.AxisX>
+        <chart:CartesianChart.AxisY>
+            <chart:Axis IsMerged="False" ShowLabels="True" FontSize="16" MinValue="0">
+                <chart:Axis.Sections>
+                    <chart:AxisSection Value="{Binding Threshold}" Stroke="OrangeRed" StrokeThickness="3" />
+                    <chart:AxisSection Value="{Binding SoftThreshold}" Stroke="Orange" StrokeThickness="3" />
+                    <chart:AxisSection Value="{Binding Average, UpdateSourceTrigger=PropertyChanged}" Stroke="CornflowerBlue" StrokeThickness="2" StrokeDashArray="4,5" />
+                </chart:Axis.Sections>
+                <chart:Axis.Separator>
+                    <chart:Separator IsEnabled="True" Step="5"></chart:Separator>
+                </chart:Axis.Separator>
+            </chart:Axis>
+        </chart:CartesianChart.AxisY>
+    </chart:CartesianChart>
+</UserControl>
