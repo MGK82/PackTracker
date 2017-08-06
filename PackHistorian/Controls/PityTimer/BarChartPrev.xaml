@@ -18,7 +18,7 @@
             </chart:Axis>
         </chart:CartesianChart.AxisX>
         <chart:CartesianChart.AxisY>
-            <chart:Axis Title="{Binding YTitle}" IsMerged="False" ShowLabels="True" FontSize="16">
+            <chart:Axis Title="{Binding YTitle}" IsMerged="False" ShowLabels="True" FontSize="16" MinValue="0">
                 <chart:Axis.Sections>
                     <chart:AxisSection Value="{Binding Threshold}" Stroke="OrangeRed" StrokeThickness="3" />
                     <chart:AxisSection Value="{Binding SoftThreshold}" Stroke="Orange" StrokeThickness="3" />
