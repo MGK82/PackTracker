@@ -34,6 +34,8 @@ namespace PackTracker.Controls.PityTimer {
       DataContext = this;
 
       _packId = History.Min(x => x.Id);
+      Chart_Epic.DataContext = PityTimers.GetPityTimer(_packId, Rarity.EPIC, false, true);
+      Chart_Leg.DataContext = PityTimers.GetPityTimer(_packId, Rarity.LEGENDARY, false, true);
 
       History.CollectionChanged += (sender, e) => {
         foreach(Pack Pack in e.NewItems) {
@@ -52,7 +54,7 @@ namespace PackTracker.Controls.PityTimer {
 
     private void SetPosition() {
       double relativeRight = .01;
-      double relativeBottom = .25;
+      double relativeBottom = .35;
       
       Left = SystemParameters.PrimaryScreenWidth - (SystemParameters.PrimaryScreenWidth * relativeRight) - Width;
       Top = SystemParameters.PrimaryScreenHeight - (SystemParameters.PrimaryScreenHeight * relativeBottom) - Height;
