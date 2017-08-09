@@ -16,9 +16,13 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Label Grid.Column="0" Grid.Row="0" Content="Spoil" Target="{Binding ElementName=sw_Spoil}" ToolTip="Shows a pack's content when it's opened" />
         <metro:ToggleSwitchButton Grid.Column="1" Grid.Row="0" Name="sw_Spoil" IsChecked="{Binding Spoil, Mode=TwoWay}" HorizontalAlignment="Right" />
+
+        <Label Grid.Column="0" Grid.Row="1" Content="Pity Timer Overlay" Target="{Binding ElementName=sw_PityOverlay}" ToolTip="Shows Pity Timers while Packs beeing opened" />
+        <metro:ToggleSwitchButton Grid.Column="1" Grid.Row="1" Name="sw_PityOverlay" IsChecked="{Binding PityOverlay, Mode=TwoWay}" HorizontalAlignment="Right" />
     </Grid>
 </metro:MetroContentControl>

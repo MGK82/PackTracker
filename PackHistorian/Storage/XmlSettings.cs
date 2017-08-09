@@ -23,6 +23,14 @@ namespace PackTracker.Storage {
             Settings.Spoil = spoil;
           }
 
+          try {
+            if(bool.TryParse(Root.SelectSingleNode("pityoverlay").InnerText, out bool pityoverlay)) {
+              Settings.PityOverlay = pityoverlay;
+            }
+          } catch {
+            Settings.PityOverlay = true;
+          }
+
           if(bool.TryParse(Root.SelectSingleNode("update").InnerText, out bool update)) {
             Settings.Update = update;
           }
@@ -42,6 +50,10 @@ namespace PackTracker.Storage {
       XmlNode SpoilNode = Xml.CreateElement("spoil");
       SpoilNode.InnerText = Settings.Spoil.ToString();
       Root.AppendChild(SpoilNode);
+
+      XmlNode PityOverlayNode = Xml.CreateElement("pityoverlay");
+      PityOverlayNode.InnerText = Settings.PityOverlay.ToString();
+      Root.AppendChild(PityOverlayNode);
 
       XmlNode UpdateNode = Xml.CreateElement("update");
       UpdateNode.InnerText = Settings.Update.ToString();
