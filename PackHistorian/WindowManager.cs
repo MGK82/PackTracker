@@ -55,7 +55,7 @@ namespace PackTracker {
         _historyWin.Closed += (sender, e) => { _historyWin = null; };
         _historyWin.Loaded += (sender, e) => _historyWin.Title = _name + ": " + _historyWin.Title;
 
-      _historyWin.Show();
+        _historyWin.Show();
       }
 
       _historyWin.Focus(); ;
