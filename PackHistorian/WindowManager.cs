@@ -13,7 +13,7 @@ namespace PackTracker {
 
   class WindowManager {
     string _name;
-    Window _pityWin, _statisticWin, _historyWin, _logWin, _searchWin;
+    Window _pityWin, _statisticWin, _historyWin, _logWin, _searchWin, _pityOverlay;
 
     public WindowManager(string name) {
       _name = name;
@@ -108,6 +108,29 @@ namespace PackTracker {
       Win.ShowDialog();
     }
 
+    public void ShowPityTimerOverlay(History History, PityTimerRepository PityTimers) {
+      if(_pityOverlay == null) {
+        _pityOverlay = new Controls.PityTimer.PityTimerOverlay(History, PityTimers);
+        Hearthstone_Deck_Tracker.Core.MainWindow.Closed += ClosePityTimerOverlay;
+        _pityOverlay.Closed += (sender, e) => _pityOverlay = null;
+      }
 
+      _pityOverlay.Show();
+    }
+
+    private void ClosePityTimerOverlay(object sender, EventArgs e) {
+      ClosePityTimerOverlay();
+    }
+
+    public void ClosePityTimerOverlay() {
+      if(_pityOverlay != null) {
+          _pityOverlay.Dispatcher.Invoke(() => {
+            _pityOverlay.Close();
+          });
+
+          _pityOverlay = null;
+          Hearthstone_Deck_Tracker.Core.MainWindow.Closed -= ClosePityTimerOverlay;
+      }
+    }
   }
 }
