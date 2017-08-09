@@ -110,6 +110,9 @@ namespace PackTracker {
         }
       };
 
+      _watcher.PackScreenEntered += (sender, e) => _windows.ShowPityTimerOverlay(_history, _pityTimers);
+      _watcher.PackScreenLeft += (sender, e) => _windows.ClosePityTimerOverlay();
+
       if(_settings.Update) {
         BackgroundWorker bwCheck = new BackgroundWorker();
         bwCheck.DoWork += (sender, e) => {

@@ -99,6 +99,9 @@
     <Compile Include="Controls\PityTimer\BarChartSingle.xaml.cs">
       <DependentUpon>BarChartSingle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PityTimer\PityTimerOverlay.xaml.cs">
+      <DependentUpon>PityTimerOverlay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PackWatcher.cs" />
     <Compile Include="Controls\Cards.xaml.cs">
       <DependentUpon>Cards.xaml</DependentUpon>
@@ -222,6 +225,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\PityTimer\PityTimer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PityTimer\PityTimerOverlay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

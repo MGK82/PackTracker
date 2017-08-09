@@ -1,0 +1,30 @@
+﻿<Window x:Class="PackTracker.Controls.PityTimer.PityTimerOverlay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PackTracker.Controls.PityTimer"
+        xmlns:view="clr-namespace:PackTracker.View"
+        xmlns:controls="clr-namespace:PackTracker.Controls"
+        mc:Ignorable="d"
+        Title="PityTimerOverlay" Height="550" Width="220"
+        ShowInTaskbar="False" ResizeMode="NoResize" Topmost="True" Background="{x:Null}" WindowStyle="None" AllowsTransparency="True" SourceInitialized="Window_SourceInitialized">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Brushes.xaml" />
+                <ResourceDictionary>
+                    <view:PackNameConverter x:Key="PackNameConverter" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
+    </Window.Resources>
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Top" Text="{Binding PackId, Converter={StaticResource PackNameConverter}, UpdateSourceTrigger=PropertyChanged}" FontSize="18" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Center" />
+        <UniformGrid Name="test" DockPanel.Dock="Bottom" Rows="1" Loaded="UniformGrid_Loaded">
+            <local:BarChartSingle x:Name="Chart_Epic" Title="Epic" Threshold="9" SoftThreshold="4" Fill="{StaticResource Epic}" />
+            <local:BarChartSingle x:Name="Chart_Leg" Title="Legendary" Threshold="39" SoftThreshold="19" Fill="{StaticResource Legendary}" />
+        </UniformGrid>
+    </DockPanel>
+</Window>
