@@ -92,6 +92,8 @@ namespace PackTracker {
     public void Stop() {
       if(_running) {
         Watchers.PackWatcher.NewPackEventHandler -= NewPack;
+        _hearthstones.ForEach(x => { x.Exited -= Hs_Exited; x.EnableRaisingEvents = false; });
+        _hearthstones.Clear();
         _running = false;
       }
     }

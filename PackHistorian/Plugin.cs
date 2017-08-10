@@ -44,6 +44,21 @@ namespace PackTracker {
       }
 
       _pityTimers = new View.Cache.PityTimerRepository(_history);
+
+
+      //watcher
+      _watcher.PackOpened += (sender, e) => {
+        _history.Add(e.Pack);
+        _historyStorage.Store(_history.Ascending);
+
+        if(_settings.Spoil) {
+          View.Average Average = _averageCollection.FindForPackId(e.Pack.Id);
+          ToastManager.ShowCustomToast(new Controls.Toast(e.Pack, Average));
+        }
+      };
+
+      _watcher.PackScreenEntered += (sender, e) => { if(_settings.PityOverlay) _windows.ShowPityTimerOverlay(_history, _pityTimers); };
+      _watcher.PackScreenLeft += (sender, e) => _windows.ClosePityTimerOverlay();
     }
 
     public string Author
@@ -100,19 +115,6 @@ namespace PackTracker {
     public void OnLoad() {
       _watcher.Start();
 
-      _watcher.PackOpened += (sender, e) => {
-        _history.Add(e.Pack);
-        _historyStorage.Store(_history.Ascending);
-
-        if(_settings.Spoil) {
-          View.Average Average = _averageCollection.FindForPackId(e.Pack.Id);
-          ToastManager.ShowCustomToast(new Controls.Toast(e.Pack, Average));
-        }
-      };
-
-      _watcher.PackScreenEntered += (sender, e) => { if(_settings.PityOverlay) _windows.ShowPityTimerOverlay(_history, _pityTimers); };
-      _watcher.PackScreenLeft += (sender, e) => _windows.ClosePityTimerOverlay();
-
       if(_settings.Update) {
         BackgroundWorker bwCheck = new BackgroundWorker();
         bwCheck.DoWork += (sender, e) => {
@@ -128,6 +130,7 @@ namespace PackTracker {
     }
 
     public void OnUnload() {
+      _watcher.Stop();
     }
 
     public void OnUpdate() {
