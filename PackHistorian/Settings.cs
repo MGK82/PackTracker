@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace PackTracker {
   public class Settings {
-    public bool Spoil { get; set; }
-    public bool PityOverlay { get; set; }
-    public bool Update { get; set; }
+    public bool Spoil { get; set; } = false;
+    public bool PityOverlay { get; set; } = true;
+    public bool Update { get; set; } = true;
   }
 }
