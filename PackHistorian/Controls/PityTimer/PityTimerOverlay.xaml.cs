@@ -34,7 +34,7 @@ namespace PackTracker.Controls.PityTimer {
       DataContext = this;
 
       if(History.Count > 0) {
-        _packId = History.Min(x => x.Id);
+        _packId = History.Last().Id;
         Chart_Epic.DataContext = PityTimers.GetPityTimer((int)_packId, Rarity.EPIC, false, true);
         Chart_Leg.DataContext = PityTimers.GetPityTimer((int)_packId, Rarity.LEGENDARY, false, true);
       }

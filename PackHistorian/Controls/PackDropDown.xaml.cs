@@ -31,6 +31,8 @@ namespace PackTracker.Controls {
         _dropDown = new ObservableCollection<int>(History.Select(x => x.Id).Distinct().OrderBy(x => x));
         dd_Packs.ItemsSource = _dropDown;
         History.CollectionChanged += DropDown_NewEntry;
+
+
       }
       if(e.OldValue is PackTracker.History) {
         ((PackTracker.History)e.OldValue).CollectionChanged -= DropDown_NewEntry;
@@ -38,7 +40,11 @@ namespace PackTracker.Controls {
 
       if(_dropDown.Count > 0) {
         dd_Packs.SelectedIndex = -1;
-        dd_Packs.SelectedIndex = 0;
+        if(e.NewValue is PackTracker.History) {
+          dd_Packs.SelectedItem = ((PackTracker.History)e.NewValue).Last().Id;
+        } else {
+          dd_Packs.SelectedIndex = 0;
+        }
       }
     }
 
