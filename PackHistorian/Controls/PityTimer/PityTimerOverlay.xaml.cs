@@ -22,9 +22,9 @@ namespace PackTracker.Controls.PityTimer {
   /// Interaktionslogik für PityTimerOverlay.xaml
   /// </summary>
   public partial class PityTimerOverlay : Window, INotifyPropertyChanged {
-    int _packId;
+    int? _packId = null;
 
-    public int PackId => _packId;
+    public int? PackId => _packId;
 
     public event PropertyChangedEventHandler PropertyChanged;
     void OnPropertyChanged(string prop) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
@@ -33,9 +33,11 @@ namespace PackTracker.Controls.PityTimer {
       InitializeComponent();
       DataContext = this;
 
-      _packId = History.Min(x => x.Id);
-      Chart_Epic.DataContext = PityTimers.GetPityTimer(_packId, Rarity.EPIC, false, true);
-      Chart_Leg.DataContext = PityTimers.GetPityTimer(_packId, Rarity.LEGENDARY, false, true);
+      if(History.Count > 0) {
+        _packId = History.Min(x => x.Id);
+        Chart_Epic.DataContext = PityTimers.GetPityTimer((int)_packId, Rarity.EPIC, false, true);
+        Chart_Leg.DataContext = PityTimers.GetPityTimer((int)_packId, Rarity.LEGENDARY, false, true);
+      }
 
       History.CollectionChanged += (sender, e) => {
         foreach(Pack Pack in e.NewItems) {

@@ -140,6 +140,10 @@ namespace PackTracker.View {
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
+      if(value == null) {
+        return "";
+      }
+
       if(int.TryParse(value.ToString(), out int id)) {
         if(PackNames.ContainsKey(id)) {
           if(Enum.TryParse(_config.SelectedLanguage, out Locale lang)) {
