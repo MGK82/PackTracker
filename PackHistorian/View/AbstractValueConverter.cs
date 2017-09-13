@@ -15,7 +15,7 @@ namespace PackTracker.View {
     protected CultureInfo GetCultureInfo() {
       CultureInfo cult = null as CultureInfo;
       try {
-        string lang = Config.Instance.SelectedLanguage.Insert(2, "-");
+        string lang = Config.Instance.Localization.ToString().Insert(2, "-");
 
         return new CultureInfo(lang);
       }
