@@ -13,27 +13,13 @@
     <ItemsControl ItemsSource="{Binding}">
         <ItemsControl.ItemTemplate>
             <DataTemplate>
-                <Border Name="brd_Border" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center">
-                    <StackPanel Orientation="Horizontal">
-                        <Border BorderBrush="Black" BorderThickness="0, 1">
-                            <Rectangle Name="rct_Rarity" Width="10" Fill="LightGray" Stroke="Black" />
-                        </Border>
-                        <DTcontrols:Card Name="crd_Card" DataContext="{Binding HDTCard}"/>
-                    </StackPanel>
-                </Border>
-
+                <Grid>
+                    <DTcontrols:Card Name="crd_Card" DataContext="{Binding HDTCard}" />
+                    <Rectangle Name="GoldenBorder" Height="{Binding ElementName=crd_Card, Path=Height}" Width="{Binding ElementName=crd_Card, Path=Width}" StrokeThickness="2" Stroke="Gold" Visibility="Collapsed" />
+                </Grid>
                 <DataTemplate.Triggers>
-                    <DataTrigger  Binding="{Binding Rarity}" Value="{x:Static DTRarity:Rarity.RARE}">
-                        <Setter TargetName="rct_Rarity" Property="Fill" Value="Blue" />
-                    </DataTrigger>
-                    <DataTrigger  Binding="{Binding Rarity}" Value="{x:Static DTRarity:Rarity.EPIC}">
-                        <Setter TargetName="rct_Rarity" Property="Fill" Value="Purple" />
-                    </DataTrigger>
-                    <DataTrigger  Binding="{Binding Rarity}" Value="{x:Static DTRarity:Rarity.LEGENDARY}">
-                        <Setter TargetName="rct_Rarity" Property="Fill" Value="Orange" />
-                    </DataTrigger>
                     <DataTrigger Binding="{Binding Premium}" Value="True">
-                        <Setter TargetName="brd_Border" Property="BorderBrush" Value="Gold" />
+                        <Setter TargetName="GoldenBorder" Property="Visibility" Value="Visible" />
                     </DataTrigger>
                 </DataTemplate.Triggers>
             </DataTemplate>
