@@ -28,7 +28,7 @@
             <StackPanel>
                 <DockPanel>
                     <local:PackDropDown DockPanel.Dock="Right" x:Name="dd_Packs" />
-                    <Label Content="Booster Pack"/>
+                    <Label Content="Set"/>
                 </DockPanel>
                 <Border BorderThickness="0,1,0,0" BorderBrush="CornflowerBlue" Margin="6,6,6,0" />
                 <DockPanel>
