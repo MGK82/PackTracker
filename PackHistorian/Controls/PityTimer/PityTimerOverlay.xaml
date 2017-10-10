@@ -23,8 +23,8 @@
     <DockPanel>
         <TextBlock DockPanel.Dock="Top" Text="{Binding PackId, Converter={StaticResource PackNameConverter}, UpdateSourceTrigger=PropertyChanged}" FontSize="18" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Center" />
         <UniformGrid Name="test" DockPanel.Dock="Bottom" Rows="1" Loaded="UniformGrid_Loaded">
-            <local:BarChartSingle x:Name="Chart_Epic" Title="Epic" Threshold="9" SoftThreshold="4" Fill="{StaticResource Epic}" />
-            <local:BarChartSingle x:Name="Chart_Leg" Title="Legendary" Threshold="39" SoftThreshold="19" Fill="{StaticResource Legendary}" />
+            <local:BarChartSingle x:Name="Chart_Epic" Title="Epic" Threshold="9" SoftThreshold="4" MaxValue="10" Fill="{StaticResource Epic}" />
+            <local:BarChartSingle x:Name="Chart_Leg" Title="Legendary" Threshold="39" SoftThreshold="19" MaxValue="40" Fill="{StaticResource Legendary}" Position="RightTop" />
         </UniformGrid>
     </DockPanel>
 </Window>

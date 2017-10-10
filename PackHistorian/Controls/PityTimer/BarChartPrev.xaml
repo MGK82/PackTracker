@@ -11,14 +11,10 @@
 >
     <chart:CartesianChart Name="Chart" Series="{Binding Prev, UpdateSourceTrigger=PropertyChanged}" DataTooltip="{x:Null}">
         <chart:CartesianChart.AxisX>
-            <chart:Axis Title="{Binding XTitle}" LabelFormatter="{x:Static local:LabelFormatter.PlusTwo}" FontSize="20">
-                <chart:Axis.Separator>
-                    <chart:Separator Visibility="Hidden" Step="1" Stroke="{x:Null}"></chart:Separator>
-                </chart:Axis.Separator>
-            </chart:Axis>
+            <chart:Axis ShowLabels="False" Title="{Binding XTitle}" FontSize="20" />
         </chart:CartesianChart.AxisX>
         <chart:CartesianChart.AxisY>
-            <chart:Axis Title="{Binding YTitle}" IsMerged="False" ShowLabels="True" FontSize="16" MinValue="0">
+            <chart:Axis Title="{Binding YTitle}" IsMerged="False" ShowLabels="True" FontSize="16" MinValue="0" MaxValue="{Binding MaxValue}" Position="RightTop">
                 <chart:Axis.Sections>
                     <chart:AxisSection Value="{Binding Threshold}" Stroke="OrangeRed" StrokeThickness="3" />
                     <chart:AxisSection Value="{Binding SoftThreshold}" Stroke="Orange" StrokeThickness="3" />

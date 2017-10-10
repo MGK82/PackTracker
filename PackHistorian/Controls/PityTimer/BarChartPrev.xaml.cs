@@ -45,6 +45,7 @@ namespace PackTracker.Controls.PityTimer {
     public int? Average { get => DataContext is View.PityTimer ? ((View.PityTimer)DataContext).Average : null; }
     public string XTitle { get; set; }
     public string YTitle { get; set; }
+    public double? MaxValue { get; set; }
 
     public BarChartPrev() {
       InitializeComponent();

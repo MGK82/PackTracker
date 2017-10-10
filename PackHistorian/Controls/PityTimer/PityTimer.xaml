@@ -33,14 +33,14 @@
             <DockPanel Grid.Row="0">
                 <local:Label DockPanel.Dock="Right" x:Name="Ep_Label" Margin="0,4,4,4" VerticalAlignment="Top" Limit="9" />
                 <Border DockPanel.Dock="Left" Margin="4" Padding="1" BorderBrush="Black" BorderThickness="1">
-                    <local:BarChartPrev x:Name="Ep_Prev" SoftThreshold="4" Threshold="9" XTitle="Epic Packs" YTitle="Non Epic Packs" Fill="{StaticResource Epic}" />
+                    <local:BarChartPrev x:Name="Ep_Prev" SoftThreshold="4" Threshold="9" MaxValue="10" YTitle="Packs Opened" Fill="{StaticResource Epic}" />
                 </Border>
             </DockPanel>
 
             <DockPanel Grid.Row="1">
                 <local:Label DockPanel.Dock="Right" x:Name="Leg_Label" Margin="0,4,4,4" VerticalAlignment="Top" Limit="39" />
                 <Border Margin="4" Padding="1" BorderBrush="Black" BorderThickness="1">
-                    <local:BarChartPrev x:Name="Leg_Prev" SoftThreshold="19" Threshold="39" XTitle="Legendary Packs" YTitle="Non Legendary Packs" Fill="{StaticResource Legendary}" />
+                    <local:BarChartPrev x:Name="Leg_Prev" SoftThreshold="19" Threshold="39" MaxValue="40" YTitle="Packs Opened" Fill="{StaticResource Legendary}" />
                 </Border>
             </DockPanel>
         </Grid>

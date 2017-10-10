@@ -30,6 +30,8 @@ namespace PackTracker.Controls.PityTimer {
     public string Title { get; set; }
     public int Threshold { get; set; }
     public int SoftThreshold { get; set; }
+    public double? MaxValue { get; set; }
+    public AxisPosition Position { get; set; } = AxisPosition.LeftBottom;
     public Brush Fill { set {
         _cs.Fill = value.Clone();
         _cs.Fill.Opacity = .9;
