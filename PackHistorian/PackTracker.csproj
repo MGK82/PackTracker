@@ -278,5 +278,8 @@
   <ItemGroup>
     <Resource Include="Resources\Icons\if__chart_2006795.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\if_circle-help-question-mark-glyph_763459.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

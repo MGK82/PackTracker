@@ -99,6 +99,7 @@ namespace PackTracker {
     }
 
     public string Name => _name;
+    public static string NAME => _name;
 
     public Version Version
     {

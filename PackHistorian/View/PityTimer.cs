@@ -24,6 +24,7 @@ namespace PackTracker.View {
     public Rarity Rarity { get => _rarity; }
     public bool Premium { get => _premium; }
     public bool SkipFirst { get => _skipFirst; }
+    public bool WaitForFirst { get => _waitForFirst; }
 
     public int Current { get => _current; }
     public ObservableCollection<int> Prev { get => _prev; }
