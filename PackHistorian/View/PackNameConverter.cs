@@ -145,20 +145,29 @@ namespace PackTracker.View {
       }
 
       if(int.TryParse(value.ToString(), out int id)) {
-        if(PackNames.ContainsKey(id)) {
-          if(Enum.TryParse(_config.SelectedLanguage, out Locale lang)) {
-            if(PackNames[id].ContainsKey(lang)) {
-              return PackNames[id][lang];
-            } else {
-              if(PackNames[id].ContainsKey(Locale.enUS)) {
-                return PackNames[id][Locale.enUS];
-              }
-            }
+        if(Enum.TryParse(_config.SelectedLanguage, out Locale lang)) {
+          string converted = Convert(id, lang);
+          if(!string.IsNullOrEmpty(converted)) {
+            return converted;
           }
+        }
+
+        if(PackNames[id].ContainsKey(Locale.enUS)) {
+          return PackNames[id][Locale.enUS];
         }
       }
 
       return value;
+    }
+
+    public static string Convert(int packId, Locale lang) {
+      if(PackNames.ContainsKey(packId)) {
+        if(PackNames[packId].ContainsKey(lang)) {
+          return PackNames[packId][lang];
+        }
+      }
+
+      return null;
     }
 
     public object ConvertBack(object value, System.Type targetType, object parameter, CultureInfo culture) {
