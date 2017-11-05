@@ -6,8 +6,6 @@ using System.Windows.Controls;
 using PackTracker.Storage;
 using Hearthstone_Deck_Tracker.Utility.Toasts;
 using System.ComponentModel;
-using System.Collections.Generic;
-using Hearthstone_Deck_Tracker.Hearthstone;
 using PackTracker.Update;
 using System.Windows;
 
