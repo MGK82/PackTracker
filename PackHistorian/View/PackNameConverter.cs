@@ -137,6 +137,26 @@ namespace PackTracker.View {
           { Locale.thTH, "Knights of the Frozen Throne" },
         }
       },
+      {
+        30, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Kobolds and Catacombs" },
+          { Locale.enGB, "Kobolds and Catacombs" },
+          { Locale.frFR, "Kobolds et Catacombes" },
+          { Locale.deDE, "Kobolde & Katakomben" },
+          { Locale.koKR, "코볼트와 지하 미궁" },
+          { Locale.esES, "Kóbolds & Catacumbas" },
+          { Locale.esMX, "Kóbolds & Catacumbas" },
+          { Locale.ruRU, "Кобольды и катакомбы" },
+          { Locale.zhTW, "《狗頭人與地下城》" },
+          { Locale.zhCN, "狗头人与地下世界" },
+          { Locale.itIT, "Coboldi & Catacombe" },
+          { Locale.ptBR, "Kobolds & Catacumbas" },
+          { Locale.plPL, "Koboldy i katakumby" },
+          { Locale.ptPT, "Kobolds & Catacumbas" },
+          { Locale.jaJP, "コボルトと秘宝の迷宮" },
+          { Locale.thTH, "Kobolds and Catacombs" }
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
