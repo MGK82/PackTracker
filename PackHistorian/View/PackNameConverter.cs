@@ -138,6 +138,13 @@ namespace PackTracker.View {
         }
       },
       {
+        23, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Classic (Gold)" },
+          { Locale.enGB, "Classic  (Gold)" },
+          { Locale.deDE, "Klassik  (Gold)" },
+        }
+      },
+      {
         30, new Dictionary<Locale, string>() {
           { Locale.enUS, "Kobolds and Catacombs" },
           { Locale.enGB, "Kobolds and Catacombs" },
