@@ -27,7 +27,32 @@
                 </DockPanel>
                 <DockPanel>
                     <Button DockPanel.Dock="Right" Name="btn_Refresh" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="15,0,0,0" Click="btn_Refresh_Click">Refresh</Button>
-                    <Button DockPanel.Dock="Right" Name="btn_Update" IsEnabled="False" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="15,0,0,0" Click="btn_Update_Click">Update Now</Button>
+                    <Button DockPanel.Dock="Right" Name="btn_Update" IsEnabled="False" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="15,0,0,0" Click="btn_Update_Click" Content="Update Now">
+                        <Button.Style>
+                            <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsEnabled" Value="True">
+                                        <Trigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard AutoReverse="True" RepeatBehavior="Forever">
+                                                    <ColorAnimation Duration="0:0:1.300" To="Gold" Storyboard.TargetProperty="Foreground.Color">
+                                                        <ColorAnimation.EasingFunction>
+                                                            <CircleEase EasingMode="EaseInOut" />
+                                                        </ColorAnimation.EasingFunction>
+                                                    </ColorAnimation>
+                                                    <ColorAnimation Duration="0:0:1.300" To="Gold" Storyboard.TargetProperty="BorderBrush.Color">
+                                                        <ColorAnimation.EasingFunction>
+                                                            <CircleEase EasingMode="EaseInOut" />
+                                                        </ColorAnimation.EasingFunction>
+                                                    </ColorAnimation>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.EnterActions>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                     <metro:MetroProgressBar Name="pb_Bar" IsIndeterminate="True" Visibility="Hidden" />
                 </DockPanel>
             </StackPanel>
