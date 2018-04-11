@@ -12,7 +12,7 @@ using System.Windows;
 namespace PackTracker {
   public class Plugin : IPlugin {
     const string _name = "Pack Tracker";
-    readonly static Version _version = new Version("1.2.5");
+    readonly static Version _version = new Version("1.2.6");
 
     private PackWatcher _watcher;
     Updater _updater;
