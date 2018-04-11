@@ -164,6 +164,26 @@ namespace PackTracker.View {
           { Locale.thTH, "Kobolds and Catacombs" }
         }
       },
+      {
+        31, new Dictionary<Locale, string>() {
+          { Locale.enUS, "The Witchwood" },
+          { Locale.enGB, "The Witchwood" },
+          { Locale.frFR, "Le Bois Maudit" },
+          { Locale.deDE, "Der Hexenwald" },
+          { Locale.koKR, "마녀숲" },
+          { Locale.esES, "El Bosque Embrujado" },
+          { Locale.esMX, "El Bosque Embrujado" },
+          { Locale.ruRU, "Ведьмин лес" },
+          { Locale.zhTW, "《黑巫森林》" },
+          { Locale.zhCN, "女巫森林" },
+          { Locale.itIT, "Boscotetro" },
+          { Locale.ptBR, "O Bosque das Bruxas" },
+          { Locale.plPL, "Wiedźmi Las" },
+          { Locale.ptPT, "O Bosque das Bruxas" },
+          { Locale.jaJP, "妖の森ウィッチウッド" },
+          { Locale.thTH, "The Witchwood" }
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
