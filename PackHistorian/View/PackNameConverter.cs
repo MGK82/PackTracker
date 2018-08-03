@@ -184,6 +184,26 @@ namespace PackTracker.View {
           { Locale.thTH, "The Witchwood" }
         }
       },
+      {
+        38, new Dictionary<Locale, string>() {
+          { Locale.enUS, "The Boomsday Project" },
+          { Locale.enGB, "The Boomsday Project" },
+          { Locale.frFR, "Projet Armageboum" },
+          { Locale.deDE, "Dr. Bumms Geheimlabor" },
+          { Locale.koKR, "박사 붐의 폭심만만 프로젝트" },
+          { Locale.esES, "El Proyecto Armagebum" },
+          { Locale.esMX, "El Proyecto K-Bum" },
+          { Locale.ruRU, "Проект Бумного дня" },
+          { Locale.zhTW, "《爆爆計畫》" },
+          { Locale.zhCN, "砰砰计划" },
+          { Locale.itIT, "Operazione Apocalisse" },
+          { Locale.ptBR, "O Projeto Cabum" },
+          { Locale.plPL, "Projekt Hukatomba" },
+          { Locale.ptPT, "O Projeto Cabum" },
+          { Locale.jaJP, "博士のメカメカ大作戦" },
+          { Locale.thTH, "The Boomsday Project" },
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
