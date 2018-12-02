@@ -204,6 +204,26 @@ namespace PackTracker.View {
           { Locale.thTH, "The Boomsday Project" },
         }
       },
+      {
+        40, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Rastakhan's Rumble" },
+          { Locale.enGB, "Rastakhan's Rumble" },
+          { Locale.frFR, "Les Jeux de Rastakhan" },
+          { Locale.deDE, "Rastakhans Rambazamba" },
+          { Locale.koKR, "라스타칸의 대난투" },
+          { Locale.esES, "La Arena de Rastakhan" },
+          { Locale.esMX, "El Reto de Rastakhan" },
+          { Locale.ruRU, "Растахановы игрища" },
+          { Locale.zhTW, "《拉斯塔哈大混戰》" },
+          { Locale.zhCN, "拉斯塔哈的大乱斗" },
+          { Locale.itIT, "La sfida di Rastakhan" },
+          { Locale.ptBR, "Ringue do Rastakhan" },
+          { Locale.plPL, "Rozróba Rastakana" },
+          { Locale.ptPT, "Ringue do Rastakhan" },
+          { Locale.jaJP, "天下一ヴドゥ祭" },
+          { Locale.thTH, "Rastakhan's Rumble" },
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
