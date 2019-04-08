@@ -224,6 +224,26 @@ namespace PackTracker.View {
           { Locale.thTH, "Rastakhan's Rumble" },
         }
       },
+      {
+        49, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Rise of Shadows" },
+          { Locale.enGB, "Rise of Shadows" },
+          { Locale.frFR, "Éveil des ombres" },
+          { Locale.deDE, "Verschwörung der Schatten" },
+          { Locale.koKR, "어둠의 반격" },
+          { Locale.esES, "El Auge de las Sombras" },
+          { Locale.esMX, "Ascenso de las Sombras" },
+          { Locale.ruRU, "Возмездие теней" },
+          { Locale.zhTW, "《反派大進擊》" },
+          { Locale.zhCN, "暗影崛起" },
+          { Locale.itIT, "L'ascesa delle ombre" },
+          { Locale.ptBR, "Ascensão das Sombras" },
+          { Locale. plPL, "Wyjście z cienia" },
+          { Locale.ptPT, "Ascensão das Sombras" },
+          { Locale.jaJP, "爆誕！悪党同盟" },
+          { Locale.thTH, "Rise of Shadows" },
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
