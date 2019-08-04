@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -242,6 +242,26 @@ namespace PackTracker.View {
           { Locale.ptPT, "Ascensão das Sombras" },
           { Locale.jaJP, "爆誕！悪党同盟" },
           { Locale.thTH, "Rise of Shadows" },
+        }
+      },
+      {
+        128, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Saviors of Uldum" },
+          { Locale.enGB, "Saviors of Uldum" },
+          { Locale.frFR, "Les Aventuriers d’Uldum" },
+          { Locale.deDE, "Retter von Uldum" },
+          { Locale.koKR, "울둠의 구원자" },
+          { Locale.esES, "Salvadores de Uldum" },
+          { Locale.esMX, "Defensores de Uldum" },
+          { Locale.ruRU, "Спасители Ульдума" },
+          { Locale.zhTW, "《奧丹姆守護者》" },
+          { Locale.zhCN, "奧丹姆守護者" },
+          { Locale.itIT, "Salvatori di Uldum" },
+          { Locale.ptBR, "Salvadores de Uldum" },
+          { Locale. plPL, "Wybawcy Uldum" },
+          { Locale.ptPT, "Salvadores de Uldum" },
+          { Locale.jaJP, "突撃！探検同盟" },
+          { Locale.thTH, "Saviors of Uldum" },
         }
       },
     };
