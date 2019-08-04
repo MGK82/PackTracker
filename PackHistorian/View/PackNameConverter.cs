@@ -279,8 +279,10 @@ namespace PackTracker.View {
           }
         }
 
-        if(PackNames[id].ContainsKey(Locale.enUS)) {
-          return PackNames[id][Locale.enUS];
+        if(PackNames.ContainsKey(id)) {
+          if(PackNames[id].ContainsKey(Locale.enUS)) {
+            return PackNames[id][Locale.enUS];
+          }
         }
       }
 
