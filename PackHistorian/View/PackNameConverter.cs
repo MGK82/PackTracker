@@ -17,6 +17,7 @@ namespace PackTracker.View {
           { Locale.enUS, "Classic" },
           { Locale.enGB, "Classic" },
           { Locale.deDE, "Klassik" },
+          { Locale.zhCN, "经典" },
         }
       },
       {
@@ -30,6 +31,7 @@ namespace PackTracker.View {
           { Locale.esMX, "Goblins vs Gnomos" },
           { Locale.ruRU, "Гоблины и гномы" },
           { Locale.zhTW, "《哥哥打地地》" },
+          { Locale.zhCN, "地精大战侏儒" },
           { Locale.itIT, "Goblin vs Gnomi" },
           { Locale.ptBR, "Goblins vs Gnomos" },
           { Locale.plPL, "Gobliny vs Gnomy" },
@@ -49,6 +51,7 @@ namespace PackTracker.View {
           { Locale.esMX, "El Gran Torneo" },
           { Locale.ruRU, "Большой турнир" },
           { Locale.zhTW, "《銀白聯賽》" },
+          { Locale.zhCN, "冠军的试炼" },
           { Locale.itIT, "Gran Torneo" },
           { Locale.ptBR, "O Grande Torneio" },
           { Locale.plPL, "Wielki Turniej" },
@@ -142,6 +145,7 @@ namespace PackTracker.View {
           { Locale.enUS, "Classic (Gold)" },
           { Locale.enGB, "Classic  (Gold)" },
           { Locale.deDE, "Klassik  (Gold)" },
+          { Locale.zhCN, "经典（金色）" },
         }
       },
       {
@@ -255,7 +259,7 @@ namespace PackTracker.View {
           { Locale.esMX, "Defensores de Uldum" },
           { Locale.ruRU, "Спасители Ульдума" },
           { Locale.zhTW, "《奧丹姆守護者》" },
-          { Locale.zhCN, "奧丹姆守護者" },
+          { Locale.zhCN, "奧丹姆奇兵" },
           { Locale.itIT, "Salvatori di Uldum" },
           { Locale.ptBR, "Salvadores de Uldum" },
           { Locale. plPL, "Wybawcy Uldum" },
