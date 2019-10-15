@@ -45,4 +45,11 @@
         </MenuItem.Icon>
         <MenuItem.Header>Search</MenuItem.Header>
     </MenuItem>
+
+    <MenuItem Name="mnu_ManualInsert">
+        <MenuItem.Icon>
+            <Image Source="pack://application:,,,/PackTracker;component/Resources/Icons/1497613802_feather.ico" />
+        </MenuItem.Icon>
+        <MenuItem.Header>Add manual</MenuItem.Header>
+    </MenuItem>
 </MenuItem>

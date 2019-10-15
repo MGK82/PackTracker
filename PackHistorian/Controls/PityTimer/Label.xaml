@@ -27,7 +27,7 @@
 
         <Popup Name="pu_Popup" StaysOpen="False" PlacementTarget="{Binding ElementName=btn_Popup}" Placement="Bottom" IsOpen="{Binding Popup, UpdateSourceTrigger=PropertyChanged}">
             <Border BorderThickness="1" Background="LemonChiffon" Padding="2">
-                <TextBlock Text="{Binding PopupText, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock Text="{Binding PopupText, UpdateSourceTrigger=PropertyChanged}" Foreground="Black" />
             </Border>
         </Popup>
         <Button Name="btn_Popup" Margin="0,5,5,0" Width="20" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btn_Popup_Click">
