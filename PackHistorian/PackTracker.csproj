@@ -51,29 +51,36 @@
   <ItemGroup>
     <Reference Include="HearthDb, Version=8.0.4.18792, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Fetti\AppData\Local\HearthstoneDeckTracker\app-1.3.2\HearthDb.dll</HintPath>
+      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\HearthDb.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="HearthMirror">
-      <HintPath>C:\Users\Fetti\AppData\Local\HearthstoneDeckTracker\app-1.2.5\HearthMirror.dll</HintPath>
+      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\HearthMirror.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="HearthstoneDeckTracker, Version=1.3.5.3102, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Fetti\AppData\Local\HearthstoneDeckTracker\app-1.4.0\HearthstoneDeckTracker.exe</HintPath>
+      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\HearthstoneDeckTracker.exe</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="HearthWatcher">
-      <HintPath>C:\Users\Fetti\AppData\Local\HearthstoneDeckTracker\app-1.2.5\HearthWatcher.dll</HintPath>
+      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\HearthWatcher.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="LiveCharts, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Fetti\AppData\Local\HearthstoneDeckTracker\app-1.3.5\LiveCharts.dll</HintPath>
+      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\LiveCharts.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="LiveCharts.Wpf, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Fetti\AppData\Local\HearthstoneDeckTracker\app-1.3.5\LiveCharts.Wpf.dll</HintPath>
+      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\LiveCharts.Wpf.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="MahApps.Metro, Version=1.1.2.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Fetti\AppData\Local\HearthstoneDeckTracker\app-1.3.2\MahApps.Metro.dll</HintPath>
+      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\MahApps.Metro.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -90,17 +97,23 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
-    <Reference Include="XAMLMarkupExtensions, Version=1.2.1.3, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Fetti\AppData\Local\HearthstoneDeckTracker\app-1.3.2\XAMLMarkupExtensions.dll</HintPath>
+    <Reference Include="XAMLMarkupExtensions">
+      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\XAMLMarkupExtensions.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\CardSelector.xaml.cs">
+      <DependentUpon>CardSelector.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PityTimer\BarChartSingle.xaml.cs">
       <DependentUpon>BarChartSingle.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\PityTimer\PityTimerOverlay.xaml.cs">
       <DependentUpon>PityTimerOverlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ManualPackInsert.xaml.cs">
+      <DependentUpon>ManualPackInsert.xaml</DependentUpon>
     </Compile>
     <Compile Include="PackWatcher.cs" />
     <Compile Include="Controls\Cards.xaml.cs">
@@ -170,20 +183,27 @@
     <Compile Include="Update\Updater.cs" />
     <Compile Include="View\AbstractValueConverter.cs" />
     <Compile Include="View\Cache\PityTimerRepository.cs" />
+    <Compile Include="View\CardViewModel.cs" />
     <Compile Include="View\DateConverter.cs" />
     <Compile Include="View\DateTimeConverter.cs" />
     <Compile Include="View\DecimalConverter.cs" />
+    <Compile Include="SetProvider.cs" />
     <Compile Include="View\PackNameConverter.cs" />
     <Compile Include="View\Average.cs" />
     <Compile Include="View\AverageCollection.cs" />
     <Compile Include="View\PercentConverter.cs" />
     <Compile Include="View\PityTimer.cs" />
+    <Compile Include="View\ManualPackInsert.cs" />
     <Compile Include="View\Statistic.cs" />
     <Compile Include="View\TimeConverter.cs" />
     <Compile Include="WindowManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\Brushes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CardSelector.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -251,6 +271,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\ManualPackInsert.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\Statistic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -282,4 +306,8 @@
     <Resource Include="Resources\Icons\if_circle-help-question-mark-glyph_763459.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>

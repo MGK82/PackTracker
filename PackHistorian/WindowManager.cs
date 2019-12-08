@@ -13,7 +13,7 @@ namespace PackTracker {
 
   class WindowManager {
     string _name;
-    Window _pityWin, _statisticWin, _historyWin, _logWin, _searchWin, _pityOverlay;
+    Window _pityWin, _statisticWin, _historyWin, _logWin, _searchWin, _pityOverlay, _manualInsertWin;
 
     public WindowManager(string name) {
       _name = name;
@@ -89,7 +89,24 @@ namespace PackTracker {
       _searchWin.Focus();
     }
 
-    public void ShowSettingsWin(Settings Settings, ISettingsStorage SettingsStorage, Type PreSelection = null) {
+    public void ShowManualInsertWin(History History)
+    {
+        if (_manualInsertWin == null)
+        {
+            _manualInsertWin = new ManualPackInsert(History)
+            {
+                Owner = Hearthstone_Deck_Tracker.Core.MainWindow,
+            };
+            _manualInsertWin.Closed += (sender, e) => _manualInsertWin = null;
+            _manualInsertWin.Loaded += (sender, e) => _manualInsertWin.Title = _name + ": " + _manualInsertWin.Title;
+
+            _manualInsertWin.Show();
+        }
+
+        _manualInsertWin.Focus();
+    }
+
+        public void ShowSettingsWin(Settings Settings, ISettingsStorage SettingsStorage, Type PreSelection = null) {
       Controls.Settings.Settings Win = new Controls.Settings.Settings(Settings) {
         Owner = Hearthstone_Deck_Tracker.Core.MainWindow
       };

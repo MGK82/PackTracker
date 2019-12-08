@@ -11,7 +11,8 @@ using Hearthstone_Deck_Tracker;
 namespace PackTracker.View {
   class PackNameConverter : IValueConverter {
     static Config _config = Config.Instance;
-    static Dictionary<int, Dictionary<Locale, string>> PackNames = new Dictionary<int, Dictionary<Locale, string>>() {
+
+    public static Dictionary<int, Dictionary<Locale, string>> PackNames = new Dictionary<int, Dictionary<Locale, string>>() {
       {
         1, new Dictionary<Locale, string>() {
           { Locale.enUS, "Classic" },
