@@ -62,6 +62,10 @@ namespace PackTracker
           // Saviors of Uldum
         128, CardSet.ULDUM
       },
+      {
+          // Decent of Dragons
+        347, CardSet.DRAGONS
+      },
     };
     }
 }
