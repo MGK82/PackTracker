@@ -289,6 +289,26 @@ namespace PackTracker.View {
           { Locale.thTH, "Descent of Dragons" },
         }
       },
+      {
+        423, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Ashes of Outland" },
+          { Locale.enGB, "Ashes of Outland" },
+          { Locale.frFR, "Les Cendres de l’Outreterre" },
+          { Locale.deDE, "Ruinen der Scherbenwelt" },
+          { Locale.koKR, "황폐한 아웃랜드" },
+          { Locale.esES, "Cenizas de Terrallende" },
+          { Locale.esMX, "Cenizas de Terrallende" },
+          { Locale.ruRU, "Руины Запределья" },
+          { Locale.zhTW, "外域的灰烬" },
+          { Locale.zhCN, "外域之燼" },
+          { Locale.itIT, "Ceneri delle Terre Esterne" },
+          { Locale.ptBR, "Cinzas de Terralém" },
+          { Locale.plPL, "Popioły Rubieży" },
+          { Locale.ptPT, "Cinzas de Terralém" },
+          { Locale.jaJP, "灰に舞う降魔の狩人" },
+          { Locale.thTH, "Ashes of Outland" },
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {

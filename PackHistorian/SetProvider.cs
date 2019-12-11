@@ -66,6 +66,10 @@ namespace PackTracker
           // Decent of Dragons
         347, CardSet.DRAGONS
       },
+      {
+          // Ashes of Outland
+        423, CardSet.BLACK_TEMPLE
+      },
     };
     }
 }
