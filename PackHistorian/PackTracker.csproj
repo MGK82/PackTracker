@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -49,37 +49,37 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HearthDb, Version=8.0.4.18792, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\HearthDb.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="HearthDb">
+											  
+      <HintPath>$(LocalAppData)\HearthstoneDeckTracker\app-1.9.5\HearthDb.dll</HintPath>
+							  
     </Reference>
     <Reference Include="HearthMirror">
-      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\HearthMirror.dll</HintPath>
+      <HintPath>$(LocalAppData)\HearthstoneDeckTracker\app-1.9.5\HearthMirror.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="HearthstoneDeckTracker, Version=1.3.5.3102, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\HearthstoneDeckTracker.exe</HintPath>
+      <HintPath>$(LocalAppData)\HearthstoneDeckTracker\app-1.9.5\HearthstoneDeckTracker.exe</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="HearthWatcher">
-      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\HearthWatcher.dll</HintPath>
+      <HintPath>$(LocalAppData)\HearthstoneDeckTracker\app-1.9.5\HearthWatcher.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="LiveCharts, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\LiveCharts.dll</HintPath>
+      <HintPath>$(LocalAppData)\HearthstoneDeckTracker\app-1.9.5\LiveCharts.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="LiveCharts.Wpf, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\LiveCharts.Wpf.dll</HintPath>
+      <HintPath>$(LocalAppData)\HearthstoneDeckTracker\app-1.9.5\LiveCharts.Wpf.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MahApps.Metro, Version=1.1.2.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\MahApps.Metro.dll</HintPath>
+      <HintPath>$(LocalAppData)\HearthstoneDeckTracker\app-1.9.5\MahApps.Metro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />
@@ -98,7 +98,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
     <Reference Include="XAMLMarkupExtensions">
-      <HintPath>..\..\..\..\..\Users\Luca\AppData\Local\HearthstoneDeckTracker\app-1.8.21\XAMLMarkupExtensions.dll</HintPath>
+      <HintPath>$(LocalAppData)\HearthstoneDeckTracker\app-1.9.5\XAMLMarkupExtensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
