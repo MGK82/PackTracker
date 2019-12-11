@@ -269,6 +269,26 @@ namespace PackTracker.View {
           { Locale.thTH, "Saviors of Uldum" },
         }
       },
+      {
+        347, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Descent of Dragons" },
+          { Locale.enGB, "Descent of Dragons" },
+          { Locale.frFR, "L’Envol des Dragons" },
+          { Locale.deDE, "Erbe der Drachen" },
+          { Locale.koKR, "용의 강림" },
+          { Locale.esES, "El Descenso de los Dragones" },
+          { Locale.esMX, "Descenso de los Dragones" },
+          { Locale.ruRU, "Натиск драконов" },
+          { Locale.zhTW, "《降臨！遠古巨龍》" },
+          { Locale.zhCN, "巨龙降临" },
+          { Locale.itIT, "La Discesa dei Draghi" },
+          { Locale.ptBR, "Despontar dos Dragões" },
+          { Locale.plPL, "Wejście smoków" },
+          { Locale.ptPT, "Despontar dos Dragões" },
+          { Locale.jaJP, "激闘！ドラゴン大決戦" },
+          { Locale.thTH, "Descent of Dragons" },
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
