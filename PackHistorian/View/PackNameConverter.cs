@@ -299,7 +299,7 @@ namespace PackTracker.View {
           { Locale.esMX, "Cenizas de Terrallende" },
           { Locale.ruRU, "Руины Запределья" },
           { Locale.zhTW, "《外域之燼》" },
-          { Locale.zhCN, "伊利丹的崛起" },
+          { Locale.zhCN, "外域的灰烬" },
           { Locale.itIT, "Ceneri delle Terre Esterne" },
           { Locale.ptBR, "Cinzas de Terralém" },
           { Locale.plPL, "Popioły Rubieży" },
