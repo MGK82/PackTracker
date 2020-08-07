@@ -306,6 +306,26 @@ namespace PackTracker.View {
           { Locale.ptPT, "Cinzas de Terralém" },
           { Locale.jaJP, "灰に舞う降魔の狩人" },
           { Locale.thTH, "Ashes of Outland" },
+          }
+        },
+        {
+        468, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Scholomance Academy" },
+          { Locale.enGB, "Scholomance Academy" },
+          { Locale.frFR, "L’Académie Scholomance" },
+          { Locale.deDE, "Akademie Scholomance" },
+          { Locale.koKR, "스칼로맨스 아카데미" },
+          { Locale.esES, "Academia Scholomance" },
+          { Locale.esMX, "Academia Scholomance" },
+          { Locale.ruRU, "Вступительный ролик" },
+          { Locale.zhTW, "通靈學院" },
+          { Locale.zhCN, "通靈學院" },
+          { Locale.itIT, "L'Accademia di Scholomance" },
+          { Locale.ptBR, "Universidade de Scolomântia" },
+          { Locale.plPL, "Scholomancjum" },
+          { Locale.ptPT, "Universidade de Scolomântia" },
+          { Locale.jaJP, "魔法学院スクロマンス" },
+          { Locale.thTH, "Scholomance Academy" },
         }
       },
     };
