@@ -472,6 +472,69 @@ namespace PackTracker.View {
           { Locale.thTH, "Scholomance Academy สีทอง" },
         }
       },
+      {
+        // Standard Hunter Pack
+        470, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Standard Hunter Pack" },
+          { Locale.enGB, "Standard Hunter Pack" },
+          { Locale.frFR, "Standard Hunter Pack" },
+          { Locale.deDE, "Standard Hunter Pack" },
+          { Locale.koKR, "Standard Hunter Pack" },
+          { Locale.esES, "Standard Hunter Pack" },
+          { Locale.esMX, "Standard Hunter Pack" },
+          { Locale.ruRU, "Standard Hunter Pack" },
+          { Locale.zhTW, "Standard Hunter Pack" },
+          { Locale.zhCN, "Standard Hunter Pack" },
+          { Locale.itIT, "Standard Hunter Pack" },
+          { Locale.ptBR, "Standard Hunter Pack" },
+          { Locale.plPL, "Standard Hunter Pack" },
+          { Locale.ptPT, "Standard Hunter Pack" },
+          { Locale.jaJP, "Standard Hunter Pack" },
+          { Locale.thTH, "Standard Hunter Pack" },
+        }
+      },
+      {
+        // Year of the Dragon
+        498, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Year of the Dragon" },
+          { Locale.enGB, "Year of the Dragon" },
+          { Locale.frFR, "Year of the Dragon" },
+          { Locale.deDE, "Year of the Dragon" },
+          { Locale.koKR, "Year of the Dragon" },
+          { Locale.esES, "Year of the Dragon" },
+          { Locale.esMX, "Year of the Dragon" },
+          { Locale.ruRU, "Year of the Dragon" },
+          { Locale.zhTW, "Year of the Dragon" },
+          { Locale.zhCN, "Year of the Dragon" },
+          { Locale.itIT, "Year of the Dragon" },
+          { Locale.ptBR, "Year of the Dragon" },
+          { Locale.plPL, "Year of the Dragon" },
+          { Locale.ptPT, "Year of the Dragon" },
+          { Locale.jaJP, "Year of the Dragon" },
+          { Locale.thTH, "Year of the Dragon" },
+        }
+      },
+      {
+        // Standard Mage Pack
+        545, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Standard Mage Pack" },
+          { Locale.enGB, "Standard Mage Pack" },
+          { Locale.frFR, "Standard Mage Pack" },
+          { Locale.deDE, "Standard Mage Pack" },
+          { Locale.koKR, "Standard Mage Pack" },
+          { Locale.esES, "Standard Mage Pack" },
+          { Locale.esMX, "Standard Mage Pack" },
+          { Locale.ruRU, "Standard Mage Pack" },
+          { Locale.zhTW, "Standard Mage Pack" },
+          { Locale.zhCN, "Standard Mage Pack" },
+          { Locale.itIT, "Standard Mage Pack" },
+          { Locale.ptBR, "Standard Mage Pack" },
+          { Locale.plPL, "Standard Mage Pack" },
+          { Locale.ptPT, "Standard Mage Pack" },
+          { Locale.jaJP, "Standard Mage Pack" },
+          { Locale.thTH, "Standard Mage Pack" },
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
