@@ -473,6 +473,46 @@ namespace PackTracker.View {
         }
       },
       {
+        616, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Madness at the Darkmoon Faire" },
+          { Locale.enGB, "Madness at the Darkmoon Faire" },
+          { Locale.frFR, "Folle journée à Sombrelune" },
+          { Locale.deDE, "Der Dunkelmond-Wahnsinn" },
+          { Locale.koKR, "광기의 다크문 축제" },
+          { Locale.esES, "Locura en la Feria de la Luna Negra" },
+          { Locale.esMX, "Locura en la Feria de la Luna Negra" },
+          { Locale.ruRU, "Ярмарка безумия" },
+          { Locale.zhTW, "暗月馬戲團：古神也瘋狂" },
+          { Locale.zhCN, "疯狂的暗月马戏团" },
+          { Locale.itIT, "Follia alla Fiera di Lunacupa" },
+          { Locale.ptBR, "Delírios em Negraluna" },
+          { Locale.plPL, "Obłędny Festyn Lunomroku" },
+          { Locale.ptPT, "Delírios em Negraluna" },
+          { Locale.jaJP, "ダークムーン・フェアへの招待状" },
+          { Locale.thTH, "Madness at the Darkmoon Faire" },
+        }
+      },
+      {
+        643, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Golden Madness at the Darkmoon Faire" },
+          { Locale.enGB, "Golden Madness at the Darkmoon Faire" },
+          { Locale.frFR, "Folle journée dorée à Sombrelune" },
+          { Locale.deDE, "Der Dunkelmond-Wahnsinn (Golden)" },
+          { Locale.koKR, "황금 광기의 다크문 축제" },
+          { Locale.esES, "Locura dorada en la Feria de la Luna Negra" },
+          { Locale.esMX, "Locura en la Feria de la Luna Negra dorada" },
+          { Locale.ruRU, "Золотая «Ярмарка безумия»" },
+          { Locale.zhTW, "暗月馬戲團：古神也瘋狂金卡" },
+          { Locale.zhCN, "金色疯狂的暗月马戏团" },
+          { Locale.itIT, "Follia alla Fiera di Lunacupa Dorata" },
+          { Locale.ptBR, "Delírios em Negraluna Dourado" },
+          { Locale.plPL, "Złoty Obłędny Festyn Lunomroku" },
+          { Locale.ptPT, "Delírios em Negraluna Dourado" },
+          { Locale.jaJP, "ゴールデン・ダークムーン・フェアへの招待状" },
+          { Locale.thTH, "Madness at the Darkmoon Faire สีทอง" },
+        }
+      },
+      {
         // Standard Hunter Pack
         470, new Dictionary<Locale, string>() {
           { Locale.enUS, "Standard Hunter Pack" },
