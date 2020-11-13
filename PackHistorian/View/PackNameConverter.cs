@@ -309,6 +309,40 @@ namespace PackTracker.View {
           { Locale.thTH, "Ashes of Outland" },
         }
       },
+      {
+        468, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Scholomance Academy" },
+          { Locale.enGB, "Scholomance Academy" },
+          { Locale.frFR, "L’Académie Scholomance" },
+          { Locale.deDE, "Akademie Scholomance" },
+          { Locale.koKR, "스칼로맨스 아카데미" },
+          { Locale.esES, "Academia Scholomance" },
+          { Locale.esMX, "Academia Scholomance" },
+          { Locale.ruRU, "Некроситет" },
+          { Locale.zhTW, "《通靈學院》" },
+          { Locale.zhCN, "通灵学园" },
+          { Locale.itIT, "L'Accademia di Scholomance" },
+          { Locale.ptBR, "Universidade de Scolomântia" },
+          { Locale.plPL, "Scholomancjum" },
+          { Locale.ptPT, "Universidade de Scolomântia" },
+          { Locale.jaJP, "魔法学院スクロマンス" },
+          { Locale.thTH, "Scholomance Academy" },
+        }
+      },
+      {
+        498, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Year of Dragon" },
+          { Locale.enGB, "Year of dragon" },
+          { Locale.ruRU, "Год дракона" },
+        }
+      },
+      {
+        616, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Madness At The Darkmoon Faire" },
+          { Locale.enGB, "Madness At The Darkmoon Faire" },
+          { Locale.ruRU, "Ярмарка Новолуния" },
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
