@@ -62,6 +62,26 @@ namespace PackTracker
           // Saviors of Uldum
         128, CardSet.ULDUM
       },
+      {
+          // Decent of Dragons
+        347, CardSet.DRAGONS
+      },
+      {
+          // Ashes of Outland
+        423, CardSet.BLACK_TEMPLE
+      },
+      {
+         // Scholomance Academy
+        468, CardSet.SCHOLOMANCE
+      },
+      {
+         // Year of the Dragon
+        498, CardSet.YEAR_OF_THE_DRAGON
+      },
+      {
+         // Darkmoon Faire
+        616, CardSet.DARKMOON_FAIRE
+      },
     };
     }
 }

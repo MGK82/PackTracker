@@ -269,6 +269,80 @@ namespace PackTracker.View {
           { Locale.thTH, "Saviors of Uldum" },
         }
       },
+      {
+        347, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Descent of Dragons" },
+          { Locale.enGB, "Descent of Dragons" },
+          { Locale.frFR, "L’Envol des Dragons" },
+          { Locale.deDE, "Erbe der Drachen" },
+          { Locale.koKR, "용의 강림" },
+          { Locale.esES, "El Descenso de los Dragones" },
+          { Locale.esMX, "Descenso de los Dragones" },
+          { Locale.ruRU, "Натиск драконов" },
+          { Locale.zhTW, "《降臨！遠古巨龍》" },
+          { Locale.zhCN, "巨龙降临" },
+          { Locale.itIT, "La Discesa dei Draghi" },
+          { Locale.ptBR, "Despontar dos Dragões" },
+          { Locale.plPL, "Wejście smoków" },
+          { Locale.ptPT, "Despontar dos Dragões" },
+          { Locale.jaJP, "激闘！ドラゴン大決戦" },
+          { Locale.thTH, "Descent of Dragons" },
+        }
+      },
+      {
+        423, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Ashes of Outland" },
+          { Locale.enGB, "Ashes of Outland" },
+          { Locale.frFR, "Les Cendres de l’Outreterre" },
+          { Locale.deDE, "Ruinen der Scherbenwelt" },
+          { Locale.koKR, "황폐한 아웃랜드" },
+          { Locale.esES, "Cenizas de Terrallende" },
+          { Locale.esMX, "Cenizas de Terrallende" },
+          { Locale.ruRU, "Руины Запределья" },
+          { Locale.zhTW, "外域的灰烬" },
+          { Locale.zhCN, "外域之燼" },
+          { Locale.itIT, "Ceneri delle Terre Esterne" },
+          { Locale.ptBR, "Cinzas de Terralém" },
+          { Locale.plPL, "Popioły Rubieży" },
+          { Locale.ptPT, "Cinzas de Terralém" },
+          { Locale.jaJP, "灰に舞う降魔の狩人" },
+          { Locale.thTH, "Ashes of Outland" },
+        }
+      },
+      {
+        468, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Scholomance Academy" },
+          { Locale.enGB, "Scholomance Academy" },
+          { Locale.frFR, "L’Académie Scholomance" },
+          { Locale.deDE, "Akademie Scholomance" },
+          { Locale.koKR, "스칼로맨스 아카데미" },
+          { Locale.esES, "Academia Scholomance" },
+          { Locale.esMX, "Academia Scholomance" },
+          { Locale.ruRU, "Некроситет" },
+          { Locale.zhTW, "《通靈學院》" },
+          { Locale.zhCN, "通灵学园" },
+          { Locale.itIT, "L'Accademia di Scholomance" },
+          { Locale.ptBR, "Universidade de Scolomântia" },
+          { Locale.plPL, "Scholomancjum" },
+          { Locale.ptPT, "Universidade de Scolomântia" },
+          { Locale.jaJP, "魔法学院スクロマンス" },
+          { Locale.thTH, "Scholomance Academy" },
+        }
+      },
+      {
+        498, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Year of Dragon" },
+          { Locale.enGB, "Year of dragon" },
+          { Locale.ruRU, "Год дракона" },
+        }
+      },
+      {
+        616, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Madness At The Darkmoon Faire" },
+          { Locale.enGB, "Madness At The Darkmoon Faire" },
+          { Locale.ruRU, "Ярмарка Новолуния" },
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
