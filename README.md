@@ -25,17 +25,17 @@ This allows you to see how many cards of different rarities have dropped over ti
 
 ## Screenshots
 
-Pity Timers  
+### Pity Timers  
 ![](https://github.com/Ellekappae/PackTracker/blob/master/doc/Screenshots/PityTimer.png?raw=true)
 
-Statistic  
+### Statistic  
 ![](https://github.com/Ellekappae/PackTracker/blob/master/doc/Screenshots/Statistic.png?raw=true)
 
-History  
+### History  
 ![](https://github.com/Ellekappae/PackTracker/blob/master/doc/Screenshots/History.png?raw=true)  
 
-Log  
+### Log  
 ![](https://github.com/Ellekappae/PackTracker/blob/master/doc/Screenshots/Log.png?raw=true)
 
-Search  
+### Search  
 ![](https://github.com/Ellekappae/PackTracker/blob/master/doc/Screenshots/Search.png?raw=true)
