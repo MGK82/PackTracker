@@ -4,11 +4,8 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Net;
-using System.Reflection;
 using System.Runtime.Serialization.Json;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using Hearthstone_Deck_Tracker;
 
 namespace PackTracker.Update {
