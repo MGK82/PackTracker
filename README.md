@@ -39,3 +39,6 @@ This allows you to see how many cards of different rarities have dropped over ti
 
 ### Search  
 ![](https://github.com/Ellekappae/PackTracker/blob/master/doc/Screenshots/Search.png?raw=true)
+
+### Manual Add  
+![](https://github.com/Ellekappae/PackTracker/blob/master/doc/Screenshots/ManualAdd.png?raw=true)
