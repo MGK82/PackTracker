@@ -68,7 +68,7 @@ namespace PackTracker.Update {
     }
 
     public Release GetLatestRelease() {
-      HttpWebRequest request = WebRequest.CreateHttp(@"https://api.github.com/repos/RapWolf/PackTracker/releases/latest");
+      HttpWebRequest request = WebRequest.CreateHttp(@"https://api.github.com/repos/Ellekappae/PackTracker/releases/latest");
       request.Proxy = null;
       request.UserAgent = _userAgend;
 
@@ -84,7 +84,7 @@ namespace PackTracker.Update {
     public IEnumerable<Release> GetAllReleases() {
       List<Release> Releases = new List<Release>();
 
-      HttpWebRequest request = WebRequest.CreateHttp(@"https://api.github.com/repos/RapWolf/PackTracker/releases");
+      HttpWebRequest request = WebRequest.CreateHttp(@"https://api.github.com/repos/Ellekappae/PackTracker/releases");
       request.Proxy = null;
       request.UserAgent = _userAgend;
 
