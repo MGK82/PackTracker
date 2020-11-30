@@ -329,6 +329,26 @@ namespace PackTracker.View {
         }
       },
       {
+        470, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Golden Pack" },
+          { Locale.enGB, "Golden Pack" },
+          { Locale.frFR, "Golden Pack" },
+          { Locale.deDE, "Golden Pack" },
+          { Locale.koKR, "Golden Pack" },
+          { Locale.esES, "Golden Pack" },
+          { Locale.esMX, "Golden Pack" },
+          { Locale.ruRU, "Golden Pack" },
+          { Locale.zhTW, "Golden Pack" },
+          { Locale.zhCN, "Golden Pack" },
+          { Locale.itIT, "Golden Pack" },
+          { Locale.ptBR, "Golden Pack" },
+          { Locale.plPL, "Golden Pack" },
+          { Locale.ptPT, "Golden Pack" },
+          { Locale.jaJP, "Golden Pack" },
+          { Locale.thTH, "Golden Pack" },
+        }
+      },
+      {
         616, new Dictionary<Locale, string>() {
           { Locale.enUS, "Madness at the Darkmoon Faire" },
           { Locale.enGB, "Madness at the Darkmoon Faire" },
