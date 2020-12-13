@@ -575,6 +575,174 @@ namespace PackTracker.View {
           { Locale.thTH, "Standard Mage Pack" },
         }
       },
+      {
+        // Standard Druid Pack
+        631, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Standard Druid Pack" },
+          { Locale.enGB, "Standard Druid Pack" },
+          { Locale.frFR, "Standard Druid Pack" },
+          { Locale.deDE, "Standard Druid Pack" },
+          { Locale.koKR, "Standard Druid Pack" },
+          { Locale.esES, "Standard Druid Pack" },
+          { Locale.esMX, "Standard Druid Pack" },
+          { Locale.ruRU, "Standard Druid Pack" },
+          { Locale.zhTW, "Standard Druid Pack" },
+          { Locale.zhCN, "Standard Druid Pack" },
+          { Locale.itIT, "Standard Druid Pack" },
+          { Locale.ptBR, "Standard Druid Pack" },
+          { Locale.plPL, "Standard Druid Pack" },
+          { Locale.ptPT, "Standard Druid Pack" },
+          { Locale.jaJP, "Standard Druid Pack" },
+          { Locale.thTH, "Standard Druid Pack" },
+        }
+      },
+      {
+        // Standard Paladin Pack
+        632, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Standard Paladin Pack" },
+          { Locale.enGB, "Standard Paladin Pack" },
+          { Locale.frFR, "Standard Paladin Pack" },
+          { Locale.deDE, "Standard Paladin Pack" },
+          { Locale.koKR, "Standard Paladin Pack" },
+          { Locale.esES, "Standard Paladin Pack" },
+          { Locale.esMX, "Standard Paladin Pack" },
+          { Locale.ruRU, "Standard Paladin Pack" },
+          { Locale.zhTW, "Standard Paladin Pack" },
+          { Locale.zhCN, "Standard Paladin Pack" },
+          { Locale.itIT, "Standard Paladin Pack" },
+          { Locale.ptBR, "Standard Paladin Pack" },
+          { Locale.plPL, "Standard Paladin Pack" },
+          { Locale.ptPT, "Standard Paladin Pack" },
+          { Locale.jaJP, "Standard Paladin Pack" },
+          { Locale.thTH, "Standard Paladin Pack" },
+        }
+      },
+      {
+        // Standard Warrior Pack
+        633, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Standard Warrior Pack" },
+          { Locale.enGB, "Standard Warrior Pack" },
+          { Locale.frFR, "Standard Warrior Pack" },
+          { Locale.deDE, "Standard Warrior Pack" },
+          { Locale.koKR, "Standard Warrior Pack" },
+          { Locale.esES, "Standard Warrior Pack" },
+          { Locale.esMX, "Standard Warrior Pack" },
+          { Locale.ruRU, "Standard Warrior Pack" },
+          { Locale.zhTW, "Standard Warrior Pack" },
+          { Locale.zhCN, "Standard Warrior Pack" },
+          { Locale.itIT, "Standard Warrior Pack" },
+          { Locale.ptBR, "Standard Warrior Pack" },
+          { Locale.plPL, "Standard Warrior Pack" },
+          { Locale.ptPT, "Standard Warrior Pack" },
+          { Locale.jaJP, "Standard Warrior Pack" },
+          { Locale.thTH, "Standard Warrior Pack" },
+        }
+      },
+      {
+        // Standard Priest Pack
+        634, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Standard Priest Pack" },
+          { Locale.enGB, "Standard Priest Pack" },
+          { Locale.frFR, "Standard Priest Pack" },
+          { Locale.deDE, "Standard Priest Pack" },
+          { Locale.koKR, "Standard Priest Pack" },
+          { Locale.esES, "Standard Priest Pack" },
+          { Locale.esMX, "Standard Priest Pack" },
+          { Locale.ruRU, "Standard Priest Pack" },
+          { Locale.zhTW, "Standard Priest Pack" },
+          { Locale.zhCN, "Standard Priest Pack" },
+          { Locale.itIT, "Standard Priest Pack" },
+          { Locale.ptBR, "Standard Priest Pack" },
+          { Locale.plPL, "Standard Priest Pack" },
+          { Locale.ptPT, "Standard Priest Pack" },
+          { Locale.jaJP, "Standard Priest Pack" },
+          { Locale.thTH, "Standard Priest Pack" },
+        }
+      },
+      {
+        // Standard Rogue Pack
+        635, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Standard Rogue Pack" },
+          { Locale.enGB, "Standard Rogue Pack" },
+          { Locale.frFR, "Standard Rogue Pack" },
+          { Locale.deDE, "Standard Rogue Pack" },
+          { Locale.koKR, "Standard Rogue Pack" },
+          { Locale.esES, "Standard Rogue Pack" },
+          { Locale.esMX, "Standard Rogue Pack" },
+          { Locale.ruRU, "Standard Rogue Pack" },
+          { Locale.zhTW, "Standard Rogue Pack" },
+          { Locale.zhCN, "Standard Rogue Pack" },
+          { Locale.itIT, "Standard Rogue Pack" },
+          { Locale.ptBR, "Standard Rogue Pack" },
+          { Locale.plPL, "Standard Rogue Pack" },
+          { Locale.ptPT, "Standard Rogue Pack" },
+          { Locale.jaJP, "Standard Rogue Pack" },
+          { Locale.thTH, "Standard Rogue Pack" },
+        }
+      },
+      {
+        // Standard Shaman Pack
+        636, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Standard Shaman Pack" },
+          { Locale.enGB, "Standard Shaman Pack" },
+          { Locale.frFR, "Standard Shaman Pack" },
+          { Locale.deDE, "Standard Shaman Pack" },
+          { Locale.koKR, "Standard Shaman Pack" },
+          { Locale.esES, "Standard Shaman Pack" },
+          { Locale.esMX, "Standard Shaman Pack" },
+          { Locale.ruRU, "Standard Shaman Pack" },
+          { Locale.zhTW, "Standard Shaman Pack" },
+          { Locale.zhCN, "Standard Shaman Pack" },
+          { Locale.itIT, "Standard Shaman Pack" },
+          { Locale.ptBR, "Standard Shaman Pack" },
+          { Locale.plPL, "Standard Shaman Pack" },
+          { Locale.ptPT, "Standard Shaman Pack" },
+          { Locale.jaJP, "Standard Shaman Pack" },
+          { Locale.thTH, "Standard Shaman Pack" },
+        }
+      },
+      {
+        // Standard Warlock Pack
+        637, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Standard Warlock Pack" },
+          { Locale.enGB, "Standard Warlock Pack" },
+          { Locale.frFR, "Standard Warlock Pack" },
+          { Locale.deDE, "Standard Warlock Pack" },
+          { Locale.koKR, "Standard Warlock Pack" },
+          { Locale.esES, "Standard Warlock Pack" },
+          { Locale.esMX, "Standard Warlock Pack" },
+          { Locale.ruRU, "Standard Warlock Pack" },
+          { Locale.zhTW, "Standard Warlock Pack" },
+          { Locale.zhCN, "Standard Warlock Pack" },
+          { Locale.itIT, "Standard Warlock Pack" },
+          { Locale.ptBR, "Standard Warlock Pack" },
+          { Locale.plPL, "Standard Warlock Pack" },
+          { Locale.ptPT, "Standard Warlock Pack" },
+          { Locale.jaJP, "Standard Warlock Pack" },
+          { Locale.thTH, "Standard Warlock Pack" },
+        }
+      },
+      {
+        // Standard Demon Hunter Pack
+        638, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Standard Demon Hunter Pack" },
+          { Locale.enGB, "Standard Demon Hunter Pack" },
+          { Locale.frFR, "Standard Demon Hunter Pack" },
+          { Locale.deDE, "Standard Demon Hunter Pack" },
+          { Locale.koKR, "Standard Demon Hunter Pack" },
+          { Locale.esES, "Standard Demon Hunter Pack" },
+          { Locale.esMX, "Standard Demon Hunter Pack" },
+          { Locale.ruRU, "Standard Demon Hunter Pack" },
+          { Locale.zhTW, "Standard Demon Hunter Pack" },
+          { Locale.zhCN, "Standard Demon Hunter Pack" },
+          { Locale.itIT, "Standard Demon Hunter Pack" },
+          { Locale.ptBR, "Standard Demon Hunter Pack" },
+          { Locale.plPL, "Standard Demon Hunter Pack" },
+          { Locale.ptPT, "Standard Demon Hunter Pack" },
+          { Locale.jaJP, "Standard Demon Hunter Pack" },
+          { Locale.thTH, "Standard Demon Hunter Pack" },
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
