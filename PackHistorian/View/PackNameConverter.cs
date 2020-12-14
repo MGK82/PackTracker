@@ -643,7 +643,7 @@ namespace PackTracker.View {
           { Locale.esMX, "El libro de los héroes de Valeera" },
           { Locale.ruRU, "«Книга героев» Валиры" },
           { Locale.zhTW, "瓦萊拉的英雄錄" },
-          { Locale.zhCN, "瓦莱拉的英雄录" },
+          { Locale.zhCN, "瓦莉拉的英雄录" },
           { Locale.itIT, "Il Libro degli Eroi di Valeera" },
           { Locale.ptBR, "O Livro dos Heróis de Valeera" },
           { Locale.plPL, "Księga bohaterów Valeery" },
