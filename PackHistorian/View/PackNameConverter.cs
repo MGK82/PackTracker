@@ -697,7 +697,7 @@ namespace PackTracker.View {
           { Locale.enUS, "Illidan's Book of Heroes" },
           { Locale.enGB, "Illidan's Book of Heroes" },
           { Locale.frFR, "Le Livre des héros de Illidan" },
-          { Locale.deDE, "Gul'dans Buch der Illidan" },
+          { Locale.deDE, "Illidans Buch der Helden" },
           { Locale.koKR, "일리단의 영웅 책" },
           { Locale.esES, "El libro de los héroes de Illidan" },
           { Locale.esMX, "El libro de los héroes de Illidan" },
