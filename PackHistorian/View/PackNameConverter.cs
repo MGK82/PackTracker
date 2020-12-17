@@ -489,7 +489,7 @@ namespace PackTracker.View {
           { Locale.plPL, "Roku Smoka" },
           { Locale.ptPT, "Ano do Dragão" },
           { Locale.jaJP, "ドラゴンの年" },
-          { Locale.thTH, "Year of the Dragon" },
+          { Locale.thTH, "ปีแห่งมังกร" },
         }
       },
 	  	        {
