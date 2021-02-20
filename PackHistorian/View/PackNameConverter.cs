@@ -452,7 +452,7 @@ namespace PackTracker.View {
           { Locale.thTH, "Scholomance Academy" },
         }
       },
-	        {
+      {
         470, new Dictionary<Locale, string>() {
           { Locale.enUS, "Hunter Pack" },
           { Locale.enGB, "Hunter Pack" },
@@ -472,7 +472,7 @@ namespace PackTracker.View {
           { Locale.thTH, "ซองการ์ดฮันเตอร์" },
         }
       },
-	        {
+      {
         498, new Dictionary<Locale, string>() {
           { Locale.enUS, "Year of the Dragon" },
           { Locale.enGB, "Year of the Dragon" },
@@ -492,7 +492,7 @@ namespace PackTracker.View {
           { Locale.thTH, "ปีแห่งมังกร" },
         }
       },
-	  	        {
+      {
         545, new Dictionary<Locale, string>() {
           { Locale.enUS, "Mage Pack" },
           { Locale.enGB, "Mage Pack" },
@@ -510,6 +510,26 @@ namespace PackTracker.View {
           { Locale.ptPT, "Pacote de Mago" },
           { Locale.jaJP, "メイジパック" },
           { Locale.thTH, "ซองการ์ดเมจ" },
+        }
+      },
+      {
+        553, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Forged in the Barrens" },
+          { Locale.enGB, "Forged in the Barrens" },
+          { Locale.frFR, "Forgés dans les Tarides" },
+          { Locale.deDE, "Geschmiedet im Brachlan" },
+          { Locale.koKR, "불모의 땅" },
+          { Locale.esES, "Forjados en Los Baldíos" },
+          { Locale.esMX, "Forjados en los Baldíos" },
+          { Locale.ruRU, "Закаленные Степями" },
+          { Locale.zhTW, "贫瘠之地的锤炼" },
+          { Locale.zhCN, "貧瘠之地" },
+          { Locale.itIT, "Forgiati nelle Savane" },
+          { Locale.ptBR, "Forjado nos Sertões" },
+          { Locale.plPL, "Zahartowani przez Pustkowia" },
+          { Locale.ptPT, "Forjado nos Sertões" },
+          { Locale.jaJP, "荒ぶる大地の強者たち" },
+          { Locale.thTH, "Forged in the Barrens" },
         }
       },
       {
@@ -732,6 +752,46 @@ namespace PackTracker.View {
           { Locale.thTH, "Madness at the Darkmoon Faire สีทอง" },
         }
       },
+      {
+        686, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Golden Forged in the Barrens" },
+          { Locale.enGB, "Golden Forged in the Barrens" },
+          { Locale.frFR, "Forgés dans les Tarides doré" },
+          { Locale.deDE, "Geschmiedet im Brachland (Golden)" },
+          { Locale.koKR, "황금 불모의 땅" },
+          { Locale.esES, "Doradas de Forjados en los Baldíos" },
+          { Locale.esMX, "Dorado de Forjados en los Baldíos" },
+          { Locale.ruRU, "Золотой комплект «Закаленных Степями»" },
+          { Locale.zhTW, "贫瘠之地的锤炼金卡" },
+          { Locale.zhCN, "貧瘠之地金卡" },
+          { Locale.itIT, "Forgiati nelle Savane Dorata" },
+          { Locale.ptBR, "Forjado nos Sertões Dourado" },
+          { Locale.plPL, "Złoty zestaw Zahartowani przez Pustkowia" },
+          { Locale.ptPT, "Forjado nos Sertões Dourado" },
+          { Locale.jaJP, "ゴールデン荒ぶる大地の強者たち" },
+          { Locale.thTH, "Forged in the Barrens สีทอง" },
+	 }
+       },
+       {
+        688, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Year of the Phoenix" },
+          { Locale.enGB, "Year of the Phoenix" },
+          { Locale.frFR, "L'Année Du Phénix" },
+          { Locale.deDE, "Jahr des Phönix" },
+          { Locale.koKR, "피닉스의 해" },
+          { Locale.esES, "Año de Phoenix" },
+          { Locale.esMX, "Año de Phoenix" },
+          { Locale.ruRU, "Год Феникса" },
+          { Locale.zhTW, "鳳凰年" },
+          { Locale.zhCN, "凤凰年" },
+          { Locale.itIT, "L'Anno Della Fenice" },
+          { Locale.ptBR, "Ano Da Fênix" },
+          { Locale.plPL, "Roku " },
+          { Locale.ptPT, "Ano Da Fênix" },
+          { Locale.jaJP, "フェニックスの年" },
+          { Locale.thTH, "ปีของฟีนิกซ์" },
+	 }
+       },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
