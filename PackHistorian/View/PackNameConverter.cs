@@ -200,7 +200,7 @@ namespace PackTracker.View {
           { Locale.deDE, "Klassik (Golden)" },
           { Locale.koKR, "황금 오리지널" },
           { Locale.esES, "Clásica dorada" },
-          { Locale.esMX, "Clásica dorada" },
+          { Locale.esMX, "Dorado clásico" },
           { Locale.ruRU, "Золотая классика" },
           { Locale.zhTW, "經典金卡" },
           { Locale.zhCN, "金色经典" },
@@ -453,6 +453,26 @@ namespace PackTracker.View {
         }
       },
       {
+        553, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Forged in the Barrens" },
+          { Locale.enGB, "Forged in the Barrens" },
+          { Locale.frFR, "Forgés dans les Tarides" },
+          { Locale.deDE, "Geschmiedet im Brachland" },
+          { Locale.koKR, "불모의 땅" },
+          { Locale.esES, "Forjados en los Baldíos" },
+          { Locale.esMX, "Forjados en Los Baldíos" },
+          { Locale.ruRU, "Закаленные Степями" },
+          { Locale.zhTW, "貧瘠之地" },
+          { Locale.zhCN, "贫瘠之地的锤炼" },
+          { Locale.itIT, "Forgiati nelle Savane" },
+          { Locale.ptBR, "Forjado nos Sertões" },
+          { Locale.plPL, "Zahartowani przez Pustkowia" },
+          { Locale.ptPT, "Forjado nos Sertões" },
+          { Locale.jaJP, "荒ぶる大地の強者たち" },
+          { Locale.thTH, "Forged in the Barrens" },
+        }
+      },
+      {
         603, new Dictionary<Locale, string>() {
           { Locale.enUS, "Golden Scholomance Academy" },
           { Locale.enGB, "Golden Scholomance Academy" },
@@ -460,7 +480,7 @@ namespace PackTracker.View {
           { Locale.deDE, "Goldene Akademie Scholomance" },
           { Locale.koKR, "황금 스칼로맨스 아카데미" },
           { Locale.esES, "Doradas de Academia Scholomance" },
-          { Locale.esMX, "Academia Scholomance dorado" },
+          { Locale.esMX, "Dorado de Academia Scholomance" },
           { Locale.ruRU, "Золотой Некроситет" },
           { Locale.zhTW, "通靈學院金卡" },
           { Locale.zhCN, "金色通灵学园" },
@@ -500,7 +520,7 @@ namespace PackTracker.View {
           { Locale.deDE, "Der Dunkelmond-Wahnsinn (Golden)" },
           { Locale.koKR, "황금 광기의 다크문 축제" },
           { Locale.esES, "Locura dorada en la Feria de la Luna Negra" },
-          { Locale.esMX, "Locura en la Feria de la Luna Negra dorada" },
+          { Locale.esMX, "Dorado de Locura en la Feria de la Luna Negra" },
           { Locale.ruRU, "Золотая «Ярмарка безумия»" },
           { Locale.zhTW, "暗月馬戲團：古神也瘋狂金卡" },
           { Locale.zhCN, "金色疯狂的暗月马戏团" },
@@ -510,6 +530,26 @@ namespace PackTracker.View {
           { Locale.ptPT, "Delírios em Negraluna Dourado" },
           { Locale.jaJP, "ゴールデン・ダークムーン・フェアへの招待状" },
           { Locale.thTH, "Madness at the Darkmoon Faire สีทอง" },
+        }
+      },
+      {
+        686, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Golden Forged in the Barrens" },
+          { Locale.enGB, "Golden Forged in the Barrens" },
+          { Locale.frFR, "Forgés dans les Tarides doré" },
+          { Locale.deDE, "Geschmiedet im Brachland (Golden)" },
+          { Locale.koKR, "황금 불모의 땅" },
+          { Locale.esES, "Doradas de Forjados en los Baldíos" },
+          { Locale.esMX, "Dorado de Forjados en los Baldíos" },
+          { Locale.ruRU, "Золотой комплект «Закаленных Степями»" },
+          { Locale.zhTW, "貧瘠之地金卡" },
+          { Locale.zhCN, "贫瘠之地的锤炼金卡" },
+          { Locale.itIT, "Forgiati nelle Savane Dorata" },
+          { Locale.ptBR, "Forjado nos Sertões Dourado" },
+          { Locale.plPL, "Złoty zestaw Zahartowani przez Pustkowia" },
+          { Locale.ptPT, "Forjado nos Sertões Dourado" },
+          { Locale.jaJP, "ゴールデン荒ぶる大地の強者たち" },
+          { Locale.thTH, "Forged in the Barrens สีทอง" },
         }
       },
       {
@@ -741,6 +781,27 @@ namespace PackTracker.View {
           { Locale.ptPT, "Standard Demon Hunter Pack" },
           { Locale.jaJP, "Standard Demon Hunter Pack" },
           { Locale.thTH, "Standard Demon Hunter Pack" },
+        }
+      },
+      {
+        // Year of the Phoenix
+        688, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Year of the Phoenix" },
+          { Locale.enGB, "Year of the Phoenix" },
+          { Locale.frFR, "Year of the Phoenix" },
+          { Locale.deDE, "Year of the Phoenix" },
+          { Locale.koKR, "Year of the Phoenix" },
+          { Locale.esES, "Year of the Phoenix" },
+          { Locale.esMX, "Year of the Phoenix" },
+          { Locale.ruRU, "Year of the Phoenix" },
+          { Locale.zhTW, "Year of the Phoenix" },
+          { Locale.zhCN, "Year of the Phoenix" },
+          { Locale.itIT, "Year of the Phoenix" },
+          { Locale.ptBR, "Year of the Phoenix" },
+          { Locale.plPL, "Year of the Phoenix" },
+          { Locale.ptPT, "Year of the Phoenix" },
+          { Locale.jaJP, "Year of the Phoenix" },
+          { Locale.thTH, "Year of the Phoenix" },
         }
       },
     };
