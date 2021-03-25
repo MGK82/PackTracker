@@ -553,26 +553,6 @@ namespace PackTracker.View {
         }
       },
       {
-        470, new Dictionary<Locale, string>() {
-          { Locale.enUS, "Rexxar's Book of Heroes" },
-          { Locale.enGB, "Rexxar's Book of Heroes" },
-          { Locale.frFR, "Livre des héros de Rexxar" },
-          { Locale.deDE, "Rexxars Buch der Helden" },
-          { Locale.koKR, "렉사르의 영웅들의 이야기" },
-          { Locale.esES, "Libro de los Héroes de Rexxar" },
-          { Locale.esMX, "Libro de Héroes de Rexxar" },
-          { Locale.ruRU, "«Книга героев» Рексара" },
-          { Locale.zhTW, "雷克薩的英雄之書" },
-          { Locale.zhCN, "雷克萨的英雄之书" },
-          { Locale.itIT, "Libro degli Eroi di Rexxar" },
-          { Locale.ptBR, "Livro dos Heróis de Rexxar" },
-          { Locale.plPL, "Księga bohaterów: Rexxar" },
-          { Locale.ptPT, "Livro dos Heróis de Rexxar" },
-          { Locale.jaJP, "英雄の書：レクサーの章" },
-          { Locale.thTH, "Book of Heroes ของเร็กซ์ซาร์" },
-        }
-      },
-      {
         498, new Dictionary<Locale, string>() {
           { Locale.enUS, "Year of the Dragon" },
           { Locale.enGB, "Year of the Dragon" },
@@ -593,6 +573,46 @@ namespace PackTracker.View {
         }
       },
       {
+        688, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Year of the Phoenix" },
+          { Locale.enGB, "Year of the Phoenix" },
+          { Locale.frFR, "Année du Phénix" },
+          { Locale.deDE, "Jahr des Phönix" },
+          { Locale.koKR, "불사조의 해" },
+          { Locale.esES, "Año del Fénix" },
+          { Locale.esMX, "Año del fénix" },
+          { Locale.ruRU, "Год Феникса" },
+          { Locale.zhTW, "鳳凰年" },
+          { Locale.zhCN, "凤凰年" },
+          { Locale.itIT, "Anno della Fenice" },
+          { Locale.ptBR, "Ano da Fênix" },
+          { Locale.plPL, "Rok Feniksa" },
+          { Locale.ptPT, "Ano da Fênix" },
+          { Locale.jaJP, "フェニックス年" },
+          { Locale.thTH, "ปีแห่งฟีนิกซ์" },
+        }
+      },
+      {
+        470, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Rexxar's Book of Heroes" },
+          { Locale.enGB, "Rexxar's Book of Heroes" },
+          { Locale.frFR, "Livre des héros de Rexxar" },
+          { Locale.deDE, "Rexxars Buch der Helden" },
+          { Locale.koKR, "렉사르의 영웅들의 이야기" },
+          { Locale.esES, "Libro de los Héroes de Rexxar" },
+          { Locale.esMX, "Libro de Héroes de Rexxar" },
+          { Locale.ruRU, "«Книга героев» Рексара" },
+          { Locale.zhTW, "雷克薩的英雄之書" },
+          { Locale.zhCN, "雷克萨的英雄之书" },
+          { Locale.itIT, "Libro degli Eroi di Rexxar" },
+          { Locale.ptBR, "Livro dos Heróis de Rexxar" },
+          { Locale.plPL, "Księga bohaterów: Rexxar" },
+          { Locale.ptPT, "Livro dos Heróis de Rexxar" },
+          { Locale.jaJP, "英雄の書：レクサーの章" },
+          { Locale.thTH, "Book of Heroes ของเร็กซ์ซาร์" },
+        }
+      },
+      {
         545, new Dictionary<Locale, string>() {
           { Locale.enUS, "Jaina's Book of Heroes" },
           { Locale.enGB, "Jaina's Book of Heroes" },
@@ -610,27 +630,6 @@ namespace PackTracker.View {
           { Locale.ptPT, "Livro dos Heróis da Jaina" },
           { Locale.jaJP, "英雄の書：ジェイナの章" },
           { Locale.thTH, "Book of Heroes ของเจน่า" },
-        }
-      },
-      {
-        // Standard Druid Pack
-        631, new Dictionary<Locale, string>() {
-          { Locale.enUS, "Standard Druid Pack" },
-          { Locale.enGB, "Standard Druid Pack" },
-          { Locale.frFR, "Standard Druid Pack" },
-          { Locale.deDE, "Standard Druid Pack" },
-          { Locale.koKR, "Standard Druid Pack" },
-          { Locale.esES, "Standard Druid Pack" },
-          { Locale.esMX, "Standard Druid Pack" },
-          { Locale.ruRU, "Standard Druid Pack" },
-          { Locale.zhTW, "Standard Druid Pack" },
-          { Locale.zhCN, "Standard Druid Pack" },
-          { Locale.itIT, "Standard Druid Pack" },
-          { Locale.ptBR, "Standard Druid Pack" },
-          { Locale.plPL, "Standard Druid Pack" },
-          { Locale.ptPT, "Standard Druid Pack" },
-          { Locale.jaJP, "Standard Druid Pack" },
-          { Locale.thTH, "Standard Druid Pack" },
         }
       },
       {
@@ -714,6 +713,27 @@ namespace PackTracker.View {
         }
       },
       {
+        // Standard Druid Pack
+        631, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Standard Druid Pack" },
+          { Locale.enGB, "Standard Druid Pack" },
+          { Locale.frFR, "Standard Druid Pack" },
+          { Locale.deDE, "Standard Druid Pack" },
+          { Locale.koKR, "Standard Druid Pack" },
+          { Locale.esES, "Standard Druid Pack" },
+          { Locale.esMX, "Standard Druid Pack" },
+          { Locale.ruRU, "Standard Druid Pack" },
+          { Locale.zhTW, "Standard Druid Pack" },
+          { Locale.zhCN, "Standard Druid Pack" },
+          { Locale.itIT, "Standard Druid Pack" },
+          { Locale.ptBR, "Standard Druid Pack" },
+          { Locale.plPL, "Standard Druid Pack" },
+          { Locale.ptPT, "Standard Druid Pack" },
+          { Locale.jaJP, "Standard Druid Pack" },
+          { Locale.thTH, "Standard Druid Pack" },
+        }
+      },
+      {
         // Standard Shaman Pack
         636, new Dictionary<Locale, string>() {
           { Locale.enUS, "Standard Shaman Pack" },
@@ -774,26 +794,6 @@ namespace PackTracker.View {
           { Locale.ptPT, "Standard Demon Hunter Pack" },
           { Locale.jaJP, "Standard Demon Hunter Pack" },
           { Locale.thTH, "Standard Demon Hunter Pack" },
-        }
-      },
-      {
-        688, new Dictionary<Locale, string>() {
-          { Locale.enUS, "Year of the Phoenix" },
-          { Locale.enGB, "Year of the Phoenix" },
-          { Locale.frFR, "Année du Phénix" },
-          { Locale.deDE, "Jahr des Phönix" },
-          { Locale.koKR, "불사조의 해" },
-          { Locale.esES, "Año del Fénix" },
-          { Locale.esMX, "Año del fénix" },
-          { Locale.ruRU, "Год Феникса" },
-          { Locale.zhTW, "鳳凰年" },
-          { Locale.zhCN, "凤凰年" },
-          { Locale.itIT, "Anno della Fenice" },
-          { Locale.ptBR, "Ano da Fênix" },
-          { Locale.plPL, "Rok Feniksa" },
-          { Locale.ptPT, "Ano da Fênix" },
-          { Locale.jaJP, "フェニックス年" },
-          { Locale.thTH, "ปีแห่งฟีนิกซ์" },
         }
       },
     };
