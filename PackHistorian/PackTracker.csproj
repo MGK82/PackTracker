@@ -54,9 +54,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\Fetti\AppData\Local\HearthstoneDeckTracker\app-1.11.1\HearthDb.dll</HintPath>
     </Reference>
-    <Reference Include="HearthMirror, Version=8.0.4.18792, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="HearthMirror, Version=17.0.2.45932, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Fetti\AppData\Local\HearthstoneDeckTracker\app-1.11.1\HearthMirror.dll</HintPath>
+      <HintPath>C:\Users\Fetti\AppData\Local\HearthstoneDeckTracker\app-1.14.4\HearthMirror.dll</HintPath>
     </Reference>
     <Reference Include="HearthstoneDeckTracker, Version=1.4.0.3216, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>

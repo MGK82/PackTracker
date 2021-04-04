@@ -792,6 +792,26 @@ namespace PackTracker.View {
           { Locale.thTH, "ปีแห่งฟีนิกซ์" },
 	 }
        },
+      {
+        553, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Forged In The Barrens" },
+          { Locale.enGB, "Forged In The Barrens" },
+          { Locale.frFR, "Forgés dans les Tarides" },
+          { Locale.deDE, "Geschmiedet im Brachland" },
+          { Locale.koKR, "불모의 땅" },
+          { Locale.esES, "Forjados en los Baldíos" },
+          { Locale.esMX, "Forjados en Los Baldíos" },
+          { Locale.ruRU, "Закаленные Степями" },
+          { Locale.zhTW, "貧瘠之地" },
+          { Locale.zhCN, "贫瘠之地的锤炼" },
+          { Locale.itIT, "Forgiati nelle Savane" },
+          { Locale.ptBR, "Forjado nos Sertões" },
+          { Locale.ptPT, "Forjado nos Sertões" },
+          { Locale.plPL, "Zahartowani przez Pustkowia" },
+          { Locale.jaJP, "荒ぶる大地の強者たち" },
+          { Locale.thTH, "Forged In The Barrens" },
+        }
+      },
     };
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {

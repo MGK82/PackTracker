@@ -34,7 +34,7 @@ namespace PackTracker {
 
       foreach(var Card in e.Cards) {
         HDTCard cardFromId = Database.GetCardFromId(Card.Id);
-        Cards.Add(new Entity.Card(cardFromId, Card.Premium));
+        Cards.Add(new Entity.Card(cardFromId, 1 == Card.PremiumType));
       }
 
       OnPackOpened(new Pack(e.PackId, Time, Cards));
