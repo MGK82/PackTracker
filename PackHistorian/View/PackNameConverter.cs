@@ -369,7 +369,7 @@ namespace PackTracker.View {
         }
       },
       {
-        1525, new Dictionary<Locale, string>() {
+        553, new Dictionary<Locale, string>() {
           { Locale.enUS, "Forged In The Barrens" },
           { Locale.enGB, "Forged In The Barrens" },
           { Locale.frFR, "Forgés dans les Tarides" },
