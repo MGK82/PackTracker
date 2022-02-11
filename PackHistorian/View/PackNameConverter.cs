@@ -533,6 +533,26 @@ namespace PackTracker.View {
         }
       },
       {
+        602, new Dictionary<Locale, string>() {
+          { Locale.enUS, "United in Stormwind" },
+          { Locale.enGB, "United in Stormwind" },
+          { Locale.frFR, "Unis à Hurlevent" },
+          { Locale.deDE, "Vereint in Sturmwind" },
+          { Locale.koKR, "스톰윈드" },
+          { Locale.esES, "Unidos en Ventormenta"},
+          { Locale.esMX, "Unidos en Ventormenta"},
+          { Locale.ruRU, "Сплоченные Штормградом"},
+          { Locale.zhTW, "暴風城"},
+          { Locale.zhCN, "暴风城下的集结"},
+          { Locale.itIT, "Uniti a Roccavento"},
+          { Locale.ptBR, "Juntos em Ventobravo"},
+          { Locale.plPL, "Zjednoczeni w Wichrogrodzie"},
+          { Locale.ptPT, "Juntos em Ventobravo"},
+          { Locale.jaJP, "風集うストームウィンド"},
+          { Locale.thTH, "United in Stormwind"},
+        }
+      },
+      {
         603, new Dictionary<Locale, string>() {
           { Locale.enUS, "Golden Scholomance Academy" },
           { Locale.enGB, "Golden Scholomance Academy" },
@@ -775,6 +795,26 @@ namespace PackTracker.View {
         }
       },
       {
+        665, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Fractured in Alterac Valley" },
+          { Locale.enGB, "Fractured in Alterac Valley" },
+          { Locale.frFR, "Divisés en Alterac" },
+          { Locale.deDE, "Gespalten im Alteractal" },
+          { Locale.koKR, "알터랙 계곡" },
+          { Locale.esES, "Divididos en el Valle de Alterac" },
+          { Locale.esMX, "Divididos en el Valle de Alterac" },
+          { Locale.ruRU, "Разделенные Альтераком" },
+          { Locale.zhTW, "決戰奧山" },
+          { Locale.zhCN, "奥特兰克的决裂" },
+          { Locale.itIT, "Divisi nella Valle d'Alterac" },
+          { Locale.ptBR, "Divididos no Vale Alterac" },
+          { Locale.plPL, "Rozbici w Dolinie Alterak" },
+          { Locale.ptPT, "Divididos no Vale Alterac" },
+          { Locale.jaJP, "烈戦のアルタラック" },
+          { Locale.thTH, "Fractured in Alterac Valley" },
+        }
+      },
+      {
         686, new Dictionary<Locale, string>() {
           { Locale.enUS, "Golden Forged in the Barrens" },
           { Locale.enGB, "Golden Forged in the Barrens" },
@@ -792,9 +832,9 @@ namespace PackTracker.View {
           { Locale.ptPT, "Forjado nos Sertões Dourado" },
           { Locale.jaJP, "ゴールデン荒ぶる大地の強者たち" },
           { Locale.thTH, "Forged in the Barrens สีทอง" },
-	 }
-       },
-       {
+        }
+      },
+      {
         688, new Dictionary<Locale, string>() {
           { Locale.enUS, "Year of the Phoenix" },
           { Locale.enGB, "Year of the Phoenix" },
@@ -812,10 +852,96 @@ namespace PackTracker.View {
           { Locale.ptPT, "Ano da Fênix" },
           { Locale.jaJP, "フェニックス年" },
           { Locale.thTH, "ปีแห่งฟีนิกซ์" },
+<<<<<<< HEAD
 	 }
        },
 >>>>>>> 8a11168 (Added update for Barrens and class packs)
     };
+=======
+        }
+      },
+      {
+        713, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Standard" },
+          { Locale.enGB, "Standard" },
+          { Locale.frFR, "Standard" },
+          { Locale.deDE, "Standard" },
+          { Locale.koKR, "정규" },
+          { Locale.esES, "Estándar" },
+          { Locale.esMX, "Estándar" },
+          { Locale.ruRU, "Стандартный" },
+          { Locale.zhTW, "標準" },
+          { Locale.zhCN, "标准模式" },
+          { Locale.itIT, "Standard" },
+          { Locale.ptBR, "Padrão" },
+          { Locale.plPL, "Standard" },
+          { Locale.ptPT, "Padrão" },
+          { Locale.jaJP, "スタンダード" },
+          { Locale.thTH, "มาตรฐาน" },
+        }
+      },
+      {
+        714, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Wild" },
+          { Locale.enGB, "Wild" },
+          { Locale.frFR, "Libre" },
+          { Locale.deDE, "Wild" },
+          { Locale.koKR, "야생" },
+          { Locale.esES, "Salvaje" },
+          { Locale.esMX, "Salvaje" },
+          { Locale.ruRU, "Вольный" },
+          { Locale.zhTW, "開放" },
+          { Locale.zhCN, "狂野" },
+          { Locale.itIT, "Selvaggio" },
+          { Locale.ptBR, "Livre" },
+          { Locale.plPL, "Dzicz" },
+          { Locale.ptPT, "Livre" },
+          { Locale.jaJP, "ワイルド" },
+          { Locale.thTH, "อิสระ" },
+        }
+     },
+     {
+       737, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Golden United in Stormwind" },
+          { Locale.enGB, "Golden United in Stormwind" },
+          { Locale.frFR, "Unis à Hurlevent doré" },
+          { Locale.deDE, "Vereint in Sturmwind (Golden)" },
+          { Locale.koKR, "황금 스톰윈드" },
+          { Locale.esES, "Unidos en Ventormenta dorado" },
+          { Locale.esMX, "Dorado de Unidos en Ventormenta" },
+          { Locale.ruRU, "Золотой комплект «Сплоченные Штормградом»" },
+          { Locale.zhTW, "暴風城金卡" },
+          { Locale.zhCN, "暴风城下的集结金卡" },
+          { Locale.itIT, "Uniti a Roccavento Dorata" },
+          { Locale.ptBR, "Juntos em Ventobravo Dourado" },
+          { Locale.plPL, "Złoty zestaw Zjednoczeni w Wichrogrodzie" },
+          { Locale.ptPT, "Juntos em Ventobravo Dourado" },
+          { Locale.jaJP, "ゴールデン「風集うストームウィンド" },
+          { Locale.thTH, "United in Stormwind สีทอง" },
+        }
+    },
+    {
+      841, new Dictionary<Locale, string>() {
+          { Locale.enUS, "Golden Fractured in Alterac Valley" },
+          { Locale.enGB, "Golden Fractured in Alterac Valley" },
+          { Locale.frFR, "Divisés en Alterac doré" },
+          { Locale.deDE, "Gespalten im Alteractal (Golden)" },
+          { Locale.koKR, "황금 알터랙 계곡" },
+          { Locale.esES, "Doradas de Divididos en el Valle de Alterac" },
+          { Locale.esMX, "Dorado de Divididos en el Valle de Alterac" },
+          { Locale.ruRU, "Разделенные Альтераком (золото)" },
+          { Locale.zhTW, "決戰奧山金卡" },
+          { Locale.zhCN, "奥特兰克的决裂金卡" },
+          { Locale.itIT, "Divisi nella Valle d'Alterac Dorata" },
+          { Locale.ptBR, "Divididos no Vale Alterac Dourado" },
+          { Locale.plPL, "Złoci Rozbici w Dolinie Alterak" },
+          { Locale.ptPT, "Divididos no Vale Alterac Dourado" },
+          { Locale.jaJP, "ゴールデン「烈戦のアルタラック」" },
+          { Locale.thTH, "Fractured in Alterac Valley สีทอง" },
+      }
+    },
+};
+>>>>>>> e0bf041 (stormwind and alterac valley pack update)
 
     public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture) {
       if(value == null) {
